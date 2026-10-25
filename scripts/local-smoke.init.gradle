@@ -1,0 +1,9 @@
+gradle.projectsEvaluated {
+    def clientRoot = gradle.rootProject
+    if (clientRoot.findProject(':runelite-client') != null) {
+        clientRoot.tasks.named('run', JavaExec).configure {
+            mainClass.set('LocalLoginSmoke')
+            classpath += clientRoot.files(new File(gradle.gradleUserHomeDir.parentFile, 'smoke-classes'))
+        }
+    }
+}

@@ -22,3 +22,6 @@ players/
 .vscode/
 Thumbs.db
 Desktop.ini
+
+# Local Kronos working source pending redistribution review
+/main/

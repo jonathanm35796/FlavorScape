@@ -8,9 +8,13 @@ The owner has selected [Kronos-184-Fixed](https://github.com/Leif-Yggdrasil/Kron
 
 ## First milestone
 
+The working Kronos source is in `main/`; make future server/client changes there. The separate upstream reference clone remains in `research-sources/`. See [workspace layout](docs/workspace-layout.md). Source remains locally ignored pending redistribution permission.
+
 Run a compatible client and server locally. Then improve PvP behavior and customize client settings incrementally while preserving working systems.
 
 ## Environment setup
+
+For the installed local toolchain, use the [local startup instructions](docs/local-running.md) to build, start, stop, or verify a localhost login.
 
 From ordinary Windows PowerShell in this directory, run:
 

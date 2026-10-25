@@ -1,5 +1,11 @@
 # Kronos baseline review
 
+## Latest milestone: localhost login passed from main/
+
+On 2026-10-25, the separate main/ working copy built and launched successfully with the portable toolchains. A real desktop-client integration probe logged in the disposable Localtest account, reached state 30 with a local player at (2038,3577,0), and observed 16 incoming game ticks over ten seconds. Both listeners were confirmed bound to 127.0.0.1. Logs are .tools/main-GameServer.log, main-UpdateServer.log, and main-Client.log. See local-running.md for commands.
+
+The only additional game-source change for this verification was a null guard in CustomUtils.loadPkIcons: base cache sprites load asynchronously, so custom icons must wait until the array exists. The startup null-sprite exception did not recur. External item feed JSON warnings remain nonblocking for login. Visual inspection, gameplay interaction, and PvP correctness remain unverified. Source redistribution permission remains unresolved; no Kronos source is published.
+
 ## Local checkout findings, resumed 2026-10-25
 
 - Both repositories cloned successfully over HTTPS. Exact upstream HEAD is `66ee03dbbae53ccc652f6e49e9aa4191034b3c8e`, matching the earlier web observation.

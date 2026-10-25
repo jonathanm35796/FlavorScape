@@ -1,5 +1,17 @@
 # Environment status
 
+## Current local milestone: 2026-10-25, working copy in main
+
+- All components built from main/ using the portable JDKs and pinned Gradle wrappers. Runtime dependencies also resolved successfully.
+- Game and update servers started from main/ and listen only on 127.0.0.1:13302 and 127.0.0.1:7304. The earlier research-checkout processes were stopped.
+- The actual desktop client from main/runelite completed a localhost DEV login as disposable account Localtest. The integration probe observed game states 10 (login), 20 (connecting), 25 (loading), and 30 (logged in), then confirmed a player at WorldPoint(2038,3577,0) and 16 received game ticks over ten seconds.
+- Client and servers were left running after verification. Visual inspection is still unavailable because the desktop helper times out; the successful login result comes from client-thread integration instrumentation, not a screenshot.
+- main/ includes a null guard for asynchronously loaded PK sprites, eliminating the earlier startup exception in this run. External item-stat/price feeds still emit JSON warnings; these did not prevent login.
+- Use scripts/run-local.ps1 and scripts/stop-local.ps1 as described in local-running.md. No extra global Gradle, Maven, database, or IDE is needed for local DEV operation.
+- Combat accuracy, movement and PvP interactions have not been verified. Source publication still awaits server redistribution terms.
+
+Earlier session notes below are historical.
+
 ## Resumed session: 2026-10-25
 
 - HTTPS GitHub access now works. GitHub CLI authentication is valid as jonathanm35796; no new credentials were needed. SSH reaches host-key verification, but HTTPS is sufficient.
