@@ -9,6 +9,8 @@
 
 Make future game and client changes in `main/`. Keep the reference clone for upstream comparison. The working copy has no nested Git repository; the FlavorScape repository remains at the workspace root.
 
+Working modules now use flavorscape-* directory and Gradle project names. This is the selected Kronos foundation with FlavorScape branding; the original source identity and credits remain documented. See [branding status](branding-status.md).
+
 The copy includes the earlier local loopback binding fix, pinned Gradle distribution checksums, and desktop browser compatibility bridge. Build output, Gradle/Kotlin caches, runtime logs, and generated server player data were excluded. Fresh loopback server.properties files were generated from upstream examples. Bundled cache/assets are available locally for evaluation; their redistribution rights remain unverified.
 
 `main/` is temporarily ignored by the root Git repository because server redistribution permission remains unresolved. This also means edits there are not backed up to GitHub. Existing license notices remain in the working copy. See kronos-baseline-review.md for verification results and outstanding issues.

@@ -10,6 +10,8 @@ The owner has selected [Kronos-184-Fixed](https://github.com/Leif-Yggdrasil/Kron
 
 The working Kronos source is in `main/`; make future server/client changes there. The separate upstream reference clone remains in `research-sources/`. See [workspace layout](docs/workspace-layout.md). Source remains locally ignored pending redistribution permission.
 
+The working application now uses FlavorScape branding and flavorscape-* module names. See [branding status](docs/branding-status.md) for artwork, migration, and preserved upstream references.
+
 Run a compatible client and server locally. Then improve PvP behavior and customize client settings incrementally while preserving working systems.
 
 ## Environment setup

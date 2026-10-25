@@ -1,5 +1,13 @@
 # Environment status
 
+## FlavorScape branding update: 2026-10-25
+
+- Working module directories and Gradle tasks now use flavorscape-* names. The run-local.ps1 command is unchanged and waits for both server listeners before starting the client.
+- Existing player files were preserved under main/flavorscape-server/server-data/_saved/characters. A fresh autosave was observed and the saved files backed up before the first branding restart.
+- Client window, splash/login text, resource artwork, help text, world names, and project-specific identifiers were rebranded. Client settings were copied to .flavorscape without removing the originals.
+- Original copyright/attribution, historical evidence, genuine OSRS Kronos farming content, and the upstream jav_config.ws dependency remain intact. See branding-status.md for scope and asset paths.
+- Rebuilt the renamed components and passed actual-client localhost login again: state 30, a player present, and 16 game ticks received in ten seconds. Runtime logs confirm the FlavorScape window/server titles and loopback-only listeners. The saved Jon character matches the pre-restart backup byte for byte.
+
 ## Current local milestone: 2026-10-25, working copy in main
 
 - All components built from main/ using the portable JDKs and pinned Gradle wrappers. Runtime dependencies also resolved successfully.

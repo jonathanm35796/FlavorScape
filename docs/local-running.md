@@ -18,7 +18,9 @@ From `C:\Users\Jonathan\Desktop\FlavorScape`:
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\run-local.ps1
 ```
 
-This builds the components and starts the update server, game server, and desktop client. Helper consoles stay hidden; the client has its normal window. Game and update listeners use `127.0.0.1:13302` and `127.0.0.1:7304`. The client DEV configuration already points to localhost. Use a disposable test username and password; DEV accounts receive administrator privileges and skip password verification.
+This builds the components and starts the update server and game server, waits for both loopback listeners, then opens the desktop client. Helper consoles stay hidden; the client has its normal window. Game and update listeners use `127.0.0.1:13302` and `127.0.0.1:7304`. The client DEV configuration already points to localhost. Use a disposable test username and password; DEV accounts receive administrator privileges and skip password verification.
+
+Server modules now live at main/flavorscape-server and main/flavorscape-update-server. Client settings use the user's .flavorscape folder; earlier .kronos settings were copied during the branding migration and retained for recovery.
 
 Stop the launched components:
 
