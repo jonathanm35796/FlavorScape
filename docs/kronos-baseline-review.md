@@ -56,3 +56,26 @@ Sources:
 3. Fetch FlavorScape separately and inspect its history. The owner previously observed main at a75b93d6510013f67fdae2fbbe5b7231dfb997e7; that was not reverified here. Preserve remote history and local documentation, including Start.txt. Do not initialize an unrelated baseline or force-push.
 4. Only once redistribution evidence supports it, import reviewed source with upstream notices and attribution; exclude tools, build output, secrets, personal settings, player data, and unverified assets. Review staged contents, commit, and push. The owner already authorized this conditional baseline push.
 5. Install isolated required JDKs, inspect remaining scripts/dependencies, then build and launch locally. Login, gameplay, PvP, networking, and tick behavior are entirely unverified.
+
+## Additional verified local code findings
+
+- DEV administrator assignment and password bypass are confirmed in kronos-server/src/main/java/io/ruin/model/entity/player/PlayerFile.java, not merely README claims. Account JSON is saved through a single-thread save executor.
+- Server.worker uses a 600 ms period. ProcessWorker uses a single-thread scheduled executor with scheduleAtFixedRate. This establishes intended scheduling only; actual tick stability and combat timing remain untested.
+- The bundled Cache directory contains the dat2 file and index files. Presence does not prove cache compatibility or redistribution rights; it stays ignored with the entire research checkout.
+- Before launch, the isolated NettyServer.java was patched from bootstrap.bind(port) to bootstrap.bind(host, port), and the root wrapper properties received the official Gradle 8.14 all-distribution SHA-256. These are uncommitted local evaluation changes, not published upstream source.
+
+## Build and startup results
+
+- Installed portable Temurin 21.0.12.1+1 and 8u504-b01 in .tools/, verifying ZIP checksums against Adoptium metadata. No administrator installation or global Java configuration change.
+- Server and update-server classes compiled successfully on JDK 21 using Gradle 8.14. Missing optional project directories did not prevent these targeted tasks; aggregate deployment tasks remain unverified.
+- Client classes initially failed on missing netscape.javascript.JSObject under Temurin 8. The isolated checkout now replaces three browser-plugin API imports/call sites with DesktopBrowserBridge, which explicitly rejects unavailable browser-page JavaScript calls. Existing callers already handle failures. Client classes then compiled successfully. This is a local evaluation adaptation, not an upstream build pass without changes.
+- Local server properties were created from examples, with world_address set to loopback. Game server completed startup in 12.5 seconds. OS listener inspection confirmed 127.0.0.1:13302 and 127.0.0.1:7304. An actual revision-184 update handshake returned the expected success byte 0.
+- Client process launched through the root RuneLite run task. Runtime log records an external item-stat JSON parsing warning and repeated NullPointerException entries in CustomUtils.loadPkIcons while sprites load; these entries stopped after the initial loading interval. Their user-visible impact remains unverified.
+- Desktop inspection helper initialization timed out, preventing visual verification in this session. Login, basic gameplay, and PvP timing/behavior have NOT passed verification.
+- Logs: .tools/server-build.log, client-build.log (initial failure), client-build-retry.log (success), local-servers.log, game-server.log, client-run.log. These remain local and ignored.
+
+### Reproduce local startup
+
+Use separate PowerShell sessions from the workspace. Set JAVA_HOME to the relevant portable JDK and GRADLE_USER_HOME to the workspace's .tools/gradle-home. From research-sources/Kronos-184-Fixed/Kronos-master, run .\gradlew.bat :kronos-update-server:run or :kronos-server:run with JDK 21. From its runelite directory, run .\gradlew.bat run with JDK 8. The DEV client configuration already points to 127.0.0.1. Do not launch duplicate instances while ports are in use.
+
+Server/source redistribution evidence is still required before the source baseline can be published. Only FlavorScape's own documentation/setup files have been pushed.

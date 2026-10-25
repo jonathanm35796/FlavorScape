@@ -38,3 +38,14 @@ Checked 2026-10-25 in C:\Users\Jonathan\Desktop\FlavorScape.
 6. Execute builds and local client/server checks before recommending a source.
 
 No tools have been installed, no Git commit or push has occurred, and no candidate has passed a build or gameplay check.
+
+## Local toolchain verified during resume
+
+- Portable Temurin JDK 21.0.12.1+1: .tools/jdk21/jdk-21.0.12.1+1 (server).
+- Portable Temurin JDK 8u504-b01: .tools/jdk8/jdk8u504-b01 (client).
+- Both ZIP SHA-256 values matched Adoptium's API metadata before extraction. No system Java settings or administrator installation was needed.
+- Gradle 8.14 wrappers run successfully. Gradle cache is isolated at .tools/gradle-home.
+- :kronos-server:classes and :kronos-update-server:classes completed successfully with JDK 21 (upstream warnings remain).
+- Both servers started with explicit loopback binding: 127.0.0.1:13302 and 127.0.0.1:7304. Revision-184 JS5 handshake returned byte 0, as expected.
+- Initial client compilation failed because Temurin 8 lacks netscape.javascript.JSObject. A local desktop-only compatibility bridge disables browser-page callbacks; :runelite-client:classes then completed successfully with JDK 8. No gameplay behavior is claimed verified.
+- Build/startup logs are under ignored .tools/. Research source, cache, local configuration, and generated player data remain excluded from the FlavorScape repository.
