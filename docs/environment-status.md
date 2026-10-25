@@ -1,5 +1,12 @@
 # Environment status
 
+## Commands catalogue update: 2026-10-25
+
+- ::commands is now generated from all active server command switch cases and filtered using the same access policy as execution. ::staffcommands opens the accessible staff/Owner subset. Lists support paging and search.
+- Eight permission/index tests passed. An actual-client probe verified the full menu, a save search, and the staff menu through game packets and interface widgets after a fresh-save backup/restart.
+- DEV automatic Owner grants remain unchanged. Legacy dice/flower override entry points are now Owner-only and cannot be enabled by an ordinary account using the old hidden password.
+- See commands.md for syntax, policy details, and the distinction from client-only/plugin commands.
+
 ## FlavorScape branding update: 2026-10-25
 
 - Working module directories and Gradle tasks now use flavorscape-* names. The run-local.ps1 command is unchanged and waits for both server listeners before starting the client.

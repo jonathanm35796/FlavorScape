@@ -12,6 +12,8 @@ The working Kronos source is in `main/`; make future server/client changes there
 
 The working application now uses FlavorScape branding and flavorscape-* module names. See [branding status](docs/branding-status.md) for artwork, migration, and preserved upstream references.
 
+The in-game `::commands` catalogue is generated from active server handlers and filtered by the same permissions used for execution. See [command help](docs/commands.md) for paging, search, and maintenance.
+
 Run a compatible client and server locally. Then improve PvP behavior and customize client settings incrementally while preserving working systems.
 
 ## Environment setup

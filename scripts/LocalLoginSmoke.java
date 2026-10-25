@@ -10,6 +10,23 @@ public final class LocalLoginSmoke {
     private static int lastState = -1;
     private static int firstTick;
     private static boolean submitted;
+    private static boolean loginReported;
+    private static int commandStage;
+    private static long commandSent;
+
+    private static String commandMenu(Class<?> clientApi, Object client) throws Exception {
+        StringBuilder text = new StringBuilder();
+        for (int child = 2; child < 38; child++) {
+            Object widget = clientApi.getMethod("getWidget", int.class, int.class).invoke(client, 119, child);
+            if (widget != null) text.append(Class.forName("net.runelite.api.widgets.Widget").getMethod("getText").invoke(widget)).append('\n');
+        }
+        return text.toString();
+    }
+
+    private static void sendCommand(String command) throws Exception {
+        call("WorldMapSection0", "method3906", String.class, command);
+        commandSent = System.currentTimeMillis();
+    }
 
     private static Field field(String type, String name) throws Exception {
         Field field = Class.forName(PREFIX + type).getDeclaredField(name);
@@ -60,7 +77,30 @@ public final class LocalLoginSmoke {
                         Object player = clientApi.getMethod("getLocalPlayer").invoke(client);
                         if (player == null || ticks <= firstTick) throw new IllegalStateException("No active player/ticks");
                         Object location = Class.forName("net.runelite.api.Actor").getMethod("getWorldLocation").invoke(player);
-                        System.out.println("LOCAL_SMOKE PASS logged-in player at " + location + "; received ticks=" + (ticks - firstTick));
+                        if (!loginReported) {
+                            System.out.println("LOCAL_SMOKE PASS logged-in player at " + location + "; received ticks=" + (ticks - firstTick));
+                            loginReported = true;
+                        }
+                        if ("1".equals(System.getenv("FLAVORSCAPE_VERIFY_COMMANDS"))) {
+                            if (commandStage == 0) { sendCommand("commands"); commandStage = 1; return false; }
+                            if (System.currentTimeMillis() - commandSent < 2000) return false;
+                            String menu = commandMenu(clientApi, client);
+                            if (commandStage == 1) {
+                                if (!menu.contains("FlavorScape Commands") || !menu.contains("accessible commands"))
+                                    throw new IllegalStateException("Command catalogue interface did not open");
+                                System.out.println("COMMANDS_SMOKE full catalogue opened");
+                                sendCommand("commands 1 save"); commandStage = 2; return false;
+                            }
+                            if (commandStage == 2) {
+                                if (!menu.contains("::save")) throw new IllegalStateException("Command search missing save");
+                                sendCommand("staffcommands"); commandStage = 3; return false;
+                            }
+                            if (commandStage == 3) {
+                                if (!menu.contains("::staffcommands [page] [search]")) throw new IllegalStateException("Staff catalogue missing");
+                                sendCommand("commands");
+                                System.out.println("COMMANDS_SMOKE PASS full list, search and staff alias via actual game packets/widgets");
+                            }
+                        }
                         return true;
                     }
                 } else { loggedInSince = 0; }
