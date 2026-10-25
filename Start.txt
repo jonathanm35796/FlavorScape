@@ -1,0 +1,59 @@
+# FlavorScape — Source Selection and Development Strategy
+
+I want to revive my former RuneScape Private Server, FlavorScape.
+
+My inspirations are Runite for authentic, responsive PvP combat and OS-PvP for its polished standalone client with custom settings.
+
+**I strongly prefer adapting a reputable, publicly available RSPS source over building an entire game from scratch.**
+
+I am willing to replace or substantially rewrite individual components where necessary, but I do not want to recreate mature systems unnecessarily.
+
+## Development priorities
+
+1. Find a reputable, well-developed OSRS-style server source with a compatible standalone client.
+2. Prioritize accurate combat, responsive PKing, reliable networking, and correct game-tick processing.
+3. Favor an existing source with substantial working gameplay and content over a bare framework, provided its architecture is maintainable.
+4. Develop a dedicated FlavorScape client with configurable settings, custom interfaces, hotkeys, performance options, and PvP quality-of-life features.
+5. Do not require RuneLite compatibility.
+6. Preserve working systems and improve them incrementally.
+7. Avoid outdated, insecure, incomplete, or poorly structured sources.
+8. Evaluate licensing, redistribution permissions, and intellectual-property risks before adopting a source.
+
+## Initial candidates
+
+Research and compare:
+
+- RS Mod: https://github.com/rsmod/rsmod
+- RSBox: https://github.com/vanicosrs/rsbox
+- Tarnish: https://rsps.org/resources/tarnish
+
+Expand the search to Rune-Server.org and other credible RSPS development communities.
+
+Do not limit the evaluation to these three candidates.
+
+## Instructions for Codex
+
+Act as an experienced RSPS developer and Java game-server engineer.
+
+Before writing code, conduct a detailed source-selection investigation.
+
+For each promising candidate:
+
+- Inspect the actual repository and code.
+- Verify that it builds.
+- Determine whether a compatible standalone client is available.
+- Assess existing PvP functionality and combat accuracy.
+- Evaluate the completeness of gameplay systems.
+- Identify bugs, security concerns, and technical debt.
+- Assess the difficulty of implementing custom client settings.
+- Review licensing and project maintenance.
+
+Distinguish verified findings from assumptions. Do not equate popularity with quality.
+
+Recommend the strongest foundation for a long-term FlavorScape project.
+
+**Do not start from scratch unless the evidence demonstrates that adapting existing sources would be more difficult or less maintainable.**
+
+The first development milestone should be a working local FlavorScape client and server, followed by improvements to PvP combat and client customization.
+
+Do not begin major implementation until I approve the recommended source.
