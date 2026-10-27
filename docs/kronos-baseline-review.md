@@ -1,5 +1,9 @@
 # Kronos baseline review
 
+## Owner-authorized private source backup, 2026-10-27
+
+The owner explicitly requested pushing the current project to the existing private `jonathanm35796/FlavorScape` repository. The blanket `main/` ignore has been replaced by exclusions for cache assets, player/runtime data, local credentials, toolchains and generated output. Upstream client notices/licenses are retained. Embedded legacy Discord webhooks and commented payment credentials were removed from source before preparing the backup; optional live announcements now read environment variables documented in `.env.example`. This private backup does not resolve the historical public-redistribution questions recorded below.
+
 ## Latest milestone: localhost login passed from main/
 
 On 2026-10-25, the separate main/ working copy built and launched successfully with the portable toolchains. A real desktop-client integration probe logged in the disposable Localtest account, reached state 30 with a local player at (2038,3577,0), and observed 16 incoming game ticks over ten seconds. Both listeners were confirmed bound to 127.0.0.1. Logs are .tools/main-GameServer.log, main-UpdateServer.log, and main-Client.log. See local-running.md for commands.

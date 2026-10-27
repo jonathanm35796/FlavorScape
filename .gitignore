@@ -12,8 +12,8 @@ research-sources/
 !.env.example
 *.pem
 *.key
-cache/
-data/cache/
+/cache/
+**/data/cache/
 saves/
 players/
 
@@ -23,5 +23,14 @@ players/
 Thumbs.db
 Desktop.ini
 
-# Local Kronos working source pending redistribution review
-/main/
+# Local runtime data and secrets; project source is included for the owner's private backup.
+/main/Cache/
+/main/.kotlin/
+**/server-data/
+**/server.properties
+**/local.properties
+**/out/
+*.jks
+*.p12
+*.pfx
+*.hprof

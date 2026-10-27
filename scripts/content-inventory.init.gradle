@@ -1,0 +1,13 @@
+allprojects {
+    afterEvaluate { project ->
+        if (project.path == ':flavorscape-server') {
+            tasks.register('contentInventoryAudit', JavaExec) {
+                dependsOn testClasses
+                classpath = sourceSets.test.runtimeClasspath
+                mainClass = 'io.ruin.tools.ContentInventoryAudit'
+                jvmArgs '--add-exports=java.base/jdk.internal.vm=ALL-UNNAMED'
+                workingDir = projectDir
+            }
+        }
+    }
+}

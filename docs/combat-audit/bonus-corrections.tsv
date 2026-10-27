@@ -1,0 +1,1171 @@
+id	name	field	server	wiki
+806	Bronze dart	range_attack_bonus	3.0	0.0
+807	Iron dart	range_attack_bonus	4.0	0.0
+807	Iron dart	ranged_strength_bonus	3.0	2.0
+808	Steel dart	range_attack_bonus	5.0	0.0
+808	Steel dart	ranged_strength_bonus	4.0	3.0
+809	Mithril dart	range_attack_bonus	8.0	0.0
+809	Mithril dart	ranged_strength_bonus	7.0	9.0
+810	Adamant dart	range_attack_bonus	11.0	0.0
+810	Adamant dart	ranged_strength_bonus	10.0	17.0
+811	Rune dart	range_attack_bonus	15.0	0.0
+811	Rune dart	ranged_strength_bonus	14.0	26.0
+812	Bronze dart(p)	range_attack_bonus	3.0	0.0
+813	Iron dart(p)	range_attack_bonus	4.0	0.0
+813	Iron dart(p)	ranged_strength_bonus	3.0	2.0
+814	Steel dart(p)	range_attack_bonus	5.0	0.0
+814	Steel dart(p)	ranged_strength_bonus	4.0	3.0
+815	Mithril dart(p)	range_attack_bonus	8.0	0.0
+815	Mithril dart(p)	ranged_strength_bonus	7.0	9.0
+816	Adamant dart(p)	range_attack_bonus	11.0	0.0
+816	Adamant dart(p)	ranged_strength_bonus	10.0	17.0
+817	Rune dart(p)	range_attack_bonus	15.0	0.0
+817	Rune dart(p)	ranged_strength_bonus	14.0	26.0
+825	Bronze javelin	ranged_strength_bonus	30.0	25.0
+826	Iron javelin	ranged_strength_bonus	50.0	42.0
+827	Steel javelin	ranged_strength_bonus	75.0	64.0
+828	Mithril javelin	ranged_strength_bonus	100.0	85.0
+829	Adamant javelin	ranged_strength_bonus	125.0	102.0
+830	Rune javelin	ranged_strength_bonus	145.0	124.0
+831	Bronze javelin(p)	range_attack_bonus	5.0	0.0
+831	Bronze javelin(p)	ranged_strength_bonus	6.0	25.0
+832	Iron javelin(p)	range_attack_bonus	8.0	0.0
+832	Iron javelin(p)	ranged_strength_bonus	10.0	42.0
+833	Steel javelin(p)	range_attack_bonus	12.0	0.0
+833	Steel javelin(p)	ranged_strength_bonus	12.0	64.0
+834	Mithril javelin(p)	range_attack_bonus	17.0	0.0
+834	Mithril javelin(p)	ranged_strength_bonus	18.0	85.0
+835	Adamant javelin(p)	range_attack_bonus	24.0	0.0
+835	Adamant javelin(p)	ranged_strength_bonus	28.0	102.0
+836	Rune javelin(p)	range_attack_bonus	38.0	0.0
+836	Rune javelin(p)	ranged_strength_bonus	42.0	124.0
+1011	Blue skirt	magic_attack_bonus	1.0	0.0
+1011	Blue skirt	magic_defence_bonus	1.0	0.0
+1013	Pink skirt	magic_attack_bonus	1.0	0.0
+1013	Pink skirt	magic_defence_bonus	1.0	0.0
+1015	Black skirt	magic_attack_bonus	1.0	0.0
+1015	Black skirt	magic_defence_bonus	1.0	0.0
+1065	Green d'hide vamb	stab_defence_bonus	3.0	1.0
+1065	Green d'hide vamb	crush_defence_bonus	4.0	2.0
+1067	Iron platelegs	range_attack_bonus	-7.0	-11.0
+1069	Steel platelegs	range_attack_bonus	-7.0	-11.0
+1071	Mithril platelegs	range_attack_bonus	-7.0	-11.0
+1073	Adamant platelegs	range_attack_bonus	-7.0	-11.0
+1075	Bronze platelegs	range_attack_bonus	-7.0	-11.0
+1077	Black platelegs	range_attack_bonus	-7.0	-11.0
+1079	Rune platelegs	range_attack_bonus	-7.0	-11.0
+1081	Iron plateskirt	range_attack_bonus	-7.0	-11.0
+1083	Steel plateskirt	range_attack_bonus	-7.0	-11.0
+1085	Mithril plateskirt	range_attack_bonus	-7.0	-11.0
+1087	Bronze plateskirt	range_attack_bonus	-7.0	-11.0
+1089	Black plateskirt	range_attack_bonus	-7.0	-11.0
+1091	Adamant plateskirt	range_attack_bonus	-7.0	-11.0
+1093	Rune plateskirt	range_attack_bonus	-7.0	-11.0
+1099	Green d'hide chaps	stab_defence_bonus	22.0	12.0
+1099	Green d'hide chaps	slash_defence_bonus	16.0	15.0
+1099	Green d'hide chaps	crush_defence_bonus	24.0	18.0
+1099	Green d'hide chaps	range_defence_bonus	22.0	17.0
+1115	Iron platebody	range_attack_bonus	-10.0	-15.0
+1117	Bronze platebody	range_attack_bonus	-10.0	-15.0
+1119	Steel platebody	range_attack_bonus	-10.0	-15.0
+1121	Mithril platebody	range_attack_bonus	-10.0	-15.0
+1123	Adamant platebody	range_attack_bonus	-10.0	-15.0
+1125	Black platebody	range_attack_bonus	-10.0	-15.0
+1127	Rune platebody	range_attack_bonus	-10.0	-15.0
+1135	Green d'hide body	stab_defence_bonus	40.0	18.0
+1135	Green d'hide body	slash_defence_bonus	32.0	27.0
+1135	Green d'hide body	crush_defence_bonus	45.0	24.0
+1135	Green d'hide body	range_defence_bonus	40.0	35.0
+1137	Iron med helm	range_attack_bonus	-1.0	0.0
+1139	Bronze med helm	range_attack_bonus	-1.0	0.0
+1141	Steel med helm	range_attack_bonus	-1.0	0.0
+1143	Mithril med helm	range_attack_bonus	-1.0	0.0
+1145	Adamant med helm	range_attack_bonus	-1.0	0.0
+1147	Rune med helm	range_attack_bonus	-1.0	0.0
+1149	Dragon med helm	range_attack_bonus	-1.0	0.0
+1151	Black med helm	range_attack_bonus	-1.0	0.0
+1153	Iron full helm	range_attack_bonus	-2.0	-3.0
+1155	Bronze full helm	range_attack_bonus	-2.0	-3.0
+1157	Steel full helm	range_attack_bonus	-2.0	-3.0
+1159	Mithril full helm	range_attack_bonus	-2.0	-3.0
+1161	Adamant full helm	range_attack_bonus	-2.0	-3.0
+1163	Rune full helm	range_attack_bonus	-2.0	-3.0
+1165	Black full helm	range_attack_bonus	-2.0	-3.0
+1173	Bronze sq shield	range_attack_bonus	-2.0	0.0
+1175	Iron sq shield	range_attack_bonus	-2.0	0.0
+1177	Steel sq shield	range_attack_bonus	-2.0	0.0
+1179	Black sq shield	range_attack_bonus	-2.0	0.0
+1181	Mithril sq shield	range_attack_bonus	-2.0	0.0
+1183	Adamant sq shield	range_attack_bonus	-2.0	0.0
+1185	Rune sq shield	range_attack_bonus	-2.0	0.0
+1187	Dragon sq shield	range_attack_bonus	-2.0	0.0
+1189	Bronze kiteshield	range_attack_bonus	-2.0	-3.0
+1191	Iron kiteshield	range_attack_bonus	-2.0	-3.0
+1193	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+1195	Black kiteshield	range_attack_bonus	-2.0	-3.0
+1197	Mithril kiteshield	range_attack_bonus	-2.0	-3.0
+1199	Adamant kiteshield	range_attack_bonus	-2.0	-3.0
+1201	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+1335	Iron warhammer	melee_strength_bonus	9.0	11.0
+1339	Steel warhammer	melee_strength_bonus	16.0	18.0
+1341	Black warhammer	melee_strength_bonus	19.0	22.0
+1343	Mithril warhammer	melee_strength_bonus	20.0	27.0
+1345	Adamant warhammer	crush_attack_bonus	33.0	35.0
+1345	Adamant warhammer	melee_strength_bonus	31.0	39.0
+1347	Rune warhammer	melee_strength_bonus	48.0	62.0
+1391	Battlestaff	magic_attack_bonus	10.0	12.0
+1391	Battlestaff	magic_defence_bonus	10.0	12.0
+1393	Fire battlestaff	magic_attack_bonus	10.0	12.0
+1393	Fire battlestaff	magic_defence_bonus	10.0	12.0
+1395	Water battlestaff	magic_attack_bonus	10.0	12.0
+1395	Water battlestaff	magic_defence_bonus	10.0	12.0
+1397	Air battlestaff	magic_attack_bonus	10.0	12.0
+1397	Air battlestaff	magic_defence_bonus	10.0	12.0
+1399	Earth battlestaff	magic_attack_bonus	10.0	12.0
+1399	Earth battlestaff	magic_defence_bonus	10.0	12.0
+1401	Mystic fire staff	magic_attack_bonus	10.0	14.0
+1401	Mystic fire staff	magic_defence_bonus	10.0	14.0
+1403	Mystic water staff	magic_attack_bonus	10.0	14.0
+1403	Mystic water staff	magic_defence_bonus	10.0	14.0
+1405	Mystic air staff	magic_attack_bonus	10.0	14.0
+1405	Mystic air staff	magic_defence_bonus	10.0	14.0
+1407	Mystic earth staff	magic_attack_bonus	10.0	14.0
+1407	Mystic earth staff	magic_defence_bonus	10.0	14.0
+2487	Blue d'hide vamb	stab_defence_bonus	4.0	2.0
+2487	Blue d'hide vamb	crush_defence_bonus	5.0	3.0
+2489	Red d'hide vamb	stab_defence_bonus	5.0	3.0
+2489	Red d'hide vamb	crush_defence_bonus	6.0	4.0
+2491	Black d'hide vamb	stab_defence_bonus	6.0	4.0
+2491	Black d'hide vamb	crush_defence_bonus	7.0	5.0
+2493	Blue d'hide chaps	stab_defence_bonus	25.0	13.0
+2493	Blue d'hide chaps	slash_defence_bonus	19.0	16.0
+2493	Blue d'hide chaps	crush_defence_bonus	27.0	20.0
+2493	Blue d'hide chaps	range_defence_bonus	25.0	20.0
+2495	Red d'hide chaps	stab_defence_bonus	28.0	15.0
+2495	Red d'hide chaps	slash_defence_bonus	22.0	18.0
+2495	Red d'hide chaps	crush_defence_bonus	30.0	22.0
+2495	Red d'hide chaps	magic_defence_bonus	20.0	18.0
+2495	Red d'hide chaps	range_defence_bonus	28.0	20.0
+2497	Black d'hide chaps	stab_defence_bonus	31.0	18.0
+2497	Black d'hide chaps	slash_defence_bonus	25.0	20.0
+2497	Black d'hide chaps	crush_defence_bonus	33.0	26.0
+2497	Black d'hide chaps	magic_defence_bonus	28.0	23.0
+2497	Black d'hide chaps	range_defence_bonus	31.0	26.0
+2499	Blue d'hide body	stab_defence_bonus	45.0	23.0
+2499	Blue d'hide body	slash_defence_bonus	37.0	30.0
+2499	Blue d'hide body	crush_defence_bonus	50.0	30.0
+2499	Blue d'hide body	magic_defence_bonus	30.0	28.0
+2499	Blue d'hide body	range_defence_bonus	45.0	40.0
+2501	Red d'hide body	stab_defence_bonus	50.0	26.0
+2501	Red d'hide body	slash_defence_bonus	42.0	34.0
+2501	Red d'hide body	crush_defence_bonus	55.0	36.0
+2501	Red d'hide body	magic_defence_bonus	40.0	36.0
+2501	Red d'hide body	range_defence_bonus	50.0	45.0
+2503	Black d'hide body	stab_defence_bonus	55.0	30.0
+2503	Black d'hide body	slash_defence_bonus	47.0	38.0
+2503	Black d'hide body	crush_defence_bonus	60.0	45.0
+2503	Black d'hide body	magic_defence_bonus	50.0	45.0
+2503	Black d'hide body	range_defence_bonus	55.0	50.0
+2583	Black platebody (t)	range_attack_bonus	-10.0	-15.0
+2585	Black platelegs (t)	range_attack_bonus	-7.0	-11.0
+2587	Black full helm (t)	range_attack_bonus	-2.0	-3.0
+2591	Black platebody (g)	range_attack_bonus	-10.0	-15.0
+2593	Black platelegs (g)	range_attack_bonus	-7.0	-11.0
+2595	Black full helm (g)	range_attack_bonus	-2.0	-3.0
+2599	Adamant platebody (t)	range_attack_bonus	-10.0	-15.0
+2601	Adamant platelegs (t)	range_attack_bonus	-7.0	-11.0
+2605	Adamant full helm (t)	range_attack_bonus	-2.0	-3.0
+2607	Adamant platebody (g)	range_attack_bonus	-10.0	-15.0
+2609	Adamant platelegs (g)	range_attack_bonus	-7.0	-11.0
+2613	Adamant full helm (g)	range_attack_bonus	-2.0	-3.0
+2615	Rune platebody (g)	range_attack_bonus	-10.0	-15.0
+2617	Rune platelegs (g)	range_attack_bonus	-7.0	-11.0
+2619	Rune full helm (g)	range_attack_bonus	-2.0	-3.0
+2623	Rune platebody (t)	range_attack_bonus	-10.0	-15.0
+2625	Rune platelegs (t)	range_attack_bonus	-7.0	-11.0
+2627	Rune full helm (t)	range_attack_bonus	-2.0	-3.0
+2653	Zamorak platebody	range_attack_bonus	-10.0	-15.0
+2653	Zamorak platebody	prayer_bonus	0.0	1.0
+2655	Zamorak platelegs	range_attack_bonus	-7.0	-11.0
+2655	Zamorak platelegs	prayer_bonus	0.0	1.0
+2657	Zamorak full helm	range_attack_bonus	-2.0	-3.0
+2657	Zamorak full helm	prayer_bonus	0.0	1.0
+2659	Zamorak kiteshield	prayer_bonus	0.0	1.0
+2661	Saradomin platebody	range_attack_bonus	-10.0	-15.0
+2661	Saradomin platebody	prayer_bonus	0.0	1.0
+2663	Saradomin platelegs	range_attack_bonus	-7.0	-11.0
+2663	Saradomin platelegs	prayer_bonus	0.0	1.0
+2665	Saradomin full helm	range_attack_bonus	-2.0	-3.0
+2665	Saradomin full helm	prayer_bonus	0.0	1.0
+2667	Saradomin kiteshield	prayer_bonus	0.0	1.0
+2669	Guthix platebody	range_attack_bonus	-10.0	-15.0
+2669	Guthix platebody	prayer_bonus	0.0	1.0
+2671	Guthix platelegs	range_attack_bonus	-7.0	-11.0
+2671	Guthix platelegs	prayer_bonus	0.0	1.0
+2673	Guthix full helm	range_attack_bonus	-2.0	-3.0
+2673	Guthix full helm	prayer_bonus	0.0	1.0
+2675	Guthix kiteshield	prayer_bonus	0.0	1.0
+3053	Lava battlestaff	magic_attack_bonus	10.0	12.0
+3053	Lava battlestaff	magic_defence_bonus	10.0	12.0
+3054	Mystic lava staff	magic_attack_bonus	10.0	14.0
+3054	Mystic lava staff	magic_defence_bonus	10.0	14.0
+3093	Black dart	range_attack_bonus	7.0	0.0
+3094	Black dart(p)	range_attack_bonus	7.0	0.0
+3194	Steel halberd	slash_defence_bonus	2.0	1.0
+3194	Steel halberd	crush_defence_bonus	3.0	2.0
+3472	Black plateskirt (t)	range_attack_bonus	-7.0	-11.0
+3473	Black plateskirt (g)	range_attack_bonus	-7.0	-11.0
+3474	Adamant plateskirt (t)	range_attack_bonus	-7.0	-11.0
+3475	Adamant plateskirt (g)	range_attack_bonus	-7.0	-11.0
+3476	Rune plateskirt (g)	range_attack_bonus	-7.0	-11.0
+3477	Rune plateskirt (t)	range_attack_bonus	-7.0	-11.0
+3478	Zamorak plateskirt	range_attack_bonus	-7.0	-11.0
+3478	Zamorak plateskirt	prayer_bonus	0.0	1.0
+3479	Saradomin plateskirt	range_attack_bonus	-7.0	-11.0
+3479	Saradomin plateskirt	prayer_bonus	0.0	1.0
+3480	Guthix plateskirt	range_attack_bonus	-7.0	-11.0
+3480	Guthix plateskirt	prayer_bonus	0.0	1.0
+3481	Gilded platebody	range_attack_bonus	-10.0	-15.0
+3483	Gilded platelegs	range_attack_bonus	-7.0	-11.0
+3485	Gilded plateskirt	range_attack_bonus	-7.0	-11.0
+3486	Gilded full helm	range_attack_bonus	-2.0	-3.0
+3488	Gilded kiteshield	range_attack_bonus	-2.0	-3.0
+4087	Dragon platelegs	range_attack_bonus	-7.0	-11.0
+4565	Easter basket	stab_attack_bonus	0.0	-100.0
+4565	Easter basket	slash_attack_bonus	0.0	-100.0
+4565	Easter basket	crush_attack_bonus	0.0	-50.0
+4565	Easter basket	melee_strength_bonus	0.0	-10.0
+4585	Dragon plateskirt	range_attack_bonus	-7.0	-11.0
+4708	Ahrim's hood	magic_damage_bonus	0.0	1.0
+4712	Ahrim's robetop	magic_damage_bonus	0.0	1.0
+4714	Ahrim's robeskirt	magic_damage_bonus	0.0	1.0
+4722	Dharok's platelegs	range_attack_bonus	-7.0	-11.0
+4730	Guthan's chainskirt	range_attack_bonus	-7.0	-11.0
+4751	Torag's platelegs	range_attack_bonus	-7.0	-11.0
+4759	Verac's plateskirt	range_attack_bonus	-7.0	-11.0
+4856	Ahrim's hood 100	magic_damage_bonus	0.0	1.0
+4857	Ahrim's hood 75	magic_damage_bonus	0.0	1.0
+4858	Ahrim's hood 50	magic_damage_bonus	0.0	1.0
+4859	Ahrim's hood 25	magic_damage_bonus	0.0	1.0
+4868	Ahrim's robetop 100	magic_damage_bonus	0.0	1.0
+4869	Ahrim's robetop 75	magic_damage_bonus	0.0	1.0
+4870	Ahrim's robetop 50	magic_damage_bonus	0.0	1.0
+4871	Ahrim's robetop 25	magic_damage_bonus	0.0	1.0
+4874	Ahrim's robeskirt 100	magic_damage_bonus	0.0	1.0
+4875	Ahrim's robeskirt 75	magic_damage_bonus	0.0	1.0
+4876	Ahrim's robeskirt 50	magic_damage_bonus	0.0	1.0
+4877	Ahrim's robeskirt 25	magic_damage_bonus	0.0	1.0
+4898	Dharok's platelegs 100	range_attack_bonus	-7.0	-11.0
+4899	Dharok's platelegs 75	range_attack_bonus	-7.0	-11.0
+4900	Dharok's platelegs 50	range_attack_bonus	-7.0	-11.0
+4901	Dharok's platelegs 25	range_attack_bonus	-7.0	-11.0
+4922	Guthan's chainskirt 100	range_attack_bonus	-7.0	-11.0
+4923	Guthan's chainskirt 75	range_attack_bonus	-7.0	-11.0
+4924	Guthan's chainskirt 50	range_attack_bonus	-7.0	-11.0
+4925	Guthan's chainskirt 25	range_attack_bonus	-7.0	-11.0
+4970	Torag's platelegs 100	range_attack_bonus	-7.0	-11.0
+4971	Torag's platelegs 75	range_attack_bonus	-7.0	-11.0
+4972	Torag's platelegs 50	range_attack_bonus	-7.0	-11.0
+4973	Torag's platelegs 25	range_attack_bonus	-7.0	-11.0
+4994	Verac's plateskirt 100	range_attack_bonus	-7.0	-11.0
+4995	Verac's plateskirt 75	range_attack_bonus	-7.0	-11.0
+4996	Verac's plateskirt 50	range_attack_bonus	-7.0	-11.0
+4997	Verac's plateskirt 25	range_attack_bonus	-7.0	-11.0
+5574	Initiate sallet	range_attack_bonus	-2.0	-3.0
+5575	Initiate hauberk	range_attack_bonus	-10.0	-15.0
+5576	Initiate cuisse	range_attack_bonus	-7.0	-11.0
+5628	Bronze dart(p+)	range_attack_bonus	3.0	0.0
+5629	Iron dart(p+)	range_attack_bonus	4.0	0.0
+5629	Iron dart(p+)	ranged_strength_bonus	3.0	2.0
+5630	Steel dart(p+)	range_attack_bonus	5.0	0.0
+5630	Steel dart(p+)	ranged_strength_bonus	4.0	3.0
+5631	Black dart(p+)	range_attack_bonus	7.0	0.0
+5632	Mithril dart(p+)	range_attack_bonus	8.0	0.0
+5632	Mithril dart(p+)	ranged_strength_bonus	7.0	9.0
+5633	Adamant dart(p+)	range_attack_bonus	11.0	0.0
+5633	Adamant dart(p+)	ranged_strength_bonus	10.0	17.0
+5634	Rune dart(p+)	range_attack_bonus	15.0	0.0
+5634	Rune dart(p+)	ranged_strength_bonus	14.0	26.0
+5635	Bronze dart(p++)	range_attack_bonus	3.0	0.0
+5636	Iron dart(p++)	range_attack_bonus	4.0	0.0
+5636	Iron dart(p++)	ranged_strength_bonus	3.0	2.0
+5637	Steel dart(p++)	range_attack_bonus	5.0	0.0
+5637	Steel dart(p++)	ranged_strength_bonus	4.0	3.0
+5638	Black dart(p++)	range_attack_bonus	7.0	0.0
+5639	Mithril dart(p++)	range_attack_bonus	8.0	0.0
+5639	Mithril dart(p++)	ranged_strength_bonus	7.0	9.0
+5640	Adamant dart(p++)	range_attack_bonus	11.0	0.0
+5640	Adamant dart(p++)	ranged_strength_bonus	10.0	17.0
+5641	Rune dart(p++)	range_attack_bonus	15.0	0.0
+5641	Rune dart(p++)	ranged_strength_bonus	14.0	26.0
+5642	Bronze javelin(p+)	range_attack_bonus	5.0	0.0
+5642	Bronze javelin(p+)	ranged_strength_bonus	6.0	25.0
+5643	Iron javelin(p+)	range_attack_bonus	8.0	0.0
+5643	Iron javelin(p+)	ranged_strength_bonus	10.0	42.0
+5644	Steel javelin(p+)	range_attack_bonus	12.0	0.0
+5644	Steel javelin(p+)	ranged_strength_bonus	12.0	64.0
+5645	Mithril javelin(p+)	range_attack_bonus	17.0	0.0
+5645	Mithril javelin(p+)	ranged_strength_bonus	18.0	85.0
+5646	Adamant javelin(p+)	range_attack_bonus	24.0	0.0
+5646	Adamant javelin(p+)	ranged_strength_bonus	28.0	102.0
+5647	Rune javelin(p+)	range_attack_bonus	38.0	0.0
+5647	Rune javelin(p+)	ranged_strength_bonus	42.0	124.0
+5648	Bronze javelin(p++)	range_attack_bonus	5.0	0.0
+5648	Bronze javelin(p++)	ranged_strength_bonus	6.0	25.0
+5649	Iron javelin(p++)	range_attack_bonus	8.0	0.0
+5649	Iron javelin(p++)	ranged_strength_bonus	10.0	42.0
+5650	Steel javelin(p++)	range_attack_bonus	12.0	0.0
+5650	Steel javelin(p++)	ranged_strength_bonus	12.0	64.0
+5651	Mithril javelin(p++)	range_attack_bonus	17.0	0.0
+5651	Mithril javelin(p++)	ranged_strength_bonus	18.0	85.0
+5652	Adamant javelin(p++)	range_attack_bonus	24.0	0.0
+5652	Adamant javelin(p++)	ranged_strength_bonus	28.0	102.0
+5653	Rune javelin(p++)	range_attack_bonus	38.0	0.0
+5653	Rune javelin(p++)	ranged_strength_bonus	42.0	124.0
+6562	Mud battlestaff	magic_attack_bonus	10.0	12.0
+6562	Mud battlestaff	magic_defence_bonus	10.0	12.0
+6563	Mystic mud staff	magic_attack_bonus	10.0	14.0
+6563	Mystic mud staff	magic_defence_bonus	10.0	14.0
+6613	White warhammer	melee_strength_bonus	19.0	22.0
+6617	White platebody	range_attack_bonus	-10.0	-15.0
+6621	White med helm	range_attack_bonus	-1.0	0.0
+6623	White full helm	range_attack_bonus	-2.0	-3.0
+6625	White platelegs	range_attack_bonus	-7.0	-11.0
+6627	White plateskirt	range_attack_bonus	-7.0	-11.0
+6631	White sq shield	range_attack_bonus	-2.0	0.0
+6633	White kiteshield	range_attack_bonus	-2.0	-3.0
+6731	Seers ring	magic_damage_bonus	0.0	0.2
+6746	Darklight	slash_attack_bonus	28.0	16.0
+6746	Darklight	melee_strength_bonus	14.0	13.0
+6889	Mage's book	magic_damage_bonus	0.0	2.0
+6914	Master wand	magic_damage_bonus	0.0	10.0
+6916	Infinity top	magic_damage_bonus	0.0	1.0
+6918	Infinity hat	magic_damage_bonus	0.0	1.0
+6924	Infinity bottoms	magic_damage_bonus	0.0	1.0
+7170	Mud pie	stab_attack_bonus	0.0	-100.0
+7170	Mud pie	slash_attack_bonus	0.0	-100.0
+7170	Mud pie	crush_attack_bonus	0.0	-50.0
+7170	Mud pie	melee_strength_bonus	0.0	-10.0
+7332	Black shield (h1)	range_attack_bonus	-2.0	-3.0
+7334	Adamant shield (h1)	range_attack_bonus	-2.0	-3.0
+7336	Rune shield (h1)	range_attack_bonus	-2.0	-3.0
+7338	Black shield (h2)	range_attack_bonus	-2.0	-3.0
+7340	Adamant shield (h2)	range_attack_bonus	-2.0	-3.0
+7342	Rune shield (h2)	range_attack_bonus	-2.0	-3.0
+7344	Black shield (h3)	range_attack_bonus	-2.0	-3.0
+7346	Adamant shield (h3)	range_attack_bonus	-2.0	-3.0
+7348	Rune shield (h3)	range_attack_bonus	-2.0	-3.0
+7350	Black shield (h4)	range_attack_bonus	-2.0	-3.0
+7352	Adamant shield (h4)	range_attack_bonus	-2.0	-3.0
+7354	Rune shield (h4)	range_attack_bonus	-2.0	-3.0
+7356	Black shield (h5)	range_attack_bonus	-2.0	-3.0
+7358	Adamant shield (h5)	range_attack_bonus	-2.0	-3.0
+7360	Rune shield (h5)	range_attack_bonus	-2.0	-3.0
+7370	Green d'hide body (g)	stab_defence_bonus	40.0	18.0
+7370	Green d'hide body (g)	slash_defence_bonus	32.0	27.0
+7370	Green d'hide body (g)	crush_defence_bonus	45.0	24.0
+7370	Green d'hide body (g)	range_defence_bonus	40.0	35.0
+7372	Green d'hide body (t)	stab_defence_bonus	40.0	18.0
+7372	Green d'hide body (t)	slash_defence_bonus	32.0	27.0
+7372	Green d'hide body (t)	crush_defence_bonus	45.0	24.0
+7372	Green d'hide body (t)	range_defence_bonus	40.0	35.0
+7374	Blue d'hide body (g)	stab_defence_bonus	45.0	23.0
+7374	Blue d'hide body (g)	slash_defence_bonus	37.0	30.0
+7374	Blue d'hide body (g)	crush_defence_bonus	50.0	30.0
+7374	Blue d'hide body (g)	magic_defence_bonus	30.0	28.0
+7374	Blue d'hide body (g)	range_defence_bonus	45.0	40.0
+7376	Blue d'hide body (t)	stab_defence_bonus	45.0	23.0
+7376	Blue d'hide body (t)	slash_defence_bonus	37.0	30.0
+7376	Blue d'hide body (t)	crush_defence_bonus	50.0	30.0
+7376	Blue d'hide body (t)	magic_defence_bonus	30.0	28.0
+7376	Blue d'hide body (t)	range_defence_bonus	45.0	40.0
+7378	Green d'hide chaps (g)	stab_defence_bonus	22.0	12.0
+7378	Green d'hide chaps (g)	slash_defence_bonus	16.0	15.0
+7378	Green d'hide chaps (g)	crush_defence_bonus	24.0	18.0
+7378	Green d'hide chaps (g)	range_defence_bonus	22.0	17.0
+7380	Green d'hide chaps (t)	stab_defence_bonus	22.0	12.0
+7380	Green d'hide chaps (t)	slash_defence_bonus	16.0	15.0
+7380	Green d'hide chaps (t)	crush_defence_bonus	24.0	18.0
+7380	Green d'hide chaps (t)	range_defence_bonus	22.0	17.0
+7382	Blue d'hide chaps (g)	stab_defence_bonus	25.0	13.0
+7382	Blue d'hide chaps (g)	slash_defence_bonus	19.0	16.0
+7382	Blue d'hide chaps (g)	crush_defence_bonus	27.0	20.0
+7382	Blue d'hide chaps (g)	range_defence_bonus	25.0	20.0
+7384	Blue d'hide chaps (t)	stab_defence_bonus	25.0	13.0
+7384	Blue d'hide chaps (t)	slash_defence_bonus	19.0	16.0
+7384	Blue d'hide chaps (t)	crush_defence_bonus	27.0	20.0
+7384	Blue d'hide chaps (t)	range_defence_bonus	25.0	20.0
+7386	Blue skirt (g)	magic_attack_bonus	1.0	0.0
+7386	Blue skirt (g)	magic_defence_bonus	1.0	0.0
+7388	Blue skirt (t)	magic_attack_bonus	1.0	0.0
+7388	Blue skirt (t)	magic_defence_bonus	1.0	0.0
+7439	Spatula	melee_strength_bonus	22.0	26.0
+7539	Crab helmet	stab_defence_bonus	4.0	5.0
+7539	Crab helmet	slash_defence_bonus	5.0	4.0
+7806	Anger sword	stab_attack_bonus	20.0	2.0
+7806	Anger sword	slash_attack_bonus	20.0	2.0
+7806	Anger sword	crush_attack_bonus	20.0	2.0
+7806	Anger sword	melee_strength_bonus	5.0	0.0
+7807	Anger battleaxe	stab_attack_bonus	20.0	2.0
+7807	Anger battleaxe	slash_attack_bonus	20.0	2.0
+7807	Anger battleaxe	crush_attack_bonus	20.0	2.0
+7807	Anger battleaxe	melee_strength_bonus	13.0	0.0
+7808	Anger mace	stab_attack_bonus	20.0	2.0
+7808	Anger mace	slash_attack_bonus	20.0	2.0
+7808	Anger mace	crush_attack_bonus	20.0	2.0
+7808	Anger mace	melee_strength_bonus	5.0	0.0
+7809	Anger spear	stab_attack_bonus	20.0	2.0
+7809	Anger spear	slash_attack_bonus	20.0	2.0
+7809	Anger spear	crush_attack_bonus	20.0	2.0
+7809	Anger spear	melee_strength_bonus	6.0	0.0
+8841	Void knight mace	magic_damage_bonus	10.0	0.0
+8842	Void knight gloves	magic_defence_bonus	6.0	4.0
+8856	Defensive shield	range_defence_bonus	8.0	7.0
+9013	Skull sceptre	magic_attack_bonus	4.0	10.0
+9672	Proselyte sallet	range_attack_bonus	-2.0	-3.0
+9674	Proselyte hauberk	range_attack_bonus	-10.0	-15.0
+9676	Proselyte cuisse	range_attack_bonus	-7.0	-11.0
+9676	Proselyte cuisse	prayer_bonus	5.0	6.0
+9678	Proselyte tasset	range_attack_bonus	-7.0	-11.0
+9678	Proselyte tasset	prayer_bonus	5.0	6.0
+10286	Rune helm (h1)	range_attack_bonus	-2.0	-3.0
+10288	Rune helm (h2)	range_attack_bonus	-2.0	-3.0
+10290	Rune helm (h3)	range_attack_bonus	-2.0	-3.0
+10292	Rune helm (h4)	range_attack_bonus	-2.0	-3.0
+10294	Rune helm (h5)	range_attack_bonus	-2.0	-3.0
+10296	Adamant helm (h1)	range_attack_bonus	-2.0	-3.0
+10298	Adamant helm (h2)	range_attack_bonus	-2.0	-3.0
+10300	Adamant helm (h3)	range_attack_bonus	-2.0	-3.0
+10302	Adamant helm (h4)	range_attack_bonus	-2.0	-3.0
+10304	Adamant helm (h5)	range_attack_bonus	-2.0	-3.0
+10306	Black helm (h1)	range_attack_bonus	-2.0	-3.0
+10308	Black helm (h2)	range_attack_bonus	-2.0	-3.0
+10310	Black helm (h3)	range_attack_bonus	-2.0	-3.0
+10312	Black helm (h4)	range_attack_bonus	-2.0	-3.0
+10314	Black helm (h5)	range_attack_bonus	-2.0	-3.0
+10338	3rd age robe top	magic_damage_bonus	0.0	1.0
+10340	3rd age robe	magic_damage_bonus	0.0	1.0
+10342	3rd age mage hat	magic_damage_bonus	0.0	1.0
+10368	Zamorak bracers	prayer_bonus	0.0	1.0
+10372	Zamorak chaps	prayer_bonus	0.0	1.0
+10374	Zamorak coif	prayer_bonus	0.0	1.0
+10376	Guthix bracers	prayer_bonus	0.0	1.0
+10380	Guthix chaps	prayer_bonus	0.0	1.0
+10382	Guthix coif	prayer_bonus	0.0	1.0
+10384	Saradomin bracers	prayer_bonus	0.0	1.0
+10388	Saradomin chaps	prayer_bonus	0.0	1.0
+10390	Saradomin coif	prayer_bonus	0.0	1.0
+10458	Saradomin robe top	prayer_bonus	4.0	6.0
+10460	Zamorak robe top	prayer_bonus	4.0	6.0
+10462	Guthix robe top	prayer_bonus	4.0	6.0
+10464	Saradomin robe legs	prayer_bonus	4.0	5.0
+10466	Guthix robe legs	prayer_bonus	4.0	5.0
+10468	Zamorak robe legs	prayer_bonus	4.0	5.0
+10501	Snowball	range_attack_bonus	10.0	0.0
+10501	Snowball	ranged_strength_bonus	1.0	0.0
+10547	Healer hat	magic_attack_bonus	7.0	6.0
+10547	Healer hat	magic_defence_bonus	8.0	7.0
+10548	Fighter hat	stab_defence_bonus	30.0	27.0
+10548	Fighter hat	slash_defence_bonus	32.0	29.0
+10548	Fighter hat	crush_defence_bonus	28.0	26.0
+10550	Ranger hat	range_attack_bonus	7.0	6.0
+10550	Ranger hat	range_defence_bonus	9.0	8.0
+10551	Fighter torso	magic_attack_bonus	-30.0	-40.0
+10551	Fighter torso	stab_defence_bonus	66.0	62.0
+10551	Fighter torso	magic_defence_bonus	-6.0	-10.0
+10552	Runner boots	magic_attack_bonus	-3.0	1.0
+10552	Runner boots	range_attack_bonus	-1.0	1.0
+10552	Runner boots	stab_defence_bonus	12.0	8.0
+10552	Runner boots	slash_defence_bonus	13.0	8.0
+10552	Runner boots	crush_defence_bonus	14.0	8.0
+10552	Runner boots	melee_strength_bonus	2.0	0.0
+10555	Penance skirt	range_attack_bonus	16.0	15.0
+10555	Penance skirt	range_defence_bonus	27.0	26.0
+11230	Dragon dart	range_attack_bonus	18.0	0.0
+11230	Dragon dart	ranged_strength_bonus	20.0	35.0
+11231	Dragon dart(p)	range_attack_bonus	18.0	0.0
+11231	Dragon dart(p)	ranged_strength_bonus	20.0	35.0
+11233	Dragon dart(p+)	range_attack_bonus	18.0	0.0
+11233	Dragon dart(p+)	ranged_strength_bonus	20.0	35.0
+11234	Dragon dart(p++)	range_attack_bonus	18.0	0.0
+11234	Dragon dart(p++)	ranged_strength_bonus	20.0	35.0
+11335	Dragon full helm	range_attack_bonus	-2.0	-3.0
+11705	Beach boxing gloves	crush_attack_bonus	0.0	1.0
+11705	Beach boxing gloves	slash_defence_bonus	0.0	1.0
+11705	Beach boxing gloves	crush_defence_bonus	0.0	1.0
+11706	Beach boxing gloves	crush_attack_bonus	0.0	1.0
+11706	Beach boxing gloves	slash_defence_bonus	0.0	1.0
+11706	Beach boxing gloves	crush_defence_bonus	0.0	1.0
+11707	Cursed goblin hammer	stab_attack_bonus	0.0	-100.0
+11707	Cursed goblin hammer	slash_attack_bonus	0.0	-100.0
+11707	Cursed goblin hammer	crush_attack_bonus	0.0	-100.0
+11707	Cursed goblin hammer	melee_strength_bonus	0.0	-100.0
+11710	Anti-dragon shield (nz)	stab_defence_bonus	0.0	7.0
+11710	Anti-dragon shield (nz)	slash_defence_bonus	0.0	9.0
+11710	Anti-dragon shield (nz)	crush_defence_bonus	0.0	8.0
+11710	Anti-dragon shield (nz)	magic_defence_bonus	0.0	2.0
+11710	Anti-dragon shield (nz)	range_defence_bonus	0.0	8.0
+11711	Magic secateurs (nz)	stab_attack_bonus	0.0	7.0
+11711	Magic secateurs (nz)	slash_attack_bonus	0.0	9.0
+11711	Magic secateurs (nz)	crush_attack_bonus	0.0	-5.0
+11711	Magic secateurs (nz)	magic_attack_bonus	0.0	1.0
+11711	Magic secateurs (nz)	slash_defence_bonus	0.0	1.0
+11711	Magic secateurs (nz)	magic_defence_bonus	0.0	1.0
+11711	Magic secateurs (nz)	melee_strength_bonus	0.0	1.0
+11719	Rune pickaxe (nz)	stab_attack_bonus	0.0	26.0
+11719	Rune pickaxe (nz)	slash_attack_bonus	0.0	-2.0
+11719	Rune pickaxe (nz)	crush_attack_bonus	0.0	24.0
+11719	Rune pickaxe (nz)	slash_defence_bonus	0.0	1.0
+11719	Rune pickaxe (nz)	melee_strength_bonus	0.0	29.0
+11720	Mithril pickaxe (nz)	stab_attack_bonus	0.0	12.0
+11720	Mithril pickaxe (nz)	slash_attack_bonus	0.0	-2.0
+11720	Mithril pickaxe (nz)	crush_attack_bonus	0.0	10.0
+11720	Mithril pickaxe (nz)	slash_defence_bonus	0.0	1.0
+11720	Mithril pickaxe (nz)	melee_strength_bonus	0.0	13.0
+11721	Iron pickaxe (nz)	stab_attack_bonus	0.0	5.0
+11721	Iron pickaxe (nz)	slash_attack_bonus	0.0	-2.0
+11721	Iron pickaxe (nz)	crush_attack_bonus	0.0	3.0
+11721	Iron pickaxe (nz)	slash_defence_bonus	0.0	1.0
+11721	Iron pickaxe (nz)	melee_strength_bonus	0.0	7.0
+11770	Seers ring (i)	magic_defence_bonus	6.0	12.0
+11770	Seers ring (i)	magic_damage_bonus	0.0	0.5
+11784	Black mask (i)	stab_defence_bonus	0.0	9.0
+11784	Black mask (i)	slash_defence_bonus	0.0	10.0
+11784	Black mask (i)	crush_defence_bonus	0.0	8.0
+11784	Black mask (i)	magic_defence_bonus	0.0	-1.0
+11784	Black mask (i)	range_defence_bonus	0.0	9.0
+11787	Steam battlestaff	stab_attack_bonus	0.0	7.0
+11787	Steam battlestaff	slash_attack_bonus	0.0	-1.0
+11787	Steam battlestaff	crush_attack_bonus	0.0	28.0
+11787	Steam battlestaff	magic_attack_bonus	0.0	12.0
+11787	Steam battlestaff	stab_defence_bonus	0.0	2.0
+11787	Steam battlestaff	slash_defence_bonus	0.0	3.0
+11787	Steam battlestaff	crush_defence_bonus	0.0	1.0
+11787	Steam battlestaff	magic_defence_bonus	0.0	12.0
+11787	Steam battlestaff	melee_strength_bonus	0.0	35.0
+11789	Mystic steam staff	stab_attack_bonus	0.0	10.0
+11789	Mystic steam staff	slash_attack_bonus	0.0	-1.0
+11789	Mystic steam staff	crush_attack_bonus	0.0	40.0
+11789	Mystic steam staff	magic_attack_bonus	0.0	14.0
+11789	Mystic steam staff	stab_defence_bonus	0.0	2.0
+11789	Mystic steam staff	slash_defence_bonus	0.0	3.0
+11789	Mystic steam staff	crush_defence_bonus	0.0	1.0
+11789	Mystic steam staff	magic_defence_bonus	0.0	14.0
+11789	Mystic steam staff	melee_strength_bonus	0.0	50.0
+11826	Armadyl helmet	slash_defence_bonus	6.0	8.0
+11924	Malediction ward	magic_damage_bonus	0.0	2.0
+11926	Odium ward	ranged_strength_bonus	0.0	4.0
+11998	Smoke battlestaff	magic_attack_bonus	10.0	12.0
+11998	Smoke battlestaff	magic_defence_bonus	10.0	12.0
+12000	Mystic smoke staff	magic_attack_bonus	10.0	14.0
+12000	Mystic smoke staff	magic_defence_bonus	10.0	14.0
+12002	Occult necklace	magic_damage_bonus	10.0	5.0
+12197	Ancient cloak	magic_attack_bonus	0.0	1.0
+12197	Ancient cloak	stab_defence_bonus	0.0	3.0
+12197	Ancient cloak	slash_defence_bonus	0.0	3.0
+12197	Ancient cloak	crush_defence_bonus	0.0	3.0
+12197	Ancient cloak	magic_defence_bonus	0.0	3.0
+12197	Ancient cloak	range_defence_bonus	0.0	3.0
+12197	Ancient cloak	prayer_bonus	0.0	3.0
+12205	Bronze platebody (g)	range_attack_bonus	-10.0	-15.0
+12207	Bronze platelegs (g)	range_attack_bonus	-7.0	-11.0
+12209	Bronze plateskirt (g)	range_attack_bonus	-7.0	-11.0
+12211	Bronze full helm (g)	range_attack_bonus	-2.0	-3.0
+12215	Bronze platebody (t)	range_attack_bonus	-10.0	-15.0
+12217	Bronze platelegs (t)	range_attack_bonus	-7.0	-11.0
+12219	Bronze plateskirt (t)	range_attack_bonus	-7.0	-11.0
+12221	Bronze full helm (t)	range_attack_bonus	-2.0	-3.0
+12225	Iron platebody (t)	range_attack_bonus	-10.0	-15.0
+12227	Iron platelegs (t)	range_attack_bonus	-7.0	-11.0
+12229	Iron plateskirt (t)	range_attack_bonus	-7.0	-11.0
+12231	Iron full helm (t)	range_attack_bonus	-2.0	-3.0
+12235	Iron platebody (g)	range_attack_bonus	-10.0	-15.0
+12237	Iron platelegs (g)	range_attack_bonus	-7.0	-11.0
+12239	Iron plateskirt (g)	range_attack_bonus	-7.0	-11.0
+12241	Iron full helm (g)	range_attack_bonus	-2.0	-3.0
+12277	Mithril platebody (g)	range_attack_bonus	-10.0	-15.0
+12279	Mithril platelegs (g)	range_attack_bonus	-7.0	-11.0
+12283	Mithril full helm (g)	range_attack_bonus	-2.0	-3.0
+12285	Mithril plateskirt (g)	range_attack_bonus	-7.0	-11.0
+12287	Mithril platebody (t)	range_attack_bonus	-10.0	-15.0
+12289	Mithril platelegs (t)	range_attack_bonus	-7.0	-11.0
+12293	Mithril full helm (t)	range_attack_bonus	-2.0	-3.0
+12295	Mithril plateskirt (t)	range_attack_bonus	-7.0	-11.0
+12327	Red d'hide body (g)	stab_defence_bonus	50.0	26.0
+12327	Red d'hide body (g)	slash_defence_bonus	42.0	34.0
+12327	Red d'hide body (g)	crush_defence_bonus	55.0	36.0
+12327	Red d'hide body (g)	magic_defence_bonus	40.0	36.0
+12327	Red d'hide body (g)	range_defence_bonus	50.0	45.0
+12329	Red d'hide chaps (g)	stab_defence_bonus	28.0	15.0
+12329	Red d'hide chaps (g)	slash_defence_bonus	22.0	18.0
+12329	Red d'hide chaps (g)	crush_defence_bonus	30.0	22.0
+12329	Red d'hide chaps (g)	magic_defence_bonus	20.0	18.0
+12329	Red d'hide chaps (g)	range_defence_bonus	28.0	20.0
+12331	Red d'hide body (t)	stab_defence_bonus	50.0	26.0
+12331	Red d'hide body (t)	slash_defence_bonus	42.0	34.0
+12331	Red d'hide body (t)	crush_defence_bonus	55.0	36.0
+12331	Red d'hide body (t)	magic_defence_bonus	40.0	36.0
+12331	Red d'hide body (t)	range_defence_bonus	50.0	45.0
+12333	Red d'hide chaps (t)	stab_defence_bonus	28.0	15.0
+12333	Red d'hide chaps (t)	slash_defence_bonus	22.0	18.0
+12333	Red d'hide chaps (t)	crush_defence_bonus	30.0	22.0
+12333	Red d'hide chaps (t)	magic_defence_bonus	20.0	18.0
+12333	Red d'hide chaps (t)	range_defence_bonus	28.0	20.0
+12373	Dragon cane	stab_attack_bonus	42.0	40.0
+12381	Black d'hide body (g)	stab_defence_bonus	55.0	30.0
+12381	Black d'hide body (g)	slash_defence_bonus	47.0	38.0
+12381	Black d'hide body (g)	crush_defence_bonus	60.0	45.0
+12381	Black d'hide body (g)	magic_defence_bonus	50.0	45.0
+12381	Black d'hide body (g)	range_defence_bonus	55.0	50.0
+12383	Black d'hide chaps (g)	stab_defence_bonus	33.0	18.0
+12383	Black d'hide chaps (g)	slash_defence_bonus	25.0	20.0
+12383	Black d'hide chaps (g)	crush_defence_bonus	33.0	26.0
+12383	Black d'hide chaps (g)	magic_defence_bonus	28.0	23.0
+12383	Black d'hide chaps (g)	range_defence_bonus	31.0	26.0
+12385	Black d'hide body (t)	stab_defence_bonus	55.0	30.0
+12385	Black d'hide body (t)	slash_defence_bonus	47.0	38.0
+12385	Black d'hide body (t)	crush_defence_bonus	60.0	45.0
+12385	Black d'hide body (t)	magic_defence_bonus	50.0	45.0
+12385	Black d'hide body (t)	range_defence_bonus	55.0	50.0
+12387	Black d'hide chaps (t)	stab_defence_bonus	33.0	18.0
+12387	Black d'hide chaps (t)	slash_defence_bonus	25.0	20.0
+12387	Black d'hide chaps (t)	crush_defence_bonus	33.0	26.0
+12387	Black d'hide chaps (t)	magic_defence_bonus	28.0	23.0
+12387	Black d'hide chaps (t)	range_defence_bonus	31.0	26.0
+12415	Dragon platelegs (g)	range_attack_bonus	-7.0	-11.0
+12416	Dragon plateskirt (g)	range_attack_bonus	-7.0	-11.0
+12417	Dragon full helm (g)	range_attack_bonus	-2.0	-3.0
+12418	Dragon sq shield (g)	range_attack_bonus	-2.0	0.0
+12419	Light infinity hat	magic_damage_bonus	0.0	1.0
+12420	Light infinity top	magic_damage_bonus	0.0	1.0
+12421	Light infinity bottoms	magic_damage_bonus	0.0	1.0
+12426	3rd age longsword	stab_attack_bonus	60.0	0.0
+12426	3rd age longsword	crush_attack_bonus	-2.0	60.0
+12447	Black skirt (t)	magic_attack_bonus	-21.0	0.0
+12447	Black skirt (t)	range_attack_bonus	-7.0	0.0
+12447	Black skirt (t)	stab_defence_bonus	21.0	0.0
+12447	Black skirt (t)	slash_defence_bonus	20.0	0.0
+12447	Black skirt (t)	crush_defence_bonus	19.0	0.0
+12447	Black skirt (t)	magic_defence_bonus	-4.0	0.0
+12447	Black skirt (t)	range_defence_bonus	20.0	0.0
+12449	Black wizard robe (g)	magic_attack_bonus	2.0	3.0
+12449	Black wizard robe (g)	magic_defence_bonus	2.0	3.0
+12451	Black wizard robe (t)	magic_attack_bonus	2.0	3.0
+12451	Black wizard robe (t)	magic_defence_bonus	2.0	3.0
+12457	Dark infinity hat	magic_damage_bonus	0.0	1.0
+12458	Dark infinity top	magic_damage_bonus	0.0	1.0
+12459	Dark infinity bottoms	magic_damage_bonus	0.0	1.0
+12460	Ancient platebody	range_attack_bonus	-10.0	-15.0
+12462	Ancient platelegs	range_attack_bonus	-7.0	-11.0
+12464	Ancient plateskirt	range_attack_bonus	-7.0	-11.0
+12466	Ancient full helm	range_attack_bonus	-2.0	-3.0
+12470	Armadyl platebody	range_attack_bonus	-10.0	-15.0
+12472	Armadyl platelegs	range_attack_bonus	-7.0	-11.0
+12474	Armadyl plateskirt	range_attack_bonus	-7.0	-11.0
+12476	Armadyl full helm	range_attack_bonus	-2.0	-3.0
+12480	Bandos platebody	range_attack_bonus	-10.0	-15.0
+12482	Bandos platelegs	range_attack_bonus	-7.0	-11.0
+12484	Bandos plateskirt	range_attack_bonus	-7.0	-11.0
+12486	Bandos full helm	range_attack_bonus	-2.0	-3.0
+12601	Ring of the gods	prayer_bonus	3.0	4.0
+12810	Ironman helm	range_attack_bonus	-2.0	-3.0
+12811	Ironman platebody	range_attack_bonus	-10.0	-15.0
+12812	Ironman platelegs	range_attack_bonus	-7.0	-11.0
+12813	Ultimate ironman helm	range_attack_bonus	-2.0	-3.0
+12814	Ultimate ironman platebody	range_attack_bonus	-10.0	-15.0
+12815	Ultimate ironman platelegs	range_attack_bonus	-7.0	-11.0
+12825	Arcane spirit shield	magic_damage_bonus	0.0	3.0
+12926	Toxic blowpipe	range_attack_bonus	78.0	30.0
+12926	Toxic blowpipe	ranged_strength_bonus	60.0	20.0
+13202	Ring of the gods (i)	prayer_bonus	4.0	8.0
+13235	Eternal boots	magic_damage_bonus	0.0	1.0
+13237	Pegasian boots	range_defence_bonus	0.0	5.0
+13237	Pegasian boots	ranged_strength_bonus	0.0	1.0
+13317	Deadman's chest	stab_defence_bonus	0.0	21.0
+13317	Deadman's chest	slash_defence_bonus	0.0	20.0
+13317	Deadman's chest	crush_defence_bonus	0.0	12.0
+13317	Deadman's chest	magic_defence_bonus	0.0	3.0
+13317	Deadman's chest	range_defence_bonus	0.0	20.0
+13318	Deadman's legs	stab_defence_bonus	0.0	11.0
+13318	Deadman's legs	slash_defence_bonus	0.0	10.0
+13318	Deadman's legs	crush_defence_bonus	0.0	10.0
+13318	Deadman's legs	magic_defence_bonus	0.0	-2.0
+13318	Deadman's legs	range_defence_bonus	0.0	10.0
+13319	Deadman's cape	slash_defence_bonus	0.0	1.0
+13319	Deadman's cape	crush_defence_bonus	0.0	1.0
+13319	Deadman's cape	range_defence_bonus	0.0	2.0
+13357	Shayzien gloves (1)	magic_attack_bonus	0.0	-1.0
+13357	Shayzien gloves (1)	crush_defence_bonus	0.0	1.0
+13357	Shayzien gloves (1)	magic_defence_bonus	0.0	-1.0
+13358	Shayzien boots (1)	magic_attack_bonus	0.0	-2.0
+13358	Shayzien boots (1)	range_attack_bonus	0.0	-1.0
+13358	Shayzien boots (1)	stab_defence_bonus	0.0	1.0
+13358	Shayzien boots (1)	slash_defence_bonus	0.0	2.0
+13358	Shayzien boots (1)	crush_defence_bonus	0.0	3.0
+13359	Shayzien helm (1)	magic_attack_bonus	0.0	-5.0
+13359	Shayzien helm (1)	range_attack_bonus	0.0	-2.0
+13359	Shayzien helm (1)	stab_defence_bonus	0.0	3.0
+13359	Shayzien helm (1)	slash_defence_bonus	0.0	5.0
+13359	Shayzien helm (1)	crush_defence_bonus	0.0	4.0
+13359	Shayzien helm (1)	magic_defence_bonus	0.0	-1.0
+13359	Shayzien helm (1)	range_defence_bonus	0.0	5.0
+13360	Shayzien greaves (1)	magic_attack_bonus	0.0	-10.0
+13360	Shayzien greaves (1)	range_attack_bonus	0.0	-2.0
+13360	Shayzien greaves (1)	stab_defence_bonus	0.0	10.0
+13360	Shayzien greaves (1)	slash_defence_bonus	0.0	9.0
+13360	Shayzien greaves (1)	crush_defence_bonus	0.0	8.0
+13360	Shayzien greaves (1)	magic_defence_bonus	0.0	-2.0
+13360	Shayzien greaves (1)	range_defence_bonus	0.0	10.0
+13361	Shayzien platebody (1)	magic_attack_bonus	0.0	-5.0
+13361	Shayzien platebody (1)	stab_defence_bonus	0.0	16.0
+13361	Shayzien platebody (1)	slash_defence_bonus	0.0	20.0
+13361	Shayzien platebody (1)	crush_defence_bonus	0.0	22.0
+13361	Shayzien platebody (1)	magic_defence_bonus	0.0	-2.0
+13361	Shayzien platebody (1)	range_defence_bonus	0.0	16.0
+13362	Shayzien gloves (2)	crush_attack_bonus	0.0	1.0
+13362	Shayzien gloves (2)	magic_attack_bonus	0.0	-1.0
+13362	Shayzien gloves (2)	crush_defence_bonus	0.0	1.0
+13362	Shayzien gloves (2)	magic_defence_bonus	0.0	-1.0
+13362	Shayzien gloves (2)	melee_strength_bonus	0.0	1.0
+13363	Shayzien boots (2)	magic_attack_bonus	0.0	-2.0
+13363	Shayzien boots (2)	range_attack_bonus	0.0	-1.0
+13363	Shayzien boots (2)	stab_defence_bonus	0.0	2.0
+13363	Shayzien boots (2)	slash_defence_bonus	0.0	3.0
+13363	Shayzien boots (2)	crush_defence_bonus	0.0	4.0
+13364	Shayzien helm (2)	magic_attack_bonus	0.0	-5.0
+13364	Shayzien helm (2)	range_attack_bonus	0.0	-2.0
+13364	Shayzien helm (2)	stab_defence_bonus	0.0	5.0
+13364	Shayzien helm (2)	slash_defence_bonus	0.0	8.0
+13364	Shayzien helm (2)	crush_defence_bonus	0.0	6.0
+13364	Shayzien helm (2)	magic_defence_bonus	0.0	-1.0
+13364	Shayzien helm (2)	range_defence_bonus	0.0	7.0
+13365	Shayzien greaves (2)	magic_attack_bonus	0.0	-14.0
+13365	Shayzien greaves (2)	range_attack_bonus	0.0	-3.0
+13365	Shayzien greaves (2)	stab_defence_bonus	0.0	14.0
+13365	Shayzien greaves (2)	slash_defence_bonus	0.0	13.0
+13365	Shayzien greaves (2)	crush_defence_bonus	0.0	12.0
+13365	Shayzien greaves (2)	magic_defence_bonus	0.0	-3.0
+13365	Shayzien greaves (2)	range_defence_bonus	0.0	14.0
+13366	Shayzien platebody (2)	magic_attack_bonus	0.0	-7.0
+13366	Shayzien platebody (2)	stab_defence_bonus	0.0	20.0
+13366	Shayzien platebody (2)	slash_defence_bonus	0.0	25.0
+13366	Shayzien platebody (2)	crush_defence_bonus	0.0	30.0
+13366	Shayzien platebody (2)	magic_defence_bonus	0.0	-3.0
+13366	Shayzien platebody (2)	range_defence_bonus	0.0	20.0
+13367	Shayzien gloves (3)	crush_attack_bonus	0.0	2.0
+13367	Shayzien gloves (3)	magic_attack_bonus	0.0	-1.0
+13367	Shayzien gloves (3)	crush_defence_bonus	0.0	1.0
+13367	Shayzien gloves (3)	magic_defence_bonus	0.0	-1.0
+13367	Shayzien gloves (3)	melee_strength_bonus	0.0	2.0
+13368	Shayzien boots (3)	magic_attack_bonus	0.0	-2.0
+13368	Shayzien boots (3)	range_attack_bonus	0.0	-1.0
+13368	Shayzien boots (3)	stab_defence_bonus	0.0	4.0
+13368	Shayzien boots (3)	slash_defence_bonus	0.0	5.0
+13368	Shayzien boots (3)	crush_defence_bonus	0.0	6.0
+13369	Shayzien helm (3)	magic_attack_bonus	0.0	-6.0
+13369	Shayzien helm (3)	range_attack_bonus	0.0	-2.0
+13369	Shayzien helm (3)	stab_defence_bonus	0.0	7.0
+13369	Shayzien helm (3)	slash_defence_bonus	0.0	10.0
+13369	Shayzien helm (3)	crush_defence_bonus	0.0	8.0
+13369	Shayzien helm (3)	magic_defence_bonus	0.0	-2.0
+13369	Shayzien helm (3)	range_defence_bonus	0.0	9.0
+13370	Shayzien greaves (3)	magic_attack_bonus	0.0	-17.0
+13370	Shayzien greaves (3)	range_attack_bonus	0.0	-4.0
+13370	Shayzien greaves (3)	stab_defence_bonus	0.0	17.0
+13370	Shayzien greaves (3)	slash_defence_bonus	0.0	16.0
+13370	Shayzien greaves (3)	crush_defence_bonus	0.0	15.0
+13370	Shayzien greaves (3)	magic_defence_bonus	0.0	-3.0
+13370	Shayzien greaves (3)	range_defence_bonus	0.0	17.0
+13371	Shayzien platebody (3)	magic_attack_bonus	0.0	-8.0
+13371	Shayzien platebody (3)	stab_defence_bonus	0.0	25.0
+13371	Shayzien platebody (3)	slash_defence_bonus	0.0	32.0
+13371	Shayzien platebody (3)	crush_defence_bonus	0.0	35.0
+13371	Shayzien platebody (3)	magic_defence_bonus	0.0	-3.0
+13371	Shayzien platebody (3)	range_defence_bonus	0.0	22.0
+13372	Shayzien gloves (4)	crush_attack_bonus	0.0	2.0
+13372	Shayzien gloves (4)	magic_attack_bonus	0.0	-1.0
+13372	Shayzien gloves (4)	slash_defence_bonus	0.0	1.0
+13372	Shayzien gloves (4)	crush_defence_bonus	0.0	2.0
+13372	Shayzien gloves (4)	magic_defence_bonus	0.0	-1.0
+13372	Shayzien gloves (4)	range_defence_bonus	0.0	1.0
+13372	Shayzien gloves (4)	melee_strength_bonus	0.0	2.0
+13373	Shayzien boots (4)	magic_attack_bonus	0.0	-2.0
+13373	Shayzien boots (4)	range_attack_bonus	0.0	-1.0
+13373	Shayzien boots (4)	stab_defence_bonus	0.0	5.0
+13373	Shayzien boots (4)	slash_defence_bonus	0.0	6.0
+13373	Shayzien boots (4)	crush_defence_bonus	0.0	7.0
+13374	Shayzien helm (4)	magic_attack_bonus	0.0	-6.0
+13374	Shayzien helm (4)	range_attack_bonus	0.0	-2.0
+13374	Shayzien helm (4)	stab_defence_bonus	0.0	8.0
+13374	Shayzien helm (4)	slash_defence_bonus	0.0	12.0
+13374	Shayzien helm (4)	crush_defence_bonus	0.0	10.0
+13374	Shayzien helm (4)	magic_defence_bonus	0.0	-2.0
+13374	Shayzien helm (4)	range_defence_bonus	0.0	11.0
+13375	Shayzien greaves (4)	magic_attack_bonus	0.0	-20.0
+13375	Shayzien greaves (4)	range_attack_bonus	0.0	-5.0
+13375	Shayzien greaves (4)	stab_defence_bonus	0.0	20.0
+13375	Shayzien greaves (4)	slash_defence_bonus	0.0	19.0
+13375	Shayzien greaves (4)	crush_defence_bonus	0.0	18.0
+13375	Shayzien greaves (4)	magic_defence_bonus	0.0	-4.0
+13375	Shayzien greaves (4)	range_defence_bonus	0.0	20.0
+13376	Shayzien platebody (4)	magic_attack_bonus	0.0	-9.0
+13376	Shayzien platebody (4)	stab_defence_bonus	0.0	28.0
+13376	Shayzien platebody (4)	slash_defence_bonus	0.0	35.0
+13376	Shayzien platebody (4)	crush_defence_bonus	0.0	37.0
+13376	Shayzien platebody (4)	magic_defence_bonus	0.0	-4.0
+13376	Shayzien platebody (4)	range_defence_bonus	0.0	25.0
+13377	Shayzien gloves (5)	crush_attack_bonus	0.0	2.0
+13377	Shayzien gloves (5)	magic_attack_bonus	0.0	-1.0
+13377	Shayzien gloves (5)	range_attack_bonus	0.0	6.0
+13377	Shayzien gloves (5)	slash_defence_bonus	0.0	2.0
+13377	Shayzien gloves (5)	crush_defence_bonus	0.0	3.0
+13377	Shayzien gloves (5)	magic_defence_bonus	0.0	-1.0
+13377	Shayzien gloves (5)	range_defence_bonus	0.0	2.0
+13377	Shayzien gloves (5)	melee_strength_bonus	0.0	3.0
+13378	Shayzien boots (5)	magic_attack_bonus	0.0	-2.0
+13378	Shayzien boots (5)	range_attack_bonus	0.0	4.0
+13378	Shayzien boots (5)	stab_defence_bonus	0.0	5.0
+13378	Shayzien boots (5)	slash_defence_bonus	0.0	7.0
+13378	Shayzien boots (5)	crush_defence_bonus	0.0	8.0
+13379	Shayzien helm (5)	magic_attack_bonus	0.0	-6.0
+13379	Shayzien helm (5)	range_attack_bonus	0.0	4.0
+13379	Shayzien helm (5)	stab_defence_bonus	0.0	10.0
+13379	Shayzien helm (5)	slash_defence_bonus	0.0	14.0
+13379	Shayzien helm (5)	crush_defence_bonus	0.0	12.0
+13379	Shayzien helm (5)	magic_defence_bonus	0.0	-2.0
+13379	Shayzien helm (5)	range_defence_bonus	0.0	13.0
+13380	Shayzien greaves (5)	magic_attack_bonus	0.0	-20.0
+13380	Shayzien greaves (5)	range_attack_bonus	0.0	6.0
+13380	Shayzien greaves (5)	stab_defence_bonus	0.0	23.0
+13380	Shayzien greaves (5)	slash_defence_bonus	0.0	22.0
+13380	Shayzien greaves (5)	crush_defence_bonus	0.0	21.0
+13380	Shayzien greaves (5)	magic_defence_bonus	0.0	-4.0
+13380	Shayzien greaves (5)	range_defence_bonus	0.0	23.0
+13387	Xerician top	magic_attack_bonus	12.0	6.0
+13389	Xerician robe	magic_attack_bonus	8.0	4.0
+13393	Xeric's talisman	magic_attack_bonus	0.0	3.0
+13393	Xeric's talisman	magic_defence_bonus	0.0	1.0
+13679	Cabbage cape	slash_defence_bonus	0.0	1.0
+13679	Cabbage cape	crush_defence_bonus	0.0	1.0
+13679	Cabbage cape	range_defence_bonus	0.0	2.0
+19476	Achievement diary cape	stab_defence_bonus	0.0	9.0
+19476	Achievement diary cape	slash_defence_bonus	0.0	9.0
+19476	Achievement diary cape	crush_defence_bonus	0.0	9.0
+19476	Achievement diary cape	magic_defence_bonus	0.0	9.0
+19476	Achievement diary cape	range_defence_bonus	0.0	9.0
+19476	Achievement diary cape	prayer_bonus	0.0	4.0
+19675	Arclight	melee_strength_bonus	14.0	8.0
+19687	Helm of raedwald	magic_attack_bonus	0.0	-6.0
+19687	Helm of raedwald	range_attack_bonus	0.0	-2.0
+19687	Helm of raedwald	stab_defence_bonus	0.0	6.0
+19687	Helm of raedwald	slash_defence_bonus	0.0	7.0
+19687	Helm of raedwald	crush_defence_bonus	0.0	5.0
+19687	Helm of raedwald	magic_defence_bonus	0.0	-1.0
+19687	Helm of raedwald	range_defence_bonus	0.0	6.0
+19689	Clue hunter garb	magic_attack_bonus	0.0	-2.0
+19689	Clue hunter garb	range_attack_bonus	0.0	2.0
+19689	Clue hunter garb	stab_defence_bonus	0.0	8.0
+19689	Clue hunter garb	slash_defence_bonus	0.0	9.0
+19689	Clue hunter garb	crush_defence_bonus	0.0	10.0
+19689	Clue hunter garb	magic_defence_bonus	0.0	4.0
+19689	Clue hunter garb	range_defence_bonus	0.0	9.0
+19691	Clue hunter gloves	slash_defence_bonus	0.0	1.0
+19691	Clue hunter gloves	crush_defence_bonus	0.0	2.0
+19693	Clue hunter trousers	range_attack_bonus	0.0	4.0
+19693	Clue hunter trousers	stab_defence_bonus	0.0	2.0
+19693	Clue hunter trousers	slash_defence_bonus	0.0	2.0
+19693	Clue hunter trousers	crush_defence_bonus	0.0	1.0
+19695	Clue hunter boots	slash_defence_bonus	0.0	1.0
+19695	Clue hunter boots	crush_defence_bonus	0.0	1.0
+19697	Clue hunter cloak	slash_defence_bonus	0.0	1.0
+19697	Clue hunter cloak	crush_defence_bonus	0.0	1.0
+19697	Clue hunter cloak	range_defence_bonus	0.0	2.0
+19720	Occult necklace (or)	magic_damage_bonus	10.0	5.0
+19918	Nunchaku	stab_attack_bonus	0.0	-4.0
+19918	Nunchaku	slash_attack_bonus	0.0	-4.0
+19918	Nunchaku	crush_attack_bonus	0.0	11.0
+19918	Nunchaku	magic_attack_bonus	0.0	-4.0
+19918	Nunchaku	melee_strength_bonus	0.0	14.0
+19941	Heavy casket	stab_attack_bonus	0.0	-4.0
+19941	Heavy casket	slash_attack_bonus	0.0	-4.0
+19941	Heavy casket	crush_attack_bonus	0.0	11.0
+19941	Heavy casket	magic_attack_bonus	0.0	-4.0
+19941	Heavy casket	melee_strength_bonus	0.0	9.0
+19988	Blacksmith's helm	magic_attack_bonus	0.0	-6.0
+19988	Blacksmith's helm	range_attack_bonus	0.0	-2.0
+19988	Blacksmith's helm	stab_defence_bonus	0.0	6.0
+19988	Blacksmith's helm	slash_defence_bonus	0.0	7.0
+19988	Blacksmith's helm	crush_defence_bonus	0.0	5.0
+19988	Blacksmith's helm	magic_defence_bonus	0.0	-1.0
+19988	Blacksmith's helm	range_defence_bonus	0.0	6.0
+19994	Ranger gloves	melee_strength_bonus	2.0	0.0
+19994	Ranger gloves	ranged_strength_bonus	2.0	0.0
+19994	Ranger gloves	magic_damage_bonus	2.0	0.0
+19994	Ranger gloves	prayer_bonus	2.0	0.0
+20011	3rd age axe	stab_attack_bonus	0.0	-2.0
+20011	3rd age axe	slash_attack_bonus	0.0	38.0
+20011	3rd age axe	crush_attack_bonus	0.0	32.0
+20011	3rd age axe	slash_defence_bonus	0.0	1.0
+20011	3rd age axe	melee_strength_bonus	0.0	42.0
+20014	3rd age pickaxe	stab_attack_bonus	0.0	38.0
+20014	3rd age pickaxe	slash_attack_bonus	0.0	-2.0
+20014	3rd age pickaxe	crush_attack_bonus	0.0	32.0
+20014	3rd age pickaxe	slash_defence_bonus	0.0	1.0
+20014	3rd age pickaxe	melee_strength_bonus	0.0	42.0
+20035	Samurai kasa	stab_defence_bonus	0.0	16.0
+20035	Samurai kasa	slash_defence_bonus	0.0	17.0
+20035	Samurai kasa	crush_defence_bonus	0.0	15.0
+20035	Samurai kasa	magic_defence_bonus	0.0	4.0
+20035	Samurai kasa	range_defence_bonus	0.0	16.0
+20038	Samurai shirt	stab_defence_bonus	0.0	69.0
+20038	Samurai shirt	slash_defence_bonus	0.0	67.0
+20038	Samurai shirt	crush_defence_bonus	0.0	59.0
+20038	Samurai shirt	magic_defence_bonus	0.0	10.0
+20038	Samurai shirt	range_defence_bonus	0.0	67.0
+20041	Samurai gloves	stab_attack_bonus	0.0	2.0
+20041	Samurai gloves	slash_attack_bonus	0.0	2.0
+20041	Samurai gloves	crush_attack_bonus	0.0	2.0
+20041	Samurai gloves	magic_attack_bonus	0.0	2.0
+20041	Samurai gloves	range_attack_bonus	0.0	2.0
+20041	Samurai gloves	stab_defence_bonus	0.0	3.0
+20041	Samurai gloves	slash_defence_bonus	0.0	3.0
+20041	Samurai gloves	crush_defence_bonus	0.0	3.0
+20041	Samurai gloves	magic_defence_bonus	0.0	3.0
+20041	Samurai gloves	range_defence_bonus	0.0	3.0
+20044	Samurai greaves	stab_defence_bonus	0.0	42.0
+20044	Samurai greaves	slash_defence_bonus	0.0	40.0
+20044	Samurai greaves	crush_defence_bonus	0.0	38.0
+20044	Samurai greaves	magic_defence_bonus	0.0	3.0
+20044	Samurai greaves	range_defence_bonus	0.0	40.0
+20047	Samurai boots	stab_defence_bonus	0.0	11.0
+20047	Samurai boots	slash_defence_bonus	0.0	12.0
+20047	Samurai boots	crush_defence_bonus	0.0	13.0
+20047	Samurai boots	magic_defence_bonus	0.0	1.0
+20050	Obsidian cape (r)	stab_defence_bonus	0.0	9.0
+20050	Obsidian cape (r)	slash_defence_bonus	0.0	9.0
+20050	Obsidian cape (r)	crush_defence_bonus	0.0	9.0
+20050	Obsidian cape (r)	magic_defence_bonus	0.0	9.0
+20050	Obsidian cape (r)	range_defence_bonus	0.0	9.0
+20146	Gilded med helm	range_attack_bonus	-1.0	0.0
+20152	Gilded sq shield	range_attack_bonus	-2.0	0.0
+20155	Gilded 2h sword	stab_attack_bonus	0.0	-4.0
+20155	Gilded 2h sword	slash_attack_bonus	0.0	69.0
+20155	Gilded 2h sword	crush_attack_bonus	0.0	50.0
+20155	Gilded 2h sword	magic_attack_bonus	0.0	-4.0
+20155	Gilded 2h sword	range_defence_bonus	0.0	-1.0
+20155	Gilded 2h sword	melee_strength_bonus	0.0	70.0
+20164	Large spade	stab_attack_bonus	0.0	-100.0
+20164	Large spade	slash_attack_bonus	0.0	-100.0
+20164	Large spade	crush_attack_bonus	0.0	-50.0
+20164	Large spade	melee_strength_bonus	0.0	-10.0
+20169	Steel platebody (g)	range_attack_bonus	-10.0	-15.0
+20172	Steel platelegs (g)	range_attack_bonus	-7.0	-11.0
+20175	Steel plateskirt (g)	range_attack_bonus	-7.0	-11.0
+20178	Steel full helm (g)	range_attack_bonus	-2.0	-3.0
+20184	Steel platebody (t)	range_attack_bonus	-10.0	-15.0
+20187	Steel platelegs (t)	range_attack_bonus	-7.0	-11.0
+20190	Steel plateskirt (t)	range_attack_bonus	-7.0	-11.0
+20193	Steel full helm (t)	range_attack_bonus	-2.0	-3.0
+20220	Holy blessing	prayer_bonus	6.0	1.0
+20223	Unholy blessing	prayer_bonus	6.0	1.0
+20226	Peaceful blessing	prayer_bonus	6.0	1.0
+20229	Honourable blessing	prayer_bonus	6.0	1.0
+20232	War blessing	prayer_bonus	6.0	1.0
+20235	Ancient blessing	prayer_bonus	6.0	1.0
+20243	Crier bell	stab_attack_bonus	0.0	-100.0
+20243	Crier bell	slash_attack_bonus	0.0	-100.0
+20243	Crier bell	crush_attack_bonus	15.0	-50.0
+20243	Crier bell	melee_strength_bonus	5.0	-10.0
+20249	Clueless scroll	stab_attack_bonus	0.0	-100.0
+20249	Clueless scroll	slash_attack_bonus	0.0	-100.0
+20249	Clueless scroll	crush_attack_bonus	0.0	-50.0
+20249	Clueless scroll	melee_strength_bonus	0.0	-10.0
+20251	Arceuus banner	stab_attack_bonus	0.0	12.0
+20251	Arceuus banner	slash_attack_bonus	0.0	12.0
+20251	Arceuus banner	crush_attack_bonus	0.0	12.0
+20251	Arceuus banner	stab_defence_bonus	0.0	1.0
+20251	Arceuus banner	slash_defence_bonus	0.0	1.0
+20251	Arceuus banner	melee_strength_bonus	0.0	12.0
+20254	Hosidius banner	stab_attack_bonus	0.0	12.0
+20254	Hosidius banner	slash_attack_bonus	0.0	12.0
+20254	Hosidius banner	crush_attack_bonus	0.0	12.0
+20254	Hosidius banner	stab_defence_bonus	0.0	1.0
+20254	Hosidius banner	slash_defence_bonus	0.0	1.0
+20254	Hosidius banner	melee_strength_bonus	0.0	12.0
+20257	Lovakengj banner	stab_attack_bonus	0.0	12.0
+20257	Lovakengj banner	slash_attack_bonus	0.0	12.0
+20257	Lovakengj banner	crush_attack_bonus	0.0	12.0
+20257	Lovakengj banner	stab_defence_bonus	0.0	1.0
+20257	Lovakengj banner	slash_defence_bonus	0.0	1.0
+20257	Lovakengj banner	melee_strength_bonus	0.0	12.0
+20260	Piscarilius banner	stab_attack_bonus	0.0	12.0
+20260	Piscarilius banner	slash_attack_bonus	0.0	12.0
+20260	Piscarilius banner	crush_attack_bonus	0.0	12.0
+20260	Piscarilius banner	stab_defence_bonus	0.0	1.0
+20260	Piscarilius banner	slash_defence_bonus	0.0	1.0
+20260	Piscarilius banner	melee_strength_bonus	0.0	12.0
+20263	Shayzien banner	stab_attack_bonus	0.0	12.0
+20263	Shayzien banner	slash_attack_bonus	0.0	12.0
+20263	Shayzien banner	crush_attack_bonus	0.0	12.0
+20263	Shayzien banner	stab_defence_bonus	0.0	1.0
+20263	Shayzien banner	slash_defence_bonus	0.0	1.0
+20263	Shayzien banner	melee_strength_bonus	0.0	12.0
+20517	Elder chaos top	magic_damage_bonus	0.0	1.0
+20520	Elder chaos robe	magic_damage_bonus	0.0	1.0
+20590	Stale baguette	stab_attack_bonus	0.0	-100.0
+20590	Stale baguette	slash_attack_bonus	0.0	-100.0
+20590	Stale baguette	crush_attack_bonus	0.0	-50.0
+20590	Stale baguette	melee_strength_bonus	0.0	-10.0
+20595	Elder chaos hood	magic_damage_bonus	0.0	1.0
+20727	Leaf-bladed battleaxe	range_attack_bonus	-1.0	0.0
+20727	Leaf-bladed battleaxe	range_defence_bonus	0.0	-1.0
+20730	Mist battlestaff	magic_attack_bonus	10.0	12.0
+20730	Mist battlestaff	magic_defence_bonus	10.0	12.0
+20733	Mystic mist staff	stab_attack_bonus	0.0	10.0
+20733	Mystic mist staff	slash_attack_bonus	0.0	-1.0
+20733	Mystic mist staff	crush_attack_bonus	0.0	40.0
+20733	Mystic mist staff	magic_attack_bonus	0.0	14.0
+20733	Mystic mist staff	stab_defence_bonus	0.0	2.0
+20733	Mystic mist staff	slash_defence_bonus	0.0	3.0
+20733	Mystic mist staff	crush_defence_bonus	0.0	1.0
+20733	Mystic mist staff	magic_defence_bonus	0.0	14.0
+20733	Mystic mist staff	melee_strength_bonus	0.0	50.0
+20736	Dust battlestaff	magic_attack_bonus	10.0	12.0
+20736	Dust battlestaff	magic_defence_bonus	10.0	12.0
+20736	Dust battlestaff	melee_strength_bonus	23.0	35.0
+20739	Mystic dust staff	stab_attack_bonus	0.0	10.0
+20739	Mystic dust staff	slash_attack_bonus	0.0	-1.0
+20739	Mystic dust staff	crush_attack_bonus	0.0	40.0
+20739	Mystic dust staff	magic_attack_bonus	0.0	14.0
+20739	Mystic dust staff	stab_defence_bonus	0.0	2.0
+20739	Mystic dust staff	slash_defence_bonus	0.0	3.0
+20739	Mystic dust staff	crush_defence_bonus	0.0	1.0
+20739	Mystic dust staff	magic_defence_bonus	0.0	14.0
+20739	Mystic dust staff	melee_strength_bonus	0.0	50.0
+20756	Hill giant club	stab_attack_bonus	0.0	-4.0
+20756	Hill giant club	slash_attack_bonus	0.0	50.0
+20756	Hill giant club	crush_attack_bonus	0.0	65.0
+20756	Hill giant club	magic_attack_bonus	0.0	-4.0
+20756	Hill giant club	range_defence_bonus	0.0	-1.0
+20756	Hill giant club	melee_strength_bonus	0.0	70.0
+20779	Hunting knife	stab_attack_bonus	0.0	-100.0
+20779	Hunting knife	slash_attack_bonus	0.0	-100.0
+20779	Hunting knife	crush_attack_bonus	0.0	-100.0
+20779	Hunting knife	melee_strength_bonus	0.0	-100.0
+20792	Hardcore ironman helm	range_attack_bonus	-2.0	-3.0
+20794	Hardcore ironman platebody	range_attack_bonus	-10.0	-15.0
+20796	Hardcore ironman platelegs	range_attack_bonus	-7.0	-11.0
+20836	Giant present	stab_attack_bonus	0.0	-100.0
+20836	Giant present	slash_attack_bonus	0.0	-100.0
+20836	Giant present	crush_attack_bonus	0.0	-50.0
+20836	Giant present	melee_strength_bonus	0.0	-10.0
+20838	Corrupted helm	magic_attack_bonus	0.0	-6.0
+20838	Corrupted helm	range_attack_bonus	0.0	-3.0
+20838	Corrupted helm	stab_defence_bonus	0.0	6.0
+20838	Corrupted helm	slash_defence_bonus	0.0	7.0
+20838	Corrupted helm	crush_defence_bonus	0.0	5.0
+20838	Corrupted helm	magic_defence_bonus	0.0	-1.0
+20838	Corrupted helm	range_defence_bonus	0.0	6.0
+20840	Corrupted platebody	magic_attack_bonus	0.0	-30.0
+20840	Corrupted platebody	range_attack_bonus	0.0	-15.0
+20840	Corrupted platebody	stab_defence_bonus	0.0	21.0
+20840	Corrupted platebody	slash_defence_bonus	0.0	20.0
+20840	Corrupted platebody	crush_defence_bonus	0.0	12.0
+20840	Corrupted platebody	magic_defence_bonus	0.0	-6.0
+20840	Corrupted platebody	range_defence_bonus	0.0	20.0
+20842	Corrupted platelegs	magic_attack_bonus	0.0	-21.0
+20842	Corrupted platelegs	range_attack_bonus	0.0	-11.0
+20842	Corrupted platelegs	stab_defence_bonus	0.0	11.0
+20842	Corrupted platelegs	slash_defence_bonus	0.0	10.0
+20842	Corrupted platelegs	crush_defence_bonus	0.0	10.0
+20842	Corrupted platelegs	magic_defence_bonus	0.0	-4.0
+20842	Corrupted platelegs	range_defence_bonus	0.0	10.0
+20844	Corrupted plateskirt	magic_attack_bonus	0.0	-21.0
+20844	Corrupted plateskirt	range_attack_bonus	0.0	-11.0
+20844	Corrupted plateskirt	stab_defence_bonus	0.0	11.0
+20844	Corrupted plateskirt	slash_defence_bonus	0.0	10.0
+20844	Corrupted plateskirt	crush_defence_bonus	0.0	10.0
+20844	Corrupted plateskirt	magic_defence_bonus	0.0	-4.0
+20844	Corrupted plateskirt	range_defence_bonus	0.0	10.0
+20846	Corrupted kiteshield	magic_attack_bonus	0.0	-8.0
+20846	Corrupted kiteshield	range_attack_bonus	0.0	-3.0
+20846	Corrupted kiteshield	stab_defence_bonus	0.0	8.0
+20846	Corrupted kiteshield	slash_defence_bonus	0.0	10.0
+20846	Corrupted kiteshield	crush_defence_bonus	0.0	9.0
+20846	Corrupted kiteshield	magic_defence_bonus	0.0	-1.0
+20846	Corrupted kiteshield	range_defence_bonus	0.0	9.0
+21000	Twisted buckler	ranged_strength_bonus	0.0	10.0
+21003	Elder maul	magic_attack_bonus	-4.0	0.0
+21015	Dinh's bulwark	crush_attack_bonus	110.0	124.0
+21015	Dinh's bulwark	stab_defence_bonus	141.0	106.0
+21015	Dinh's bulwark	slash_defence_bonus	145.0	109.0
+21015	Dinh's bulwark	crush_defence_bonus	145.0	109.0
+21015	Dinh's bulwark	magic_defence_bonus	18.0	-10.0
+21018	Ancestral hat	magic_damage_bonus	2.0	3.0
+21021	Ancestral robe top	magic_damage_bonus	2.0	3.0
+21024	Ancestral robe bottom	magic_damage_bonus	2.0	3.0
+21031	Infernal harpoon	stab_attack_bonus	0.0	38.0
+21031	Infernal harpoon	slash_attack_bonus	0.0	32.0
+21031	Infernal harpoon	slash_defence_bonus	0.0	1.0
+21031	Infernal harpoon	melee_strength_bonus	0.0	42.0
+21209	Birthday balloons	stab_attack_bonus	0.0	-100.0
+21209	Birthday balloons	slash_attack_bonus	0.0	-100.0
+21209	Birthday balloons	crush_attack_bonus	0.0	-50.0
+21209	Birthday balloons	melee_strength_bonus	0.0	-10.0
+21255	Slayer's staff (e)	stab_attack_bonus	0.0	7.0
+21255	Slayer's staff (e)	slash_attack_bonus	0.0	-1.0
+21255	Slayer's staff (e)	crush_attack_bonus	0.0	25.0
+21255	Slayer's staff (e)	magic_attack_bonus	0.0	12.0
+21255	Slayer's staff (e)	stab_defence_bonus	0.0	2.0
+21255	Slayer's staff (e)	slash_defence_bonus	0.0	3.0
+21255	Slayer's staff (e)	crush_defence_bonus	0.0	1.0
+21255	Slayer's staff (e)	magic_defence_bonus	0.0	10.0
+21255	Slayer's staff (e)	melee_strength_bonus	0.0	35.0
+21276	Skull sceptre (i)	slash_attack_bonus	0.0	-1.0
+21276	Skull sceptre (i)	crush_attack_bonus	0.0	7.0
+21276	Skull sceptre (i)	magic_attack_bonus	0.0	10.0
+21276	Skull sceptre (i)	stab_defence_bonus	0.0	2.0
+21276	Skull sceptre (i)	slash_defence_bonus	0.0	3.0
+21276	Skull sceptre (i)	crush_defence_bonus	0.0	1.0
+21276	Skull sceptre (i)	magic_defence_bonus	0.0	4.0
+21276	Skull sceptre (i)	melee_strength_bonus	0.0	3.0
+21316	Amethyst broad bolts	ranged_strength_bonus	0.0	115.0
+21318	Amethyst javelin	ranged_strength_bonus	0.0	135.0
+21320	Amethyst javelin(p)	ranged_strength_bonus	0.0	135.0
+21322	Amethyst javelin(p+)	ranged_strength_bonus	0.0	135.0
+21324	Amethyst javelin(p++)	ranged_strength_bonus	0.0	135.0
+21328	Amethyst fire arrow	ranged_strength_bonus	0.0	55.0
+21330	Amethyst fire arrow (lit)	ranged_strength_bonus	0.0	55.0
+21332	Amethyst arrow(p)	ranged_strength_bonus	0.0	55.0
+21334	Amethyst arrow(p+)	ranged_strength_bonus	0.0	55.0
+21336	Amethyst arrow(p++)	ranged_strength_bonus	0.0	55.0
+21633	Ancient wyvern shield	magic_damage_bonus	0.0	2.0
+21634	Ancient wyvern shield	magic_damage_bonus	0.0	2.0
+21739	Granite ring	range_defence_bonus	8.0	12.0
+21752	Granite ring (i)	range_defence_bonus	16.0	24.0
+22109	Ava's assembler	range_defence_bonus	8.0	2.0
+21905	Dragon bolts	ranged_strength_bonus	0.0	122.0
+22324	Ghrazi rapier	stab_attack_bonus	94.0	100.0
+22324	Ghrazi rapier	melee_strength_bonus	89.0	93.0
+22002	Dragonfire ward	ranged_strength_bonus	0.0	8.0
+22003	Dragonfire ward	ranged_strength_bonus	0.0	8.0
+22111	Dragonbone necklace	stab_attack_bonus	0.0	10.0
+22111	Dragonbone necklace	slash_attack_bonus	0.0	10.0
+22111	Dragonbone necklace	crush_attack_bonus	0.0	10.0
+22111	Dragonbone necklace	magic_attack_bonus	0.0	10.0
+22111	Dragonbone necklace	range_attack_bonus	0.0	10.0
+22111	Dragonbone necklace	stab_defence_bonus	0.0	2.0
+22111	Dragonbone necklace	slash_defence_bonus	0.0	2.0
+22111	Dragonbone necklace	crush_defence_bonus	0.0	2.0
+22111	Dragonbone necklace	magic_defence_bonus	0.0	2.0
+22111	Dragonbone necklace	range_defence_bonus	0.0	2.0
+22111	Dragonbone necklace	melee_strength_bonus	0.0	2.0
+22545	Viggora's chainmace	slash_defence_bonus	0.0	1.0
+22545	Viggora's chainmace	prayer_bonus	5.0	2.0
+22555	Thammaron's sceptre	magic_attack_bonus	20.0	15.0
+22316	Prop sword	melee_strength_bonus	0.0	-10.0
+21643	Granite boots	melee_strength_bonus	0.0	3.0
+22816	Cormorant's glove	slash_defence_bonus	0.0	1.0
+22816	Cormorant's glove	crush_defence_bonus	0.0	1.0
+22817	Cormorant's glove	slash_defence_bonus	0.0	1.0
+22817	Cormorant's glove	crush_defence_bonus	0.0	1.0

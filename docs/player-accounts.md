@@ -8,6 +8,8 @@ For example, `Sales Tax` saves as `sales tax.json`. The file contains the passwo
 
 PlayerFile.java loads the character's JSON at login. Player.java restores nonempty savedGroupIds from that file. PlayerFile.save serializes fields annotated with Gson @Expose through a single-thread save worker. Saving happens during logout, approximately every minute through World's 100-tick save event, and through the administrator ::save command.
 
+The file-login service now assigns each account a stable positive ID through `LocalAccountIds`. The registry is `.account-ids.json` beside the character files; include it when backing up or moving the character directory. IDs persist across logins/restarts and do not depend on name hashes. Registry updates use a temporary file and atomic replacement where supported. Invalid/duplicate registry IDs fail the login instead of silently reassigning identities. This fixes the former shared `-1` ID that blocked Bounty Hunter assignment.
+
 Relevant PlayerGroup IDs:
 
 | Group | Saved ID |

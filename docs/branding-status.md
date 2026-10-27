@@ -10,6 +10,8 @@ Client settings were copied from the user's .kronos directory to .flavorscape wi
 
 User-facing old website links now point to the owner's FlavorScape GitHub project. Optional forum integration, hiscores, and launcher downloads require FlavorScape configuration instead of contacting old branded services. The local launch script remains the supported way to start this development setup.
 
+The official community invite is [FlavorScape Discord](https://discord.gg/QJDZX7U4y), supplied by the owner on 2026-10-26. The `::discord` command and Quest tab Discord button share `World.DISCORD_INVITE`; both client help/info panels use the `runelite.discord.invite` property. Project README community links use the same invite. Upstream copyright/author links remain preserved. Bot credentials, webhooks and Rich Presence application IDs are separate integration settings and cannot be derived from a community invitation.
+
 Intentionally retained old-name references:
 
 - Original copyright holders, authors, @project credits, licenses, source repository URLs, and historical investigation notes.

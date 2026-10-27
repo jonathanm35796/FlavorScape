@@ -1,8 +1,9 @@
 param(
-    [ValidateSet('All', 'UpdateServer', 'GameServer', 'Client')]
+    [ValidateSet('All', 'Servers', 'UpdateServer', 'GameServer', 'Client')]
     [string]$Component = 'All',
     [switch]$BuildOnly,
-    [switch]$VerifyLogin
+    [switch]$VerifyLogin,
+    [switch]$Visible
 )
 
 $ErrorActionPreference = 'Stop'
@@ -24,13 +25,23 @@ function Invoke-LocalGradle([string]$Directory, [string[]]$Tasks, [string]$Log) 
     try {
         # Windows PowerShell wraps native stderr as errors; Gradle's exit code is authoritative.
         $ErrorActionPreference = 'Continue'
-        & .\gradlew.bat @Tasks --console=plain --no-daemon '-Dorg.gradle.warning.mode=summary' *> $Log
+        $stream = [System.IO.File]::Open($Log, 'Create', 'Write', 'ReadWrite')
+        $writer = New-Object System.IO.StreamWriter($stream)
+        $writer.AutoFlush = $true
+        try {
+            & .\gradlew.bat @Tasks --console=plain --no-daemon '-Dorg.gradle.warning.mode=summary' 2>&1 | ForEach-Object {
+                $line = "$_"
+                if ($_ -is [System.Management.Automation.ErrorRecord] -and $line -eq 'System.Management.Automation.RemoteException') { $line = '' }
+                $writer.WriteLine($line)
+                if ($Visible) { Write-Host $line }
+            }
+        } finally { $writer.Dispose() }
         $result = $LASTEXITCODE
         if ($result -ne 0) { Get-Content $Log -Tail 40; throw "Gradle failed ($result). See $Log" }
     } finally { Pop-Location }
 }
 
-if ($Component -eq 'All') {
+if ($Component -in @('All', 'Servers')) {
     if (-not $BuildOnly) {
         $listeners = Get-NetTCPConnection -State Listen -ErrorAction SilentlyContinue |
             Where-Object { $_.LocalPort -in @(7304, 13302) }
@@ -38,12 +49,19 @@ if ($Component -eq 'All') {
     }
     Write-Host 'Building game and update servers with JDK 21...'
     Invoke-LocalGradle $source @(':flavorscape-server:classes', ':flavorscape-update-server:classes') (Join-Path $tools 'main-server-build.log')
-    $env:JAVA_HOME = (Get-ChildItem (Join-Path $tools 'jdk8') -Directory | Select-Object -First 1).FullName
-    Write-Host 'Building client with JDK 8...'
-    Invoke-LocalGradle (Join-Path $source 'runelite') @(':runelite-client:classes') (Join-Path $tools 'main-client-build.log')
-    if ($BuildOnly) { Write-Host 'All components compiled successfully.'; exit 0 }
+    if ($Component -eq 'All') {
+        $env:JAVA_HOME = (Get-ChildItem (Join-Path $tools 'jdk8') -Directory | Select-Object -First 1).FullName
+        Write-Host 'Building client with JDK 8...'
+        Invoke-LocalGradle (Join-Path $source 'runelite') @(':runelite-client:classes') (Join-Path $tools 'main-client-build.log')
+    }
+    if ($BuildOnly) {
+        if ($Component -eq 'All') { Write-Host 'All components compiled successfully.' }
+        else { Write-Host 'Server components compiled successfully.' }
+        exit 0
+    }
     $sessions = @()
-    foreach ($part in @('UpdateServer', 'GameServer', 'Client')) {
+    $parts = if ($Component -eq 'All') { @('UpdateServer', 'GameServer', 'Client') } else { @('UpdateServer', 'GameServer') }
+    foreach ($part in $parts) {
         if ($part -eq 'Client') {
             Write-Host 'Waiting for localhost game and update listeners...'
             $deadline = (Get-Date).AddSeconds(90)
@@ -57,13 +75,24 @@ if ($Component -eq 'All') {
             } while ($true)
         }
         $arguments = '-NoProfile -ExecutionPolicy Bypass -File "{0}" -Component {1}' -f $PSCommandPath, $part
+        $windowStyle = 'Hidden'
+        if ($Visible) {
+            $arguments = '-NoExit ' + $arguments + ' -Visible'
+            $windowStyle = 'Normal'
+        }
         if ($VerifyLogin -and $part -eq 'Client') { $arguments += ' -VerifyLogin' }
-        $process = Start-Process powershell.exe -ArgumentList $arguments -WindowStyle Hidden -PassThru
-        $sessions += [PSCustomObject]@{ Component = $part; ProcessId = $process.Id }
+        $process = Start-Process powershell.exe -ArgumentList $arguments -WindowStyle $windowStyle -PassThru
+        $sessions += [PSCustomObject]@{
+            Component = $part
+            ProcessId = $process.Id
+            StartedAtUtc = $process.StartTime.ToUniversalTime().ToString('o')
+        }
         $sessions | ConvertTo-Json | Set-Content (Join-Path $tools 'local-session.json')
     }
-    Write-Host 'Started all components from main/. Logs: .tools/main-UpdateServer.log, main-GameServer.log, main-Client.log.'
-    Write-Host 'DEV login is local-only: use a disposable test username/password. Stop with scripts/stop-local.ps1.'
+    if ($Component -eq 'All') { Write-Host 'Started all components from main/.' }
+    else { Write-Host 'Started update and game servers.' }
+    Write-Host 'Server/client logs are in .tools. DEV login is local-only; use disposable test credentials.'
+    Write-Host 'Stop components with scripts/stop-local.ps1.'
     exit 0
 }
 
@@ -73,6 +102,9 @@ switch ($Component) {
     'Client' { $directory = Join-Path $source 'runelite'; $task = 'run' }
 }
 $tasks = @($task)
+if ($BuildOnly) {
+    $tasks = @(if ($Component -eq 'Client') { ':runelite-client:classes' } else { $task -replace ':run$', ':classes' })
+}
 if ($VerifyLogin -and $Component -eq 'Client') {
     $classes = Join-Path $tools 'smoke-classes'
     New-Item -ItemType Directory -Force $classes | Out-Null
@@ -80,4 +112,5 @@ if ($VerifyLogin -and $Component -eq 'Client') {
     if ($LASTEXITCODE -ne 0) { throw 'Smoke probe compilation failed.' }
     $tasks += @('--init-script', (Join-Path $PSScriptRoot 'local-smoke.init.gradle'))
 }
-Invoke-LocalGradle $directory $tasks (Join-Path $tools "main-$Component.log")
+$logName = if ($Component -eq 'Client') { "main-Client-$PID.log" } else { "main-$Component.log" }
+Invoke-LocalGradle $directory $tasks (Join-Path $tools $logName)

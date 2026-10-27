@@ -13,7 +13,17 @@
 
 Exact usage examples are included where existing command handlers provide them. Other entries show their actual command names; arguments may still be required or the command may open a prompt. The unimplemented donator-zone commands are explicitly labeled. Combat, location, target, cooldown, and temporary gameplay checks remain in their existing handlers.
 
+`::maxlvls` is an Admin+ command that sets every skill to level 99.
+
+Every player can freely raise or lower combat skills using `::levels` / `::combatlevels`, or set one directly with `::level attack 75` (also supports `hp`). Left-clicking a combat skill in the Skills tab opens the same number prompt; right-click retains the skill guide. Levels range from 1–99, with Hitpoints 10–99. Changes are blocked during combat, in PvP areas, with an active Bounty Hunter target, and during supported minigames/instances/duels. Unequip gear before lowering below its requirements. Noncombat skills retain normal progression. See the [content audit](content-audit.md) for coverage and verification.
+
+Select the Quest tab and click its **dragon med helm** button to open the gear interface. `Ctrl+G` toggles it while on that tab; `Ctrl+Q` loads the latest setup. Switching tabs hides the interface. While the preset panel is visible, `F1`–`F12` load matching slots. Every account has twelve editable slots; new accounts start with six defaults and six empty slots. Each slot, including a default, has **Save current** for inventory, equipment, combat levels, spellbook and prayer selections. Command equivalents are `::gears`, `::gear 1-12`, `::lastgear`, `::storegear 1-12` (save current), `::savegear 1-12` (manage), and `::preset 1-12` (load). Saving and loading enforce existing combat, location and game-mode rules; all slots are available without donator rank. Overwriting a populated slot asks for confirmation.
+
 ## Permission enforcement
+
+The gear interface also closes with `Esc` when **Esc closes interfaces** is enabled in the game's settings. When disabled, the gear interface leaves Esc handling unchanged.
+
+Successfully loading a preset closes the gear interface after the server confirms completion. Rejected loads leave it open.
 
 CommandCatalog.java supplies a common permission policy used by both the catalogue and all five execution handlers. The policy honors support/moderator/administrator inheritance, Owner membership, the exact per-command DEV exceptions, the existing primary Community Manager exclusions, and the existing heal entitlement check. Overlapping names such as master, empty, and lms use the same first-accessible-handler priority as execution.
 
@@ -23,7 +33,7 @@ DEV mode currently grants Owner membership to every logged-in character, so thos
 
 ## Keeping the list accurate
 
-GenerateCommandCatalog.java uses the JDK Java parser at build time to index active top-level switch cases from CommandHandler.java. It indexes 330 section/name entries across 281 alias groups in the current source; overlapping names between sections are deduplicated for display. Comments and nested event/XP-mode subcommands are not mistaken for chat commands. The generated command-catalog.tsv is packaged as a server resource, so the running server does not read or parse Java source.
+GenerateCommandCatalog.java uses the JDK Java parser at build time to index active top-level switch cases from CommandHandler.java. It indexes the active section/name entries and alias groups in the current source; overlapping names between sections are deduplicated for display. Comments and nested event/XP-mode subcommands are not mistaken for chat commands. The generated command-catalog.tsv is packaged as a server resource, so the running server does not read or parse Java source.
 
 Adding/removing a case or alias in an existing handler updates the list on the next build. New permission categories or special account restrictions must also be added to the shared CommandCatalog policy and its tests. Rebuild/restart to activate source changes.
 

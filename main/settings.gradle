@@ -1,0 +1,8 @@
+rootProject.name = "FlavorScape"
+
+include ':flavorscape-server'
+include ':flavorscape-api'
+include ':flavorscape-update-server'
+include ':flavorscape-launcher'
+include ':flavorscape-webhooks'
+

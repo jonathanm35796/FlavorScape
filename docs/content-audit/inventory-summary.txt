@@ -1,0 +1,8 @@
+Source files inventoried: 1420
+Component groups: 159
+Data files checked: 2411
+Data parse failures: 0
+Registered placeholder spells: 37
+Spawn rows checked against cache: 7707
+Missing spawn cache definitions: 0
+Scope: source/data inventory, not a live playthrough or proof of correctness.

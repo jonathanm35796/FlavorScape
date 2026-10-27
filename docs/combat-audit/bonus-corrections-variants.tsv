@@ -1,0 +1,255 @@
+id	name	field	server	wiki
+4069	Decorative armour	range_attack_bonus	-10.0	-15.0
+4070	Decorative armour	range_attack_bonus	-7.0	-11.0
+4071	Decorative helm	range_attack_bonus	-1.0	0.0
+4072	Decorative shield	range_attack_bonus	-2.0	-3.0
+4504	Decorative armour	range_attack_bonus	-10.0	-15.0
+4505	Decorative armour	range_attack_bonus	-7.0	-11.0
+4506	Decorative helm	range_attack_bonus	-1.0	0.0
+4507	Decorative shield	range_attack_bonus	-2.0	-3.0
+4509	Decorative armour	range_attack_bonus	-10.0	-15.0
+4510	Decorative armour	range_attack_bonus	-7.0	-11.0
+4511	Decorative helm	range_attack_bonus	-1.0	0.0
+4512	Decorative shield	range_attack_bonus	-2.0	-3.0
+8464	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8466	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8468	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8470	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8472	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8474	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8476	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8478	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8480	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8482	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8484	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8486	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8488	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8490	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8492	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8494	Rune heraldic helm	range_attack_bonus	-2.0	-3.0
+8682	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8684	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8686	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8688	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8690	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8692	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8694	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8696	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8698	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8700	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8702	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8704	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8706	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8708	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8710	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8712	Steel heraldic helm	range_attack_bonus	-2.0	-3.0
+8714	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8716	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8718	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8720	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8722	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8724	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8726	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8728	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8730	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8732	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8734	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8736	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8738	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8740	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8742	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8744	Rune kiteshield	range_attack_bonus	-2.0	-3.0
+8746	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8748	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8750	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8752	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8754	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8756	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8758	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8760	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8762	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8764	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8766	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8768	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8770	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8772	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8774	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+8776	Steel kiteshield	range_attack_bonus	-2.0	-3.0
+11774	Black mask (10) (i)	stab_defence_bonus	0.0	9.0
+11774	Black mask (10) (i)	slash_defence_bonus	0.0	10.0
+11774	Black mask (10) (i)	crush_defence_bonus	0.0	8.0
+11774	Black mask (10) (i)	magic_defence_bonus	0.0	-1.0
+11774	Black mask (10) (i)	range_defence_bonus	0.0	9.0
+11775	Black mask (9) (i)	stab_defence_bonus	0.0	9.0
+11775	Black mask (9) (i)	slash_defence_bonus	0.0	10.0
+11775	Black mask (9) (i)	crush_defence_bonus	0.0	8.0
+11775	Black mask (9) (i)	magic_defence_bonus	0.0	-1.0
+11775	Black mask (9) (i)	range_defence_bonus	0.0	9.0
+11776	Black mask (8) (i)	stab_defence_bonus	0.0	9.0
+11776	Black mask (8) (i)	slash_defence_bonus	0.0	10.0
+11776	Black mask (8) (i)	crush_defence_bonus	0.0	8.0
+11776	Black mask (8) (i)	magic_defence_bonus	0.0	-1.0
+11776	Black mask (8) (i)	range_defence_bonus	0.0	9.0
+11777	Black mask (7) (i)	stab_defence_bonus	0.0	9.0
+11777	Black mask (7) (i)	slash_defence_bonus	0.0	10.0
+11777	Black mask (7) (i)	crush_defence_bonus	0.0	8.0
+11777	Black mask (7) (i)	magic_defence_bonus	0.0	-1.0
+11777	Black mask (7) (i)	range_defence_bonus	0.0	9.0
+11778	Black mask (6) (i)	stab_defence_bonus	0.0	9.0
+11778	Black mask (6) (i)	slash_defence_bonus	0.0	10.0
+11778	Black mask (6) (i)	crush_defence_bonus	0.0	8.0
+11778	Black mask (6) (i)	magic_defence_bonus	0.0	-1.0
+11778	Black mask (6) (i)	range_defence_bonus	0.0	9.0
+11779	Black mask (5) (i)	stab_defence_bonus	0.0	9.0
+11779	Black mask (5) (i)	slash_defence_bonus	0.0	10.0
+11779	Black mask (5) (i)	crush_defence_bonus	0.0	8.0
+11779	Black mask (5) (i)	magic_defence_bonus	0.0	-1.0
+11779	Black mask (5) (i)	range_defence_bonus	0.0	9.0
+11780	Black mask (4) (i)	stab_defence_bonus	0.0	9.0
+11780	Black mask (4) (i)	slash_defence_bonus	0.0	10.0
+11780	Black mask (4) (i)	crush_defence_bonus	0.0	8.0
+11780	Black mask (4) (i)	magic_defence_bonus	0.0	-1.0
+11780	Black mask (4) (i)	range_defence_bonus	0.0	9.0
+11781	Black mask (3) (i)	stab_defence_bonus	0.0	9.0
+11781	Black mask (3) (i)	slash_defence_bonus	0.0	10.0
+11781	Black mask (3) (i)	crush_defence_bonus	0.0	8.0
+11781	Black mask (3) (i)	magic_defence_bonus	0.0	-1.0
+11781	Black mask (3) (i)	range_defence_bonus	0.0	9.0
+11782	Black mask (2) (i)	stab_defence_bonus	0.0	9.0
+11782	Black mask (2) (i)	slash_defence_bonus	0.0	10.0
+11782	Black mask (2) (i)	crush_defence_bonus	0.0	8.0
+11782	Black mask (2) (i)	magic_defence_bonus	0.0	-1.0
+11782	Black mask (2) (i)	range_defence_bonus	0.0	9.0
+11783	Black mask (1) (i)	stab_defence_bonus	0.0	9.0
+11783	Black mask (1) (i)	slash_defence_bonus	0.0	10.0
+11783	Black mask (1) (i)	crush_defence_bonus	0.0	8.0
+11783	Black mask (1) (i)	magic_defence_bonus	0.0	-1.0
+11783	Black mask (1) (i)	range_defence_bonus	0.0	9.0
+11893	Decorative armour	magic_attack_bonus	0.0	-21.0
+11893	Decorative armour	range_attack_bonus	0.0	-11.0
+11893	Decorative armour	stab_defence_bonus	0.0	17.0
+11893	Decorative armour	slash_defence_bonus	0.0	16.0
+11893	Decorative armour	crush_defence_bonus	0.0	15.0
+11893	Decorative armour	magic_defence_bonus	0.0	-4.0
+11893	Decorative armour	range_defence_bonus	0.0	16.0
+11894	Decorative armour	magic_attack_bonus	0.0	-21.0
+11894	Decorative armour	range_attack_bonus	0.0	-11.0
+11894	Decorative armour	stab_defence_bonus	0.0	24.0
+11894	Decorative armour	slash_defence_bonus	0.0	22.0
+11894	Decorative armour	crush_defence_bonus	0.0	20.0
+11894	Decorative armour	magic_defence_bonus	0.0	-4.0
+11894	Decorative armour	range_defence_bonus	0.0	22.0
+11895	Decorative armour	magic_attack_bonus	0.0	-21.0
+11895	Decorative armour	range_attack_bonus	0.0	-11.0
+11895	Decorative armour	stab_defence_bonus	0.0	33.0
+11895	Decorative armour	slash_defence_bonus	0.0	31.0
+11895	Decorative armour	crush_defence_bonus	0.0	29.0
+11895	Decorative armour	magic_defence_bonus	0.0	-4.0
+11895	Decorative armour	range_defence_bonus	0.0	31.0
+11901	Decorative armour	stab_defence_bonus	0.0	4.0
+11901	Decorative armour	slash_defence_bonus	0.0	4.0
+11901	Decorative armour	crush_defence_bonus	0.0	4.0
+11901	Decorative armour	magic_defence_bonus	0.0	4.0
+11901	Decorative armour	range_defence_bonus	0.0	4.0
+12607	Damaged book	prayer_bonus	0.0	5.0
+12609	Damaged book	prayer_bonus	0.0	5.0
+12611	Damaged book	prayer_bonus	0.0	5.0
+19912	Zombie head	stab_attack_bonus	0.0	-4.0
+19912	Zombie head	slash_attack_bonus	0.0	-4.0
+19912	Zombie head	crush_attack_bonus	0.0	10.0
+19912	Zombie head	magic_attack_bonus	0.0	-4.0
+19912	Zombie head	melee_strength_bonus	0.0	8.0
+22625	Statius's full helm	stab_attack_bonus	3.0	15.0
+22625	Statius's full helm	slash_attack_bonus	3.0	15.0
+22625	Statius's full helm	crush_attack_bonus	4.0	15.0
+22625	Statius's full helm	stab_defence_bonus	65.0	20.0
+22625	Statius's full helm	slash_defence_bonus	70.0	25.0
+22625	Statius's full helm	crush_defence_bonus	63.0	23.0
+22625	Statius's full helm	range_defence_bonus	71.0	28.0
+22625	Statius's full helm	melee_strength_bonus	3.0	5.0
+22628	Statius's platebody	stab_attack_bonus	5.0	6.0
+22628	Statius's platebody	slash_attack_bonus	5.0	6.0
+22628	Statius's platebody	crush_attack_bonus	7.0	35.0
+22628	Statius's platebody	magic_attack_bonus	-30.0	-6.0
+22628	Statius's platebody	range_attack_bonus	-10.0	-2.0
+22628	Statius's platebody	stab_defence_bonus	154.0	35.0
+22628	Statius's platebody	slash_defence_bonus	145.0	38.0
+22628	Statius's platebody	crush_defence_bonus	121.0	36.0
+22628	Statius's platebody	magic_defence_bonus	-6.0	-10.0
+22628	Statius's platebody	range_defence_bonus	157.0	40.0
+22631	Statius's platelegs	stab_attack_bonus	3.0	6.0
+22631	Statius's platelegs	slash_attack_bonus	3.0	6.0
+22631	Statius's platelegs	crush_attack_bonus	5.0	30.0
+22631	Statius's platelegs	magic_attack_bonus	-21.0	-6.0
+22631	Statius's platelegs	range_attack_bonus	-7.0	-2.0
+22631	Statius's platelegs	stab_defence_bonus	110.0	27.0
+22631	Statius's platelegs	slash_defence_bonus	106.0	30.0
+22631	Statius's platelegs	crush_defence_bonus	97.0	28.0
+22631	Statius's platelegs	magic_defence_bonus	-4.0	-7.0
+22631	Statius's platelegs	range_defence_bonus	121.0	34.0
+22616	Vesta's chainbody	stab_attack_bonus	5.0	35.0
+22616	Vesta's chainbody	slash_attack_bonus	7.0	35.0
+22616	Vesta's chainbody	crush_attack_bonus	7.0	6.0
+22616	Vesta's chainbody	magic_attack_bonus	-15.0	-6.0
+22616	Vesta's chainbody	range_attack_bonus	-0.0	-2.0
+22616	Vesta's chainbody	stab_defence_bonus	120.0	35.0
+22616	Vesta's chainbody	slash_defence_bonus	131.0	38.0
+22616	Vesta's chainbody	crush_defence_bonus	145.0	36.0
+22616	Vesta's chainbody	magic_defence_bonus	-3.0	-10.0
+22616	Vesta's chainbody	range_defence_bonus	140.0	40.0
+22616	Vesta's chainbody	melee_strength_bonus	6.0	5.0
+22619	Vesta's plateskirt	stab_attack_bonus	3.0	30.0
+22619	Vesta's plateskirt	slash_attack_bonus	5.0	30.0
+22619	Vesta's plateskirt	crush_attack_bonus	5.0	6.0
+22619	Vesta's plateskirt	magic_attack_bonus	-17.0	-6.0
+22619	Vesta's plateskirt	range_attack_bonus	-4.0	-2.0
+22619	Vesta's plateskirt	stab_defence_bonus	86.0	27.0
+22619	Vesta's plateskirt	slash_defence_bonus	100.0	30.0
+22619	Vesta's plateskirt	crush_defence_bonus	112.0	28.0
+22619	Vesta's plateskirt	magic_defence_bonus	-4.0	-7.0
+22619	Vesta's plateskirt	range_defence_bonus	118.0	34.0
+22613	Vesta's longsword	stab_defence_bonus	0.0	1.0
+22613	Vesta's longsword	slash_defence_bonus	0.0	4.0
+22613	Vesta's longsword	crush_defence_bonus	0.0	3.0
+22610	Vesta's spear	stab_defence_bonus	0.0	18.0
+22610	Vesta's spear	slash_defence_bonus	0.0	21.0
+22610	Vesta's spear	crush_defence_bonus	0.0	21.0
+22650	Zuriel's hood	magic_attack_bonus	8.0	7.0
+22650	Zuriel's hood	stab_defence_bonus	20.0	3.0
+22650	Zuriel's hood	slash_defence_bonus	16.0	2.0
+22650	Zuriel's hood	crush_defence_bonus	22.0	6.0
+22650	Zuriel's hood	magic_defence_bonus	8.0	4.0
+22650	Zuriel's hood	magic_damage_bonus	0.0	3.0
+22653	Zuriel's robe top	magic_attack_bonus	35.0	33.0
+22653	Zuriel's robe top	stab_defence_bonus	63.0	11.0
+22653	Zuriel's robe top	slash_defence_bonus	45.0	7.0
+22653	Zuriel's robe top	crush_defence_bonus	74.0	13.0
+22653	Zuriel's robe top	magic_defence_bonus	35.0	12.0
+22653	Zuriel's robe top	magic_damage_bonus	0.0	3.0
+22656	Zuriel's robe bottom	magic_attack_bonus	25.0	24.0
+22656	Zuriel's robe bottom	stab_defence_bonus	38.0	7.0
+22656	Zuriel's robe bottom	slash_defence_bonus	35.0	5.0
+22656	Zuriel's robe bottom	crush_defence_bonus	44.0	11.0
+22656	Zuriel's robe bottom	magic_defence_bonus	25.0	8.0
+22656	Zuriel's robe bottom	magic_damage_bonus	0.0	3.0
+22638	Morrigan's coif	range_attack_bonus	13.0	10.0
+22638	Morrigan's coif	stab_defence_bonus	8.0	3.0
+22638	Morrigan's coif	slash_defence_bonus	11.0	6.0
+22638	Morrigan's coif	crush_defence_bonus	14.0	8.0
+22638	Morrigan's coif	magic_defence_bonus	8.0	20.0
+22638	Morrigan's coif	range_defence_bonus	12.0	7.0
+22638	Morrigan's coif	ranged_strength_bonus	0.0	1.0
+22641	Morrigan's leather body	range_attack_bonus	36.0	40.0
+22641	Morrigan's leather body	stab_defence_bonus	61.0	11.0
+22641	Morrigan's leather body	slash_defence_bonus	53.0	13.0
+22641	Morrigan's leather body	crush_defence_bonus	66.0	16.0
+22641	Morrigan's leather body	magic_defence_bonus	75.0	50.0
+22641	Morrigan's leather body	range_defence_bonus	62.0	20.0
+22641	Morrigan's leather body	ranged_strength_bonus	0.0	2.0
+22644	Morrigan's leather chaps	range_attack_bonus	23.0	24.0
+22644	Morrigan's leather chaps	stab_defence_bonus	35.0	7.0
+22644	Morrigan's leather chaps	slash_defence_bonus	29.0	9.0
+22644	Morrigan's leather chaps	crush_defence_bonus	37.0	11.0
+22644	Morrigan's leather chaps	magic_defence_bonus	46.0	30.0
+22644	Morrigan's leather chaps	range_defence_bonus	35.0	13.0
+22644	Morrigan's leather chaps	ranged_strength_bonus	0.0	1.0

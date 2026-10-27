@@ -1,0 +1,3 @@
+Equipment rows: 3333
+{BONUSES_MATCH=2767, IDENTITY_OR_VARIANT_REVIEW=196, NO_WIKI_ID=370}
+Compared 14 static bonuses, exact ID + normalized cache name. Passive effects, special attacks, requirements, speed and NPC stats are separate checks.
