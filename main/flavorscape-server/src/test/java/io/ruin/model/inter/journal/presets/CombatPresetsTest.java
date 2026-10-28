@@ -7,7 +7,8 @@ public class CombatPresetsTest {
     private static class Account extends io.ruin.model.combat.CombatCalculationTest.Fighter {
         final io.ruin.model.item.containers.Inventory inventory = new io.ruin.model.item.containers.Inventory();
         final io.ruin.model.item.actions.impl.storage.RunePouch pouch = new io.ruin.model.item.actions.impl.storage.RunePouch();
-        Account(){inventory.init(this,28,-1,-1,-1,false);pouch.init(this,3,-1,-1,-1,false);varps=new int[5000];}
+        final io.ruin.model.item.containers.bank.Bank bank = new io.ruin.model.item.containers.bank.Bank();
+        Account(){inventory.init(this,28,-1,-1,-1,false);pouch.init(this,3,-1,-1,-1,false);bank.init(this,800,-1,-1,-1,true);varps=new int[5000];}
         final java.util.Map<Integer,String> packets = new java.util.LinkedHashMap<>();
         final java.util.List<String> messages = new java.util.ArrayList<>();
         final io.ruin.network.PacketSender sender = new io.ruin.network.PacketSender(this,null) {
@@ -17,9 +18,64 @@ public class CombatPresetsTest {
         @Override public void sendMessage(String message){messages.add(message);}
         @Override public io.ruin.model.item.containers.Inventory getInventory(){return inventory;}
         @Override public io.ruin.model.item.actions.impl.storage.RunePouch getRunePouch(){return pouch;}
+        @Override public io.ruin.model.item.containers.bank.Bank getBank(){return bank;}
         @Override public io.ruin.model.entity.player.GameMode getGameMode(){return io.ruin.model.entity.player.GameMode.STANDARD;}
     }
     @org.junit.BeforeClass public static void cache() throws Exception { io.ruin.tools.ItemCacheFixture.load(); }
+    @Test public void lootKeysCannotBeBankedOrClonedBySavedGear() throws Exception {
+        Account account=new Account();
+        io.ruin.model.item.Item key=io.ruin.model.activities.wilderness.LootKeys.create(java.util.List.of(new io.ruin.model.item.Item(11802)));
+        account.inventory.add(key);assertFalse(new Preset().bankCurrentSetup(account));assertEquals(1,io.ruin.model.activities.wilderness.LootKeys.count(account));
+        Preset preset=new Preset();preset.free=true;preset.invItems[0]=key.copy();account.inventory.clear();
+        java.lang.reflect.Method withdraw=Preset.class.getDeclaredMethod("withdrawItems",io.ruin.model.entity.player.Player.class,boolean.class);withdraw.setAccessible(true);withdraw.invoke(preset,account,true);
+        assertEquals(0,io.ruin.model.activities.wilderness.LootKeys.count(account));
+    }
+    @Test public void loadingGearBanksItemsOutsidePresetIncludingAttributesAndPouch() throws Exception {
+        Account account = new Account();
+        account.inventory.set(0, new io.ruin.model.item.Item(4151));
+        account.inventory.set(1, new io.ruin.model.item.Item(565, 250,
+                new java.util.HashMap<>(java.util.Map.of("CHARGES", "12"))));
+        account.getEquipment().set(3, new io.ruin.model.item.Item(11802));
+        account.pouch.set(0, new io.ruin.model.item.Item(560, 1200));
+        Preset preset = new Preset();
+        preset.free = true;
+        preset.invItems[0] = new io.ruin.model.item.Item(385);
+        assertTrue(preset.bankCurrentSetup(account));
+        java.lang.reflect.Method withdraw = Preset.class.getDeclaredMethod("withdrawItems", io.ruin.model.entity.player.Player.class, boolean.class);
+        withdraw.setAccessible(true);
+        withdraw.invoke(preset, account, true);
+        withdraw.invoke(preset, account, false);
+        assertEquals(385, account.inventory.get(0).getId());
+        assertEquals(1, account.bank.count(4151));
+        assertEquals(1, account.bank.count(11802));
+        assertEquals(1200, account.bank.count(560));
+        io.ruin.model.item.Item attributed = account.bank.findItem(565, java.util.Map.of("CHARGES", "12"));
+        assertEquals(250, attributed.getAmount());
+        assertEquals(12, attributed.getAttributeInt("CHARGES", 0));
+        assertTrue(account.getEquipment().isEmpty());
+        assertTrue(account.pouch.isEmpty());
+    }
+    @Test public void fullBankStopsPresetBeforeMovingAnyCurrentItems() {
+        Account account = new Account();
+        account.bank.init(account, 1, -1, -1, -1, true);
+        account.bank.add(385, 1);
+        account.inventory.set(0, new io.ruin.model.item.Item(4151));
+        account.getEquipment().set(3, new io.ruin.model.item.Item(11802));
+        account.pouch.set(0, new io.ruin.model.item.Item(560, 1200));
+        assertFalse(new Preset().bankCurrentSetup(account));
+        assertEquals(4151, account.inventory.get(0).getId());
+        assertEquals(11802, account.getEquipment().get(3).getId());
+        assertEquals(1200, account.pouch.get(0).getAmount());
+        assertEquals(1, account.bank.count(385));
+    }
+    @Test public void overflowingBankStackStopsPresetWithoutLosingRunes() {
+        Account account = new Account();
+        account.bank.add(560, Integer.MAX_VALUE);
+        account.inventory.set(0, new io.ruin.model.item.Item(560, 20));
+        assertFalse(new Preset().bankCurrentSetup(account));
+        assertEquals(20, account.inventory.get(0).getAmount());
+        assertEquals(Integer.MAX_VALUE, account.bank.count(560));
+    }
     @Test public void builtInsHaveCompleteIndependentGearAndExpectedLevels() {
         assertEquals(6, CombatPresets.BUILT_INS.length);
         for (int i = 0; i < 6; i++) {

@@ -1,0 +1,1070 @@
+[
+    {
+        "id":  11335,
+        "name":  "Dragon full helm",
+        "price":  8000000,
+        "category":  0
+    },
+    {
+        "id":  21892,
+        "name":  "Dragon platebody",
+        "price":  25000000,
+        "category":  0
+    },
+    {
+        "id":  4087,
+        "name":  "Dragon platelegs",
+        "price":  2000000,
+        "category":  0
+    },
+    {
+        "id":  13652,
+        "name":  "Dragon claws",
+        "price":  125000000,
+        "category":  0
+    },
+    {
+        "id":  11283,
+        "name":  "Dragonfire shield",
+        "price":  3000000,
+        "category":  0
+    },
+    {
+        "id":  4587,
+        "name":  "Dragon scimitar",
+        "price":  0,
+        "category":  0
+    },
+    {
+        "id":  1305,
+        "name":  "Dragon longsword",
+        "price":  0,
+        "category":  0
+    },
+    {
+        "id":  21009,
+        "name":  "Dragon sword",
+        "price":  2000000,
+        "category":  0
+    },
+    {
+        "id":  1149,
+        "name":  "Dragon med helm",
+        "price":  2000000,
+        "category":  0
+    },
+    {
+        "id":  3140,
+        "name":  "Dragon chainbody",
+        "price":  2000000,
+        "category":  0
+    },
+    {
+        "id":  4585,
+        "name":  "Dragon plateskirt",
+        "price":  2000000,
+        "category":  0
+    },
+    {
+        "id":  11840,
+        "name":  "Dragon boots",
+        "price":  4000000,
+        "category":  0
+    },
+    {
+        "id":  1187,
+        "name":  "Dragon sq shield",
+        "price":  1000000,
+        "category":  0
+    },
+    {
+        "id":  1434,
+        "name":  "Dragon mace",
+        "price":  0,
+        "category":  0
+    },
+    {
+        "id":  5698,
+        "name":  "Dragon dagger(p++)",
+        "price":  0,
+        "category":  0
+    },
+    {
+        "id":  1377,
+        "name":  "Dragon battleaxe",
+        "price":  5000000,
+        "category":  0
+    },
+    {
+        "id":  22322,
+        "name":  "Avernic defender",
+        "price":  40000000,
+        "category":  0
+    },
+    {
+        "id":  4153,
+        "name":  "Granite maul",
+        "price":  2000000,
+        "category":  0
+    },
+    {
+        "id":  6585,
+        "name":  "Amulet of fury",
+        "price":  5000000,
+        "category":  0
+    },
+    {
+        "id":  1249,
+        "name":  "Dragon spear",
+        "price":  0,
+        "category":  0
+    },
+    {
+        "id":  11838,
+        "name":  "Saradomin sword",
+        "price":  12500000,
+        "category":  0
+    },
+    {
+        "id":  4151,
+        "name":  "Abyssal whip",
+        "price":  15000000,
+        "category":  0
+    },
+    {
+        "id":  1704,
+        "name":  "Amulet of glory",
+        "price":  5000000,
+        "category":  0
+    },
+    {
+        "id":  6130,
+        "name":  "Rock-shell legs",
+        "price":  0,
+        "category":  0
+    },
+    {
+        "id":  10828,
+        "name":  "Helm of neitiznot",
+        "price":  0,
+        "category":  0
+    },
+    {
+        "id":  11773,
+        "name":  "Berserker ring (i)",
+        "price":  4000000,
+        "category":  0
+    },
+    {
+        "id":  11772,
+        "name":  "Warrior ring (i)",
+        "price":  4000000,
+        "category":  0
+    },
+    {
+        "id":  12954,
+        "name":  "Dragon defender",
+        "price":  750000,
+        "category":  0
+    },
+    {
+        "id":  6737,
+        "name":  "Berserker ring",
+        "price":  750000,
+        "category":  0
+    },
+    {
+        "id":  1725,
+        "name":  "Amulet of strength",
+        "price":  0,
+        "category":  0
+    },
+    {
+        "id":  6739,
+        "name":  "Dragon axe",
+        "price":  3000000,
+        "category":  0
+    },
+    {
+        "id":  6570,
+        "name":  "Fire cape",
+        "price":  0,
+        "category":  0
+    },
+    {
+        "id":  6568,
+        "name":  "Obsidian cape",
+        "price":  0,
+        "category":  0
+    },
+    {
+        "id":  2581,
+        "name":  "Robin hood hat",
+        "price":  5000000,
+        "category":  1
+    },
+    {
+        "id":  12596,
+        "name":  "Rangers\u0027 tunic",
+        "price":  5000000,
+        "category":  1
+    },
+    {
+        "id":  2577,
+        "name":  "Ranger boots",
+        "price":  5000000,
+        "category":  1
+    },
+    {
+        "id":  19481,
+        "name":  "Heavy ballista",
+        "price":  100000000,
+        "category":  1
+    },
+    {
+        "id":  11235,
+        "name":  "Dark bow",
+        "price":  10000000,
+        "category":  1
+    },
+    {
+        "id":  861,
+        "name":  "Magic shortbow",
+        "price":  1000000,
+        "category":  1
+    },
+    {
+        "id":  21902,
+        "name":  "Dragon crossbow",
+        "price":  10000000,
+        "category":  1
+    },
+    {
+        "id":  9185,
+        "name":  "Rune crossbow",
+        "price":  0,
+        "category":  1
+    },
+    {
+        "id":  2503,
+        "name":  "Black d\u0027hide body",
+        "price":  0,
+        "category":  1
+    },
+    {
+        "id":  2497,
+        "name":  "Black d\u0027hide chaps",
+        "price":  0,
+        "category":  1
+    },
+    {
+        "id":  2491,
+        "name":  "Black d\u0027hide vamb",
+        "price":  0,
+        "category":  1
+    },
+    {
+        "id":  52,
+        "name":  "Arrow shaft",
+        "price":  25000,
+        "category":  1
+    },
+    {
+        "id":  20849,
+        "name":  "Dragon thrownaxe",
+        "price":  25000,
+        "category":  1
+    },
+    {
+        "id":  22804,
+        "name":  "Dragon knife",
+        "price":  25000,
+        "category":  1
+    },
+    {
+        "id":  11230,
+        "name":  "Dragon dart",
+        "price":  5000,
+        "category":  1
+    },
+    {
+        "id":  827,
+        "name":  "Steel javelin",
+        "price":  300,
+        "category":  1
+    },
+    {
+        "id":  825,
+        "name":  "Bronze javelin",
+        "price":  150,
+        "category":  1
+    },
+    {
+        "id":  22109,
+        "name":  "Ava\u0027s assembler",
+        "price":  10000000,
+        "category":  1
+    },
+    {
+        "id":  11771,
+        "name":  "Archers ring (i)",
+        "price":  4000000,
+        "category":  1
+    },
+    {
+        "id":  10499,
+        "name":  "Ava\u0027s accumulator",
+        "price":  5000,
+        "category":  1
+    },
+    {
+        "id":  6918,
+        "name":  "Infinity hat",
+        "price":  1000000,
+        "category":  2
+    },
+    {
+        "id":  6916,
+        "name":  "Infinity top",
+        "price":  1000000,
+        "category":  2
+    },
+    {
+        "id":  6924,
+        "name":  "Infinity bottoms",
+        "price":  1000000,
+        "category":  2
+    },
+    {
+        "id":  6920,
+        "name":  "Infinity boots",
+        "price":  2500000,
+        "category":  2
+    },
+    {
+        "id":  6889,
+        "name":  "Mage\u0027s book",
+        "price":  8000000,
+        "category":  2
+    },
+    {
+        "id":  20714,
+        "name":  "Tome of fire",
+        "price":  15000000,
+        "category":  2
+    },
+    {
+        "id":  12612,
+        "name":  "Book of darkness",
+        "price":  15000000,
+        "category":  2
+    },
+    {
+        "id":  11770,
+        "name":  "Seers ring (i)",
+        "price":  4000000,
+        "category":  2
+    },
+    {
+        "id":  12904,
+        "name":  "Toxic staff of the dead",
+        "price":  30000000,
+        "category":  2
+    },
+    {
+        "id":  11791,
+        "name":  "Staff of the dead",
+        "price":  30000000,
+        "category":  2
+    },
+    {
+        "id":  6914,
+        "name":  "Master wand",
+        "price":  30000000,
+        "category":  2
+    },
+    {
+        "id":  21006,
+        "name":  "Kodai wand",
+        "price":  8500000,
+        "category":  2
+    },
+    {
+        "id":  1727,
+        "name":  "Amulet of magic",
+        "price":  0,
+        "category":  2
+    },
+    {
+        "id":  1993,
+        "name":  "Jug of wine",
+        "price":  1250,
+        "category":  3
+    },
+    {
+        "id":  385,
+        "name":  "Shark",
+        "price":  4500,
+        "category":  3
+    },
+    {
+        "id":  13441,
+        "name":  "Anglerfish",
+        "price":  10000,
+        "category":  3
+    },
+    {
+        "id":  712,
+        "name":  "Cup of tea",
+        "price":  5000,
+        "category":  3
+    },
+    {
+        "id":  4718,
+        "name":  "Dharok\u0027s greataxe",
+        "price":  6000000,
+        "category":  5
+    },
+    {
+        "id":  4716,
+        "name":  "Dharok\u0027s helm",
+        "price":  6000000,
+        "category":  5
+    },
+    {
+        "id":  4720,
+        "name":  "Dharok\u0027s platebody",
+        "price":  6000000,
+        "category":  5
+    },
+    {
+        "id":  4722,
+        "name":  "Dharok\u0027s platelegs",
+        "price":  6000000,
+        "category":  5
+    },
+    {
+        "id":  4726,
+        "name":  "Guthan\u0027s warspear",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4724,
+        "name":  "Guthan\u0027s helm",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4728,
+        "name":  "Guthan\u0027s platebody",
+        "price":  6000000,
+        "category":  5
+    },
+    {
+        "id":  4730,
+        "name":  "Guthan\u0027s chainskirt",
+        "price":  4000000,
+        "category":  5
+    },
+    {
+        "id":  4755,
+        "name":  "Verac\u0027s flail",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4753,
+        "name":  "Verac\u0027s helm",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4757,
+        "name":  "Verac\u0027s brassard",
+        "price":  6000000,
+        "category":  5
+    },
+    {
+        "id":  4759,
+        "name":  "Verac\u0027s plateskirt",
+        "price":  6000000,
+        "category":  5
+    },
+    {
+        "id":  4747,
+        "name":  "Torag\u0027s hammers",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4745,
+        "name":  "Torag\u0027s helm",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4749,
+        "name":  "Torag\u0027s platebody",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4751,
+        "name":  "Torag\u0027s platelegs",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4710,
+        "name":  "Ahrim\u0027s staff",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4708,
+        "name":  "Ahrim\u0027s hood",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4712,
+        "name":  "Ahrim\u0027s robetop",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4714,
+        "name":  "Ahrim\u0027s robeskirt",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4734,
+        "name":  "Karil\u0027s crossbow",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4732,
+        "name":  "Karil\u0027s coif",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4736,
+        "name":  "Karil\u0027s leathertop",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  4738,
+        "name":  "Karil\u0027s leatherskirt",
+        "price":  2000000,
+        "category":  5
+    },
+    {
+        "id":  11863,
+        "name":  "Rainbow partyhat",
+        "price":  50000000,
+        "category":  6
+    },
+    {
+        "id":  9925,
+        "name":  "Skeleton mask",
+        "price":  50000000,
+        "category":  6
+    },
+    {
+        "id":  314,
+        "name":  "Feather",
+        "price":  10,
+        "category":  7
+    },
+    {
+        "id":  1609,
+        "name":  "Opal",
+        "price":  550,
+        "category":  7
+    },
+    {
+        "id":  1613,
+        "name":  "Red topaz",
+        "price":  1250,
+        "category":  7
+    },
+    {
+        "id":  1607,
+        "name":  "Sapphire",
+        "price":  27500,
+        "category":  7
+    },
+    {
+        "id":  1605,
+        "name":  "Emerald",
+        "price":  3000,
+        "category":  7
+    },
+    {
+        "id":  1603,
+        "name":  "Ruby",
+        "price":  3500,
+        "category":  7
+    },
+    {
+        "id":  1601,
+        "name":  "Diamond",
+        "price":  8000,
+        "category":  7
+    },
+    {
+        "id":  1615,
+        "name":  "Dragonstone",
+        "price":  50000,
+        "category":  7
+    },
+    {
+        "id":  6573,
+        "name":  "Onyx",
+        "price":  3400000,
+        "category":  7
+    },
+    {
+        "id":  1511,
+        "name":  "Logs",
+        "price":  150,
+        "category":  7
+    },
+    {
+        "id":  1521,
+        "name":  "Oak logs",
+        "price":  275,
+        "category":  7
+    },
+    {
+        "id":  1519,
+        "name":  "Willow logs",
+        "price":  325,
+        "category":  7
+    },
+    {
+        "id":  1517,
+        "name":  "Maple logs",
+        "price":  500,
+        "category":  7
+    },
+    {
+        "id":  1515,
+        "name":  "Yew logs",
+        "price":  4500,
+        "category":  7
+    },
+    {
+        "id":  1513,
+        "name":  "Magic logs",
+        "price":  15000,
+        "category":  7
+    },
+    {
+        "id":  592,
+        "name":  "Ashes",
+        "price":  2750,
+        "category":  7
+    },
+    {
+        "id":  954,
+        "name":  "Rope",
+        "price":  100,
+        "category":  7
+    },
+    {
+        "id":  221,
+        "name":  "Eye of newt",
+        "price":  10,
+        "category":  7
+    },
+    {
+        "id":  1759,
+        "name":  "Ball of wool",
+        "price":  5000,
+        "category":  7
+    },
+    {
+        "id":  8794,
+        "name":  "Saw",
+        "price":  1250,
+        "category":  8
+    },
+    {
+        "id":  1755,
+        "name":  "Chisel",
+        "price":  250,
+        "category":  8
+    },
+    {
+        "id":  2347,
+        "name":  "Hammer",
+        "price":  250,
+        "category":  8
+    },
+    {
+        "id":  590,
+        "name":  "Tinderbox",
+        "price":  7500,
+        "category":  8
+    },
+    {
+        "id":  6032,
+        "name":  "Compost",
+        "price":  200,
+        "category":  8
+    },
+    {
+        "id":  6034,
+        "name":  "Supercompost",
+        "price":  200,
+        "category":  8
+    },
+    {
+        "id":  1267,
+        "name":  "Iron pickaxe",
+        "price":  10000,
+        "category":  8
+    },
+    {
+        "id":  1269,
+        "name":  "Steel pickaxe",
+        "price":  25000,
+        "category":  8
+    },
+    {
+        "id":  1273,
+        "name":  "Mithril pickaxe",
+        "price":  250000,
+        "category":  8
+    },
+    {
+        "id":  1275,
+        "name":  "Rune pickaxe",
+        "price":  750000,
+        "category":  8
+    },
+    {
+        "id":  1351,
+        "name":  "Bronze axe",
+        "price":  2500,
+        "category":  8
+    },
+    {
+        "id":  1349,
+        "name":  "Iron axe",
+        "price":  15000,
+        "category":  8
+    },
+    {
+        "id":  1353,
+        "name":  "Steel axe",
+        "price":  32500,
+        "category":  8
+    },
+    {
+        "id":  1355,
+        "name":  "Mithril axe",
+        "price":  60000,
+        "category":  8
+    },
+    {
+        "id":  307,
+        "name":  "Fishing rod",
+        "price":  125,
+        "category":  8
+    },
+    {
+        "id":  1733,
+        "name":  "Needle",
+        "price":  125,
+        "category":  8
+    },
+    {
+        "id":  952,
+        "name":  "Spade",
+        "price":  250,
+        "category":  8
+    },
+    {
+        "id":  21733,
+        "name":  "Guardian boots",
+        "price":  4000000,
+        "category":  0
+    },
+    {
+        "id":  11802,
+        "name":  "Armadyl godsword",
+        "price":  90000000,
+        "category":  0
+    },
+    {
+        "id":  11804,
+        "name":  "Bandos godsword",
+        "price":  90000000,
+        "category":  0
+    },
+    {
+        "id":  11806,
+        "name":  "Saradomin godsword",
+        "price":  90000000,
+        "category":  0
+    },
+    {
+        "id":  6528,
+        "name":  "Tzhaar-ket-om",
+        "price":  5000000,
+        "category":  0
+    },
+    {
+        "id":  6145,
+        "name":  "Rock-shell boots",
+        "price":  3000000,
+        "category":  0
+    },
+    {
+        "id":  4099,
+        "name":  "Mystic hat (dark)",
+        "price":  1000000,
+        "category":  2
+    },
+    {
+        "id":  4101,
+        "name":  "Mystic robe top (dark)",
+        "price":  1000000,
+        "category":  2
+    },
+    {
+        "id":  4103,
+        "name":  "Mystic robe bottom (dark)",
+        "price":  1000000,
+        "category":  2
+    },
+    {
+        "id":  4107,
+        "name":  "Mystic boots (dark)",
+        "price":  1000000,
+        "category":  2
+    },
+    {
+        "id":  4105,
+        "name":  "Mystic gloves (dark)",
+        "price":  1000000,
+        "category":  2
+    },
+    {
+        "id":  4089,
+        "name":  "Mystic hat",
+        "price":  500000,
+        "category":  2
+    },
+    {
+        "id":  4091,
+        "name":  "Mystic robe top",
+        "price":  500000,
+        "category":  2
+    },
+    {
+        "id":  4093,
+        "name":  "Mystic robe bottom",
+        "price":  500000,
+        "category":  2
+    },
+    {
+        "id":  4097,
+        "name":  "Mystic boots",
+        "price":  500000,
+        "category":  2
+    },
+    {
+        "id":  4109,
+        "name":  "Mystic hat (light)",
+        "price":  500000,
+        "category":  2
+    },
+    {
+        "id":  4111,
+        "name":  "Mystic robe top (light)",
+        "price":  500000,
+        "category":  2
+    },
+    {
+        "id":  4113,
+        "name":  "Mystic robe bottom (light)",
+        "price":  500000,
+        "category":  2
+    },
+    {
+        "id":  4117,
+        "name":  "Mystic boots (light)",
+        "price":  500000,
+        "category":  2
+    },
+    {
+        "id":  4115,
+        "name":  "Mystic gloves (light)",
+        "price":  500000,
+        "category":  2
+    },
+    {
+        "id":  579,
+        "name":  "Blue wizard hat",
+        "price":  0,
+        "category":  2
+    },
+    {
+        "id":  577,
+        "name":  "Blue wizard robe",
+        "price":  0,
+        "category":  2
+    },
+    {
+        "id":  1011,
+        "name":  "Blue skirt",
+        "price":  0,
+        "category":  2
+    },
+    {
+        "id":  2579,
+        "name":  "Wizard boots",
+        "price":  0,
+        "category":  2
+    },
+    {
+        "id":  1017,
+        "name":  "Wizard hat",
+        "price":  0,
+        "category":  2
+    },
+    {
+        "id":  581,
+        "name":  "Black robe",
+        "price":  0,
+        "category":  2
+    },
+    {
+        "id":  1015,
+        "name":  "Black skirt",
+        "price":  0,
+        "category":  2
+    },
+    {
+        "id":  10366,
+        "name":  "Amulet of magic (t)",
+        "price":  6000000,
+        "category":  2
+    },
+    {
+        "id":  1381,
+        "name":  "Staff of air",
+        "price":  0,
+        "category":  2
+    },
+    {
+        "id":  1383,
+        "name":  "Staff of water",
+        "price":  0,
+        "category":  2
+    },
+    {
+        "id":  1385,
+        "name":  "Staff of earth",
+        "price":  0,
+        "category":  2
+    },
+    {
+        "id":  1387,
+        "name":  "Staff of fire",
+        "price":  0,
+        "category":  2
+    },
+    {
+        "id":  1397,
+        "name":  "Air battlestaff",
+        "price":  2000000,
+        "category":  2
+    },
+    {
+        "id":  1395,
+        "name":  "Water battlestaff",
+        "price":  2000000,
+        "category":  2
+    },
+    {
+        "id":  1399,
+        "name":  "Earth battlestaff",
+        "price":  2000000,
+        "category":  2
+    },
+    {
+        "id":  1393,
+        "name":  "Fire battlestaff",
+        "price":  2000000,
+        "category":  2
+    },
+    {
+        "id":  2552,
+        "name":  "Ring of dueling(8)",
+        "price":  30000,
+        "category":  3
+    },
+    {
+        "id":  11978,
+        "name":  "Amulet of glory(6)",
+        "price":  9000000,
+        "category":  3
+    },
+    {
+        "id":  20266,
+        "name":  "Black unicorn mask",
+        "price":  300000000,
+        "category":  6
+    },
+    {
+        "id":  10121,
+        "name":  "Common kebbit fur",
+        "price":  300,
+        "category":  7
+    },
+    {
+        "id":  8790,
+        "name":  "Bolt of cloth",
+        "price":  900,
+        "category":  7
+    },
+    {
+        "id":  2355,
+        "name":  "Silver bar",
+        "price":  325000,
+        "category":  7
+    },
+    {
+        "id":  2357,
+        "name":  "Gold bar",
+        "price":  130000,
+        "category":  7
+    },
+    {
+        "id":  1753,
+        "name":  "Green dragonhide",
+        "price":  2250,
+        "category":  7
+    },
+    {
+        "id":  309,
+        "name":  "Fly fishing rod",
+        "price":  300,
+        "category":  8
+    },
+    {
+        "id":  2871,
+        "name":  "Ogre bellows",
+        "price":  125,
+        "category":  8
+    }
+]

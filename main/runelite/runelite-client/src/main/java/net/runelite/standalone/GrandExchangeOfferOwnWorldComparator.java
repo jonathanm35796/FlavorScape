@@ -99,8 +99,8 @@ public class GrandExchangeOfferOwnWorldComparator implements Comparator {
          if(var2 != null) {
             var1.method4717(new Buffer(var2));
             //TODO: Custom Object Definitions
-            var1.postDecode();
          }
+         if(var2 != null || var0 == 50005)var1.postDecode();
 
          var1.method4728();
          if(var1.isSolid) {

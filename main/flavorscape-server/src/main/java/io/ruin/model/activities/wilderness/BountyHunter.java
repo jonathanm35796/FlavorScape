@@ -4,7 +4,9 @@ import com.google.gson.annotations.Expose;
 import io.ruin.api.utils.Random;
 import io.ruin.model.World;
 import io.ruin.model.combat.KillingSpree;
+import io.ruin.model.combat.PvpKillRewards;
 import io.ruin.model.entity.player.Player;
+import io.ruin.model.entity.player.DevTesting;
 import io.ruin.model.inter.Interface;
 import io.ruin.model.inter.InterfaceHandler;
 import io.ruin.model.inter.InterfaceType;
@@ -27,6 +29,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Predicate;
 
 public class BountyHunter {
+    public static final int TARGET_PANEL_CHILD=18, TARGET_NAME_CHILD=53, TARGET_LOCATION_CHILD=54;
 
     private static final Bounds EDGEVILLE_BOUNDS = new Bounds(2993, 3523, 3124, 3597, -1);
 
@@ -104,8 +107,11 @@ public class BountyHunter {
     }
 
     public void refreshOverlay(){
+        refreshOverlay(false);
+    }
+    private void refreshOverlay(boolean force){
         boolean hidden=!player.bountyHunterOverlay||(target==null&&!targeting.isActive(player));
-        if(hidden!=interfaceHidden){interfaceHidden=hidden;player.getPacketSender().sendVarp(20002,hidden?1:0);}
+        if(force||hidden!=interfaceHidden){interfaceHidden=hidden;player.getPacketSender().sendVarp(20002,hidden?1:0);}
     }
 
     protected void checkActive() {
@@ -175,7 +181,8 @@ public class BountyHunter {
             return false;
         if (player.getUserId() == searching.getUserId())
             return false;
-        if (player.getIpInt() == searching.getIpInt())
+        boolean testing=DevTesting.isPair(player,searching);
+        if (player.getIpInt() == searching.getIpInt() && !testing)
             return false;
         if (Math.abs(player.getCombat().getLevel() - searching.getCombat().getLevel()) > 5)
             return false;
@@ -185,14 +192,15 @@ public class BountyHunter {
             return false;
         if (hasPenalty(ms))
             return false;
-        return !recentTargets.contains(searching.getUserId(), ms, 10L)
-                &&!searching.getBountyHunter().recentTargets.contains(player.getUserId(),ms,10L);
+        return testing || (!recentTargets.contains(searching.getUserId(), ms, 10L)
+                &&!searching.getBountyHunter().recentTargets.contains(player.getUserId(),ms,10L));
     }
 
     private void target(Player pTarget, long ms) {
         target = pTarget;
         recentTargets.add(pTarget.getUserId(), ms);
         player.getPacketSender().sendHintIcon(target);
+        refreshOverlay(true);
         player.sendMessage("<col=ff0000>You've been assigned a target: " + pTarget.getName());
         updateTargetInfo();
     }
@@ -207,6 +215,7 @@ public class BountyHunter {
     }
 
     private boolean hasPenalty(long ms) {
+        if(DevTesting.isAccount(player))return false;
         if (skips >= 10) {
             skipsResetAt = skips = 0;
             penaltyEnd = ms + 1800000; //30 minutes
@@ -244,13 +253,13 @@ public class BountyHunter {
             distanceColor = "<col=0080ff>";
         String wild;
         if (target.wildernessLevel > 0) {
-            int base = (int) Math.floor(target.wildernessLevel / 5) * 5;
-            wild = "Lvl " + Math.max(1, base) + "-" + (base + 4);
+            int base = ((target.wildernessLevel - 1) / 5) * 5 + 1;
+            wild = "Lvl " + base + "-" + (base + 4);
         } else {
             wild = "Safe";
         }
-        player.getPacketSender().sendString(Interface.WILDERNESS_OVERLAY, 47, skullImg + target.getName());
-        player.getPacketSender().sendString(Interface.WILDERNESS_OVERLAY, 48, distanceColor + wild + ", Cmb " + target.getCombat().getLevel());
+        player.getPacketSender().sendString(Interface.WILDERNESS_OVERLAY, TARGET_NAME_CHILD, skullImg + target.getName());
+        player.getPacketSender().sendString(Interface.WILDERNESS_OVERLAY, TARGET_LOCATION_CHILD, distanceColor + wild + ", Cmb " + target.getCombat().getLevel());
 
         /**
          * Target wealth
@@ -281,15 +290,15 @@ public class BountyHunter {
     }
 
     private void clearTargetInfo() {
-        player.getPacketSender().sendString(90, 47, "None");
-        player.getPacketSender().sendString(90, 48, "Level: -----");
+        player.getPacketSender().sendString(90, TARGET_NAME_CHILD, "Searching...");
+        player.getPacketSender().sendString(90, TARGET_LOCATION_CHILD, "Within 5 levels");
         Config.BOUNTY_HUNTER_RISK.set(player, 0);
         Config.BOUNTY_HUNTER_EMBLEM.set(player, 0);
     }
 
     private void updatePenaltyInfo(long minutes) {
-        player.getPacketSender().sendString(90, 47, "<col=ff0000>---</col>");
-        player.getPacketSender().sendString(90, 48, minutes + " " + (minutes > 1 ? "mins" : "min"));
+        player.getPacketSender().sendString(90, TARGET_NAME_CHILD, "<col=ff0000>---</col>");
+        player.getPacketSender().sendString(90, TARGET_LOCATION_CHILD, minutes + " " + (minutes > 1 ? "mins" : "min"));
         Config.BOUNTY_HUNTER_RISK.set(player, 0);
         Config.BOUNTY_HUNTER_EMBLEM.set(player, 0);
     }
@@ -340,7 +349,7 @@ public class BountyHunter {
         Player previous=target;
         if(previous.getBountyHunter().target==player)previous.getBountyHunter().removeTarget();
         removeTarget();
-        if(skips>=10){hasPenalty(now);player.sendMessage("You have abandoned 10 targets in 30 minutes. New targets are restricted for 30 minutes.");}
+        if(skips>=10&&!DevTesting.isAccount(player)){hasPenalty(now);player.sendMessage("You have abandoned 10 targets in 30 minutes. New targets are restricted for 30 minutes.");}
         else player.sendMessage("You have abandoned "+skips+" target(s) in the last 30 minutes.");
     }
 
@@ -360,6 +369,11 @@ public class BountyHunter {
      */
 
     public boolean deathByTarget(Player pKiller) {
+        long now=System.currentTimeMillis();
+        return deathByTarget(pKiller,PvpKillRewards.claim(pKiller,player,now),now);
+    }
+
+    public boolean deathByTarget(Player pKiller,boolean rewardAllowed,long ms) {
         Config.BOUNTY_HUNTER_TARGET_KILLS.set(player,0);
         Config.BOUNTY_HUNTER_ROGUE_KILLS.set(player,0);
         Player assigned=target;
@@ -368,8 +382,7 @@ public class BountyHunter {
             if(assigned.getBountyHunter().target==player)assigned.getBountyHunter().removeTarget();
             removeTarget();
         }
-        long ms=System.currentTimeMillis();
-        if(!eligibleKillReward(pKiller,ms)){
+        if(!rewardAllowed||player.wildernessLevel<=0||pKiller.wildernessLevel<=0){
             if(assigned!=null)assigned.sendMessage("Your target has died. You will be assigned a new one shortly.");
             return false;
         }
@@ -406,13 +419,11 @@ public class BountyHunter {
         return false;
     }
 
-    private boolean eligibleKillReward(Player killer,long ms){
-        if(killer==null||killer==player||player.wildernessLevel<=0||killer.wildernessLevel<=0
-                ||player.getUserId()<=0||killer.getUserId()<=0||player.getUserId()==killer.getUserId()
-                ||player.getIpInt()==killer.getIpInt())return false;
-        BountyHunter winner=killer.getBountyHunter();
-        return !winner.rewardedAccounts.contains(player.getUserId(),ms,10L)
-                &&!winner.rewardedIps.contains(player.getIpInt(),ms,10L);
+    public long remainingRewardCooldown(Player victim,long ms){
+        long remaining=rewardedAccounts.remainingMillis(victim.getUserId(),ms,PvpKillRewards.COOLDOWN_MINUTES);
+        if(!DevTesting.isPair(player,victim))
+            remaining=Math.max(remaining,rewardedIps.remainingMillis(victim.getIpInt(),ms,PvpKillRewards.COOLDOWN_MINUTES));
+        return remaining;
     }
 
     protected void dropEmblem(Player killer,int id){

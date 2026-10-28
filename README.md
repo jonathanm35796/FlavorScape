@@ -6,6 +6,25 @@ FlavorScape is an OSRS-style private server with a customized RuneLite/OpenOSRS 
 
 [Join the FlavorScape Discord](https://discord.gg/QJDZX7U4y) · [Development roadmap](docs/roadmap.md) · [Full content audit](docs/content-audit.md)
 
+## Recent work: 25–28 October 2026
+
+The current development batch brings together the following changes. The feature sections below describe their final behavior, including the corrected split between the cash shop and Bounty Hunter points shop.
+
+| Area | Delivered changes |
+| --- | --- |
+| Branding and local setup | FlavorScape names, login artwork and community links; portable JDK/Gradle launch scripts, localhost startup/login checks, readable logs and optional Discord configuration. |
+| Combat builds and gearing | Free editing of seven combat skills, twelve editable presets seeded with six builds, saved prayers/spellbooks, keyboard shortcuts, native close/camera controls and bank-capacity checks that preserve attributed items and rune-pouch contents. |
+| Combat and spellbooks | Maximum-hit dummy corrections, including Vesta's special and dragon claws; equipment/combat regressions; restored classic Standard, Ancient and Lunar spellbook layouts. |
+| Edgeville and market interface | Restored bank/services, workshop pool and merchant placement, removal of the blocking table, category/search/scroll controls, native Buy 1/5/10/X menus, token payments and immediate closing. |
+| Shop stock and prices | Replaced inherited main-shop stock with 178 ordinary entries from the new list. Kept a separate 17-item Vesta/Statius/Morrigan/Zuriel points shop, with the requested 20–500-point prices, free general entries and separate buyback rules. |
+| Bounty Hunter | Stable account identities, Edgeville level 1–5 matching, reciprocal targets/hint arrows, tier-1–10 emblems, trader redemption, target-panel name/emblem fixes and visibility that survives native Wilderness scripts and interface reloads. |
+| Kill rewards | 10M Blood Money base per eligible PvP kill, fractional BH points and target bonuses, plus one persistent five-minute repeat-victim gate for all generated rewards. Edgeville and named DEV testers obey the reward timer; blocked kills report the time remaining. |
+| Loot keys | Skully at `(3099,3510,0)`, chest at `(3095,3506,0)`, saved settings and Value statistics, five-key carrying limit, preserved loot/attributes and a reference-style window with inventory/bank withdrawal, Item/Note, key tabs, scrolling, close and confirmed destruction. |
+| Account and transaction fixes | Named DEV multi-account/same-IP testing, guarded ironman test trades, both trade confirmation screens, stale-request checks, safe emblem redemption and rejection of loot-key banking or preset cloning. |
+| Reliability and review | Inactivity/six-hour logout requests removed, disconnect and metadata error handling, content/equipment audits and automated verification of the revised home layout. |
+
+Both the server and client must be restarted to load the latest definitions and loot-key UI protocol. The latest loot-key window has automated transaction/input checks and an inspected offline render; live in-game verification is still pending. Earlier localhost checks of login, presets, spellbooks and market interactions are documented in the linked reports.
+
 ## Where the game is heading
 
 - **PvP comes first.** Edgeville fights, assigned Bounty Hunter targets, reliable combat and useful PvP rewards are the core of the server.
@@ -51,6 +70,8 @@ A successful load closes the panel; a rejected load leaves it open. The panel su
 
 The implemented Bounty Hunter loop assigns opponents in **Edgeville Wilderness levels 1–5**, with eligible targets matched within five combat levels. Target information, hint arrows, skips, return allowances, cooldowns and streak tracking support the fight.
 
+Eligible PvP kills have a **10 million Blood Money base reward**. Killing the same player again within **five minutes** gives no generated kill rewards, including Blood Money, BH points and emblem upgrades. This reward cooldown also applies in Edgeville and on DEV test accounts, persists across relogs and reports its remaining time when a repeated kill is blocked.
+
 Eligible assigned-target kills award or upgrade mysterious emblems through **tiers 1–10**. Only the highest carried emblem upgrades. Non-target kills do not create or upgrade emblems. Lost emblems drop privately for the killer, downgrading one tier above tier 1.
 
 Emblems redeem directly for Blood Money through the Emblem Trader or inventory redemption:
@@ -67,12 +88,23 @@ Matching and rewards include account/IP checks, recent-opponent restrictions and
 
 See [Bounty Hunter rules and verification](docs/bounty-hunter.md) for the full eligibility, death, skip and redemption behavior.
 
+BH points remain separate from Blood Money. A kill against a player without an emblem awards **1 point**; emblem tiers 1–10 award **0.1953125 to 100 points**, doubling with each tier. An assigned-target kill adds **10 points**. These awards share the five-minute repeat-victim cooldown.
+
+### Loot keys and Skully
+
+Talk to **Skully at `(3099,3510,0)`** to enable loot keys and configure consumable/high-value/low-value ground drops. Right-click **Value** to see the saved number of fully claimed keys, value claimed and value destroyed.
+
+Use a key on the **Loot chest at `(3095,3506,0)`** to open **Wilderness Loot Keys**. Select a key tab, withdraw one item by clicking it, or use the footer buttons to withdraw contents to inventory, deposit them directly to the bank, or confirm destruction of the selected key and remaining loot. **Item/Note**, scrolling, close and Escape controls work. Space and stack limits leave unclaimed items inside the key.
+
+Keys preserve item quantities and attributes, hold up to 28 item entries and are limited to five carried keys. They cannot be banked or reproduced through presets. Held keys are lost on death and can transfer to an eligible killer; ironmen can destroy their contents but cannot claim them. See [loot-key rules, controls and verification](docs/loot-keys.md).
+
 ### Combat and Wilderness systems
 
 - Melee, ranged and magic combat; weapon styles, ammunition, requirements, prayers, special attacks, equipment effects and item charges.
 - Standard, Ancient and Lunar spellbooks with their classic desktop layouts; combat spells, teleports and implemented utility spells.
 - Maximum-hit dummies that use maximum damage rolls, including consistent Vesta's longsword specials and dragon-claw multi-hit sequences. Existing dummy tests preserve special energy and stop after the requested attack.
 - Wilderness death/loot handling, skull and risk systems, kill streaks, ELO, hotspots, blacklists and risk protection.
+- [Loot keys](docs/loot-keys.md): Skully's settings and claimed-key/value totals, with a chest window for inventory/bank withdrawals, notes and confirmed destruction.
 - Revenant Caves, Wilderness bosses/events, the resource area, Chaos Altar, Mage Arena-related content, keys/chests, volcano content, obelisks, levers and webs. Individual features have different verification levels.
 
 Combat corrections and remaining equipment-parity gaps are recorded in the [combat audit](docs/combat-audit.md).
@@ -83,13 +115,27 @@ The home retains Edgeville's bank and services, with a nearby workshop containin
 
 The market provides:
 
-- **General Market** and **PvP Equipment** dropdown choices; the latter filters Ancient Warriors' equipment.
+- **General Market** with 178 ordinary items from the new list, replacing its old stock, and a separate **PvP Equipment** points store containing 17 Vesta, Statius, Morrigan and Zuriel items.
 - One scrollable catalogue with nine categories, sidebar shortcuts, item search and server-provided prices.
 - A native right-click menu with **Buy 1, Buy 5, Buy 10 and Buy X**; left-click reports the price.
-- Blood Money and platinum-token payments at **1 platinum token = 1,000 Blood Money**.
-- **40% buyback**, rounded down, for eligible catalogue items.
+- Blood Money/token payments and 40% buyback in General Market; existing free entries remain free.
+- Bounty Hunter points and no buyback in PvP Equipment.
 - Capacity, currency, distance and active-shop checks, including revalidation of entered quantities.
 - Immediate local closing that also dismisses the underlying native shop windows.
+
+The BH points shop uses the following prices per item:
+
+| Equipment | BH points |
+| --- | ---: |
+| All Vesta and Statius melee items | 500 |
+| Morrigan's throwing axe / javelin | 20 / 25 |
+| Morrigan's coif | 250 |
+| Morrigan's leather body / chaps | 400 each |
+| Zuriel's hood | 250 |
+| Zuriel's robe top / bottom | 500 each |
+| Zuriel's staff | 400 |
+
+The [item mapping and unresolved-list review](docs/pvp-equipment-unresolved.md) records which appearance-only requests still need exact identities; the active catalogue does not invent replacements for those entries.
 
 Blood Money is the main cash currency. Legacy coin items normalize to Blood Money in item/container paths; activity tokens and refunded credits retain their own roles. Banking, direct trading, shops, a Trading Post with offers/coffer, item storage, charges, combinations and upgrades are also present. Trading Post access is restricted for ironmen.
 
@@ -181,13 +227,16 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\run-local.ps1
 
 Use **Stop Server.bat** to stop the local servers. DEV operation is local development configuration, including elevated account permissions; it is not the public-server configuration.
 
-Latest gameplay-change verification, **27 October 2026**: **127 server tests** and **32 client market/gear tests** passed. Actual localhost login and selected interface flows have also been exercised. Full live multiplayer and activity completion remain separate verification work.
+In DEV mode, **Jon**, **Jon2** and **Sales Tax** have explicit exceptions for local same-IP login/matching and ironman-mode trade testing. Their repeated matches still obey the five-minute reward cooldown. Production restrictions remain active outside DEV. See [DEV account testing](docs/dev-testing.md) for trading and Bounty Hunter instructions.
+
+Latest publication checks, **28 October 2026**: the complete server suite (**193 tests**), **1 API test** and **55 project client tests** passed with no failures or skips. Server/client JAR builds succeeded, and the cache-based home-layout check reported zero failures across 99 NPC and 62 object placements. Checks cover trade confirmations, presets, currencies, market catalogues, BH rewards/visibility, loot-key transactions and every chest-window control. The loot window's offline render was visually inspected. Earlier localhost login and selected preset/spellbook/market flows were exercised separately; the newest loot-key UI and full multiplayer behavior still need live verification after restart.
 
 | Documentation | Purpose |
 | --- | --- |
 | [Roadmap](docs/roadmap.md) | Delivered behavior and development direction |
 | [Command help](docs/commands.md) | Player commands, shortcuts and permissions |
 | [Bounty Hunter](docs/bounty-hunter.md) | Targeting, emblems, payouts and eligibility |
+| [Loot keys](docs/loot-keys.md) | Skully, settings, chest UI, withdrawals and saved Value statistics |
 | [PvP market](docs/pvp-market.md) | Catalogue, payments, buyback and interface behavior |
 | [Combat audit](docs/combat-audit.md) | Combat corrections, equipment checks and remaining gaps |
 | [Content audit](docs/content-audit.md) | Full skill/activity inventory and implementation status |

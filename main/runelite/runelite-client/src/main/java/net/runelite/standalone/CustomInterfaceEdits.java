@@ -5,6 +5,7 @@ public class CustomInterfaceEdits {
     public static void childLoaded(Widget inter) {
         int parentId = inter.id >> 16;
         int childId = inter.id & 0xffff;
+        inter.isHidden = CustomMisc.bountyOverlayHidden(inter, inter.isHidden);
         inter.text = inter.text.replace("RuneScape", CustomMain.worldType.getName()).replace("KronosPK", "FlavorScape").replace("Kronos", "FlavorScape");
 
         if(parentId == 24) { //barrows overlay

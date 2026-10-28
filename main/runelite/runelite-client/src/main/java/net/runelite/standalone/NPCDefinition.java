@@ -662,7 +662,12 @@ public class NPCDefinition extends DualNode implements RSNPCDefinition {
 
    void postDecode() {
       if (name != null) { name = name.replace("Kronos", "FlavorScape"); }
-      if (id == 9001) {
+      if (id == 15000) {
+         copy(6773);
+         name = "Skully";
+         combatLevel = 0;
+         actions = new String[]{"Talk-to", "Value", null, null, null};
+      } else if (id == 9001) {
          copy(2462);
          name = "PvP shop";
          combatLevel = 0;

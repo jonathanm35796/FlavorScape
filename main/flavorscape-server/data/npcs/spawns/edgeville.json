@@ -34,12 +34,11 @@
     {
         "name":  "Horvik",
         "id":  2882,
-        "x":  3076,
-        "y":  3511,
+        "x":  3098,
+        "y":  3508,
         "z":  0,
-        "direction":  "E",
-        "walkRange":  0,
-        "world":  "ECO"
+        "direction":  "W",
+        "walkRange":  0
     },
     {
         "name":  "Man",
@@ -856,6 +855,15 @@
         "z":  0,
         "direction":  "W",
         "walkRange":  0
+    },
+    {
+        "name": "Skully",
+        "id": 15000,
+        "x": 3099,
+        "y": 3510,
+        "z": 0,
+        "direction": "S",
+        "walkRange": 0
     },
     {
         "name":  "Banker",

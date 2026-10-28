@@ -1,0 +1,104 @@
+[
+    {
+        "id":  22610,
+        "name":  "Vesta\u0027s spear",
+        "price":  500,
+        "category":  0
+    },
+    {
+        "id":  22613,
+        "name":  "Vesta\u0027s longsword",
+        "price":  500,
+        "category":  0
+    },
+    {
+        "id":  22616,
+        "name":  "Vesta\u0027s chainbody",
+        "price":  500,
+        "category":  0
+    },
+    {
+        "id":  22619,
+        "name":  "Vesta\u0027s plateskirt",
+        "price":  500,
+        "category":  0
+    },
+    {
+        "id":  22622,
+        "name":  "Statius\u0027s warhammer",
+        "price":  500,
+        "category":  0
+    },
+    {
+        "id":  22625,
+        "name":  "Statius\u0027s full helm",
+        "price":  500,
+        "category":  0
+    },
+    {
+        "id":  22628,
+        "name":  "Statius\u0027s platebody",
+        "price":  500,
+        "category":  0
+    },
+    {
+        "id":  22631,
+        "name":  "Statius\u0027s platelegs",
+        "price":  500,
+        "category":  0
+    },
+    {
+        "id":  22634,
+        "name":  "Morrigan\u0027s throwing axe",
+        "price":  20,
+        "category":  1
+    },
+    {
+        "id":  22636,
+        "name":  "Morrigan\u0027s javelin",
+        "price":  25,
+        "category":  1
+    },
+    {
+        "id":  22638,
+        "name":  "Morrigan\u0027s coif",
+        "price":  250,
+        "category":  1
+    },
+    {
+        "id":  22641,
+        "name":  "Morrigan\u0027s leather body",
+        "price":  400,
+        "category":  1
+    },
+    {
+        "id":  22644,
+        "name":  "Morrigan\u0027s leather chaps",
+        "price":  400,
+        "category":  1
+    },
+    {
+        "id":  22647,
+        "name":  "Zuriel\u0027s staff",
+        "price":  400,
+        "category":  2
+    },
+    {
+        "id":  22650,
+        "name":  "Zuriel\u0027s hood",
+        "price":  250,
+        "category":  2
+    },
+    {
+        "id":  22653,
+        "name":  "Zuriel\u0027s robe top",
+        "price":  500,
+        "category":  2
+    },
+    {
+        "id":  22656,
+        "name":  "Zuriel\u0027s robe bottom",
+        "price":  500,
+        "category":  2
+    }
+]

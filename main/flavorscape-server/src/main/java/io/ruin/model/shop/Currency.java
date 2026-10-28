@@ -10,6 +10,23 @@ import java.util.stream.Stream;
 public enum Currency {
     COINS(new ItemCurrencyHandler(ItemID.BLOOD_MONEY)),
     BLOOD_MONEY(new ItemCurrencyHandler(ItemID.BLOOD_MONEY)),
+    BOUNTY_HUNTER_POINTS(new CurrencyHandler("Bounty Hunter points") {
+        @Override public int getCurrencyCount(Player player) {
+            return (int)Math.min(Integer.MAX_VALUE,player.bountyHunterPointUnits / io.ruin.model.activities.wilderness.BountyHunterPoints.UNITS_PER_POINT);
+        }
+        @Override public int removeCurrency(Player player, int amount) {
+            long units = (long)amount * io.ruin.model.activities.wilderness.BountyHunterPoints.UNITS_PER_POINT;
+            if(amount < 0 || units > player.bountyHunterPointUnits) return 0;
+            player.bountyHunterPointUnits -= units;
+            return amount;
+        }
+        @Override public int addCurrency(Player player, int amount) {
+            if(amount < 0) return 0;
+            return (int)(io.ruin.model.activities.wilderness.BountyHunterPoints.add(player,
+                    (long)amount * io.ruin.model.activities.wilderness.BountyHunterPoints.UNITS_PER_POINT)
+                    / io.ruin.model.activities.wilderness.BountyHunterPoints.UNITS_PER_POINT);
+        }
+    }),
     TOKKUL(new ItemCurrencyHandler(ItemID.TOKKUL)),
     MARKS_OF_GRACE(new ItemCurrencyHandler(ItemID.MARK_OF_GRACE)),
     EASTER_EGGS(new ItemCurrencyHandler(ItemID.EASTER_EGG)),

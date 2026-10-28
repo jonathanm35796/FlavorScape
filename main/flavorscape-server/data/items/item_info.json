@@ -1,4 +1,21 @@
 [
+  { #Dragon platebody - shop item 21892; OSRS equipment definition
+    "id": 21892,
+    "tradeable": true,
+    "examine": "Provides excellent protection.",
+    "weight": 11.339,
+    "protect_value": 25000000,
+    "equip_slot": 4,
+    "defence_level": 60,
+    "magic_attack_bonus": -30,
+    "range_attack_bonus": -15,
+    "stab_defence_bonus": 109,
+    "slash_defence_bonus": 107,
+    "crush_defence_bonus": 97,
+    "magic_defence_bonus": -6,
+    "range_defence_bonus": 106,
+    "hide_arms": true
+  },
   { #Dwarf remains
     "id": 0,
     "tradeable": false,

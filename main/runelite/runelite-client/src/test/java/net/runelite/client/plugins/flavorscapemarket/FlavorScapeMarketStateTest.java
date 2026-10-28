@@ -55,4 +55,32 @@ public class FlavorScapeMarketStateTest {
         FlavorScapeMarketState.receive(BASE|2,"END");
         assertEquals(3000000000L,FlavorScapeMarketState.get().balance);
     }
+    @Test public void catalogueSupportsFiveBillionPrices(){
+        FlavorScapeMarketState.receive(BASE,"{\"token\":\"expensive\"}");
+        FlavorScapeMarketState.receive(BASE|1,"{\"id\":11802,\"price\":5000000000,\"buyback\":2000000000}");
+        FlavorScapeMarketState.receive(BASE|2,"END");
+        assertEquals(5_000_000_000L,FlavorScapeMarketState.get().items.get(0).price);
+    }
+    @Test public void bountySnapshotsPreserveFractionalPointsAndCurrencyView(){
+        FlavorScapeMarketState.receive(BASE,"{\"token\":\"bh\",\"pvpOnly\":true,\"bountyBalance\":110.1953125}");
+        FlavorScapeMarketState.receive(BASE|2,"END");
+        assertTrue(FlavorScapeMarketState.get().pvpOnly);
+        assertEquals(110.1953125,FlavorScapeMarketState.get().bountyBalance,0);
+    }
+    @Test public void replacementSnapshotRemovesTheLegacyMarketChoice(){
+        FlavorScapeMarketState.receive(BASE,"{\"token\":\"new\",\"pvpOnly\":true,\"hasMarketSelector\":false}");
+        FlavorScapeMarketState.receive(BASE|2,"END");
+        assertFalse(FlavorScapeMarketState.get().hasMarketSelector);
+        assertTrue(FlavorScapeMarketState.get().pvpOnly);
+    }
+    @Test public void twoStoreSnapshotsRestoreTheSelectorAndUseTheSelectedCurrency(){
+        FlavorScapeMarketState.receive(BASE,"{\"token\":\"split\",\"pvpOnly\":false,\"hasMarketSelector\":true,\"balance\":8000000}");
+        FlavorScapeMarketState.receive(BASE|2,"END");
+        assertTrue(FlavorScapeMarketState.get().hasMarketSelector);assertFalse(FlavorScapeMarketState.get().pvpOnly);
+        assertEquals(8000000,FlavorScapeMarketState.get().balance);
+        FlavorScapeMarketState.receive(BASE,"{\"token\":\"split\",\"pvpOnly\":true,\"hasMarketSelector\":true,\"bountyBalance\":110.5}");
+        FlavorScapeMarketState.receive(BASE|2,"END");
+        assertTrue(FlavorScapeMarketState.get().hasMarketSelector);assertTrue(FlavorScapeMarketState.get().pvpOnly);
+        assertEquals(110.5,FlavorScapeMarketState.get().bountyBalance,0);
+    }
 }

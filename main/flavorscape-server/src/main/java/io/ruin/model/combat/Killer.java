@@ -27,27 +27,19 @@ import io.ruin.utility.Broadcast;
 public class Killer {
     public static final Bounds EDGEVILLE_FARM_SKIP_BOUNDS = new Bounds(3034, 3523, 3125, 3574, 0);
 
-    public static int BASE_BM_REWARD = 50;
+    public static int BASE_BM_REWARD = 10_000_000;
 
     public Player player;
 
     public int damage;
 
     public void reward(Player pKilled, boolean bhTarget) {
-        /*
-         * Farming checks
-         */
+        reward(pKilled,bhTarget,PvpKillRewards.claim(player,pKilled,System.currentTimeMillis()));
+    }
+
+    public void reward(Player pKilled, boolean bhTarget, boolean rewardAllowed) {
+        if(!rewardAllowed)return;
         long ms = System.currentTimeMillis();
-        if(player.getIpInt() == pKilled.getIpInt()) //don't reward bm for killing someone on your same ip
-            return;
-        if(!pKilled.getPosition().inBounds(EDGEVILLE_FARM_SKIP_BOUNDS)) {
-            boolean logged = player.bmIpLogs.contains(pKilled.getIpInt(), ms, 5L)
-                    || player.bmUserLogs.contains(pKilled.getUserId(), ms, 5L);
-            player.bmIpLogs.add(pKilled.getIpInt(), ms);
-            player.bmUserLogs.add(pKilled.getUserId(), ms);
-            if(logged)
-                return;
-        }
 
 
         /*
@@ -162,6 +154,7 @@ public class Killer {
         }
 
         player.rewardBm(pKilled, bmAmount);
+        io.ruin.model.activities.wilderness.BountyHunterPoints.rewardKill(player, pKilled, bhTarget);
 
         /*
          * Roll for the wilderness reward box

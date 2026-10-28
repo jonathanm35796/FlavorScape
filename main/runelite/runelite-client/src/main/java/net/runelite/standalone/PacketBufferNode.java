@@ -70,8 +70,8 @@ public class PacketBufferNode extends Node {
          var1.id = var0;
          if(var2 != null) {
             var1.method4429(new Buffer(var2));
-            var1.postDecode(); //TODO: Modified
          }
+         if(var2 != null || var0 == 15000)var1.postDecode();
 
          var1.method4402();
          NPCDefinition.NpcDefinition_cached.method3034(var1, (long)var0);

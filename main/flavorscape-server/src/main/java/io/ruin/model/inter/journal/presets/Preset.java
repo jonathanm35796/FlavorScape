@@ -53,6 +53,10 @@ public class Preset extends JournalEntry {
      */
 
     public final boolean allowSelect(Player player) {
+        if(io.ruin.model.activities.wilderness.LootKeys.count(player)>0){
+            player.sendMessage("Claim or destroy your loot keys before loading a gear preset.");
+            return false;
+        }
         if (player.getCombat().isDead() || player.getCombat().isAttacking(16) || player.getCombat().isDefending(16)) {
             player.sendMessage("You can't load gear during combat or while dead.");
             return false;
@@ -140,15 +144,8 @@ public class Preset extends JournalEntry {
             player.sendMessage("This saved gear slot is unavailable.");
             return;
         }
-        if (!allowSelect(player) || !canBankSetup(player))
+        if (!allowSelect(player) || !bankCurrentSetup(player))
             return;
-        if (!bankItems(player, true))
-            return;
-        player.getRunePouch().empty(true);
-        if (!bankItems(player, false)) {
-            player.sendMessage(Color.RED.wrap("Failed to load preset. Please make sure you have enough bank space to deposit your current gear."));
-            return;
-        }
 
         /*
          * Set combat levels
@@ -169,7 +166,7 @@ public class Preset extends JournalEntry {
             if (hitpoints != null)
                 player.getStats().set(StatType.Hitpoints, hitpoints[0], hitpoints[1]);
         }
-        
+
         /*
          * Set items
          */
@@ -202,7 +199,26 @@ public class Preset extends JournalEntry {
         player.getPacketSender().sendString(32766, 20, "FS_GEARS_LOADED");
     }
 
+    // Complete every deposit before any preset slot can replace the current setup.
+    final boolean bankCurrentSetup(Player player) {
+        if (!canBankSetup(player))
+            return false;
+        for (ItemContainer container : new ItemContainer[]{player.getInventory(), player.getEquipment(), player.getRunePouch()}) {
+            if (!bankItems(player, container))
+                return false;
+        }
+        return true;
+    }
+
+    private static int bankId(Item item) {
+        return io.ruin.model.item.CoinCurrency.normalize(item.getDef().isNote() ? item.getDef().notedId : item.getId());
+    }
+
     private boolean canBankSetup(Player player) {
+        if(io.ruin.model.activities.wilderness.LootKeys.count(player)>0){
+            player.sendMessage("Claim or destroy your loot keys before loading a gear preset.");
+            return false;
+        }
         java.util.Map<String, Long> incoming = new java.util.HashMap<>();
         int attributedSlots = 0;
         for (ItemContainer container : new ItemContainer[]{player.getInventory(), player.getEquipment(), player.getRunePouch()}) {
@@ -212,7 +228,7 @@ public class Preset extends JournalEntry {
                     attributedSlots++;
                     continue;
                 }
-                int id = item.getDef().isNote() ? item.getDef().notedId : item.getId();
+                int id = bankId(item);
                 String key = id + ":" + item.getAttributeHash();
                 incoming.merge(key, (long) item.getAmount(), Long::sum);
             }
@@ -251,22 +267,21 @@ public class Preset extends JournalEntry {
         return result.toString();
     }
 
-    private boolean bankItems(Player player, boolean inventory) {
-        ItemContainer container;
-        if (inventory) {
-            container = player.getInventory();
-        } else {
-            container = player.getEquipment();
-        }
-
+    private boolean bankItems(Player player, ItemContainer container) {
         /*
          * First, deposit any items you have.
          */
         for (Item item : container.getItems()) {
-            if (item != null && player.getBank().deposit(item, item.getAmount(), false) == 0) {
-                player.sendMessage(Color.COOL_BLUE.wrap(item.getDef().name) + " x " + item.getAmount() + " could not be banked.");
-                return false;
-            }
+            if (item == null) continue;
+            int amount = item.getAmount();
+            // Item.move only transfers one unit of attributed items. Deposit the exact
+            // slot and its full quantity, retaining attributes and any unbanked remainder.
+            int deposited = player.getBank().add(bankId(item), amount, item.copyOfAttributes());
+            if (deposited > 0)
+                item.incrementAmount(-deposited);
+            if (deposited == amount) continue;
+            player.sendMessage(Color.COOL_BLUE.wrap(item.getDef().name) + " could not be fully banked. Preset loading stopped.");
+            return false;
         }
         return true;
     }
@@ -297,6 +312,7 @@ public class Preset extends JournalEntry {
                 container.set(i, null);
                 continue;
             }
+            if(io.ruin.model.activities.wilderness.LootKeys.isKey(presetItem))continue;
             ItemDef presetDef = presetItem.getDef();
             if (free || presetDef.bmShopPrice == 0) {
                 container.set(i, presetItem.copy());

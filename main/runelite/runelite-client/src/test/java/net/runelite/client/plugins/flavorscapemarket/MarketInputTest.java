@@ -44,6 +44,13 @@ public class MarketInputTest {
         click(138,15);assertFalse(field("dropdown").getBoolean(plugin));
         assertNotNull(FlavorScapeMarketState.get());
     }
+    @Test public void replacementShopCannotOpenTheRemovedMarketSelector() throws Exception {
+        FlavorScapeMarketState.get().hasMarketSelector=false;
+        field("dropdown").setBoolean(plugin,true);
+        click(138,15);assertFalse(field("dropdown").getBoolean(plugin));
+        click(138,15);assertFalse(field("dropdown").getBoolean(plugin));
+        assertNotNull(FlavorScapeMarketState.get());
+    }
     @Test public void rightClickPassesThroughToTheNativeMenu() {
         MouseEvent event=new MouseEvent(canvas,MouseEvent.MOUSE_PRESSED,0,0,145,77,1,false,MouseEvent.BUTTON3);
         mouse.mousePressed(event);

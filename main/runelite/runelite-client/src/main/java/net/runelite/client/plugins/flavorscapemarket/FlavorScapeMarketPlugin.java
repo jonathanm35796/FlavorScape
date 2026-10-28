@@ -31,7 +31,7 @@ import net.runelite.client.ui.overlay.*;
 import net.runelite.standalone.FlavorScapeCommands;
 import net.runelite.standalone.FlavorScapeMarketState;
 
-@PluginDescriptor(name="FlavorScape Market",description="Categorised PvP market with prices and 40% buyback",enabledByDefault=true)
+@PluginDescriptor(name="FlavorScape Market",description="Categorised PvP market with server-provided stock and prices",enabledByDefault=true)
 public class FlavorScapeMarketPlugin extends Plugin {
     @Inject private Client client;
     @Inject private ClientThread clientThread;
@@ -163,9 +163,10 @@ public class FlavorScapeMarketPlugin extends Plugin {
             if(client.getGameState()!=GameState.LOGGED_IN){FlavorScapeMarketState.clear();return null;}
             Widget shop=client.getWidget(300,0);
             if(s==null||shop==null||shop.isHidden())return null;
+            if(!s.hasMarketSelector)dropdown=false;
             if(!s.token.equals(lastToken)){lastToken=s.token;query=s.query==null?"":s.query;scroll=0;searching=false;activeMenuItem=-1;selectedCategory=0;pendingJump=-1;}
             String view=s.pvpOnly+":"+s.query;if(!view.equals(lastView)){lastView=view;scroll=0;activeMenuItem=-1;}
-            if(lastSnapshot!=s){lastSnapshot=s;layout=new MarketLayout(s.items,!s.pvpOnly&&(s.query==null||s.query.isEmpty()));if(pendingJump>=0){jumpTo(pendingJump);pendingJump=-1;}}
+            if(lastSnapshot!=s){lastSnapshot=s;layout=new MarketLayout(s.items,s.query==null||s.query.isEmpty());if(pendingJump>=0){jumpTo(pendingJump);pendingJump=-1;}}
             scroll=Math.max(0,Math.min(scroll,layout.maximumScroll(GRID_HEIGHT)));
             Widget viewport=client.getViewportWidget();Rectangle v=viewport==null?new Rectangle(0,0,512,334):viewport.getBounds();
             int x=v.x+Math.max(0,(v.width-WIDTH)/2),y=v.y+Math.max(0,(v.height-HEIGHT)/2);panel=new Rectangle(x,y,WIDTH,HEIGHT);
@@ -174,8 +175,10 @@ public class FlavorScapeMarketPlugin extends Plugin {
             java.awt.image.BufferedImage background=sprites.getSprite(SpriteID.DIALOG_BACKGROUND,0);
             if(background!=null){Paint old=g.getPaint();g.setPaint(new TexturePaint(background,new Rectangle(x+4,y+4,background.getWidth(),background.getHeight())));g.fillRect(x+4,y+4,WIDTH-8,HEIGHT-8);g.setPaint(old);}
             g.setColor(new Color(31,25,19));g.drawLine(x+5,y+31,x+WIDTH-6,y+31);
-            box(g,x+8,y+7,141,19,new Color(47,45,35));text(g,s.pvpOnly?"PvP Equipment":"General Market",x+12,y+21,GOLD);
-            squareButton(g,x+130,y+8,16);arrow(g,x+138,y+15,true);
+            if(s.hasMarketSelector){
+                box(g,x+8,y+7,141,19,new Color(47,45,35));text(g,s.pvpOnly?"PvP Equipment":"General Market",x+12,y+21,GOLD);
+                squareButton(g,x+130,y+8,16);arrow(g,x+138,y+15,true);
+            }
             g.setFont(FontManager.getRunescapeBoldFont());
             center(g,s.pvpOnly?"PvP Equipment":"General Market",x+WIDTH/2,y+22,GOLD);
             java.awt.image.BufferedImage close=sprites.getSprite(SpriteID.WINDOW_CLOSE_BUTTON,0);
@@ -202,12 +205,12 @@ public class FlavorScapeMarketPlugin extends Plugin {
             for(MarketLayout.Cell cell:layout.cells){
                 int ix=grid.x+cell.bounds.x,iy=grid.y+cell.bounds.y-scroll;
                 FlavorScapeMarketState.Item item=s.items.get(cell.itemIndex);if(iy+43<grid.y||iy>grid.y+grid.height)continue;
-                g.drawImage(items.getImage(item.id),ix+5,iy,32,32,null);center(g,price(item.price),ix+22,iy+40,new Color(255,236,55));
+                g.drawImage(items.getImage(item.id),ix+5,iy,32,32,null);if(item.price>0)center(g,price(item.price),ix+22,iy+40,new Color(255,236,55));
             }
             g.setClip(clip);
             drawScrollBar(g);
-            text(g,"Blood Money (incl. tokens): "+price(s.balance),x+130,y+303,GOLD);
-            text(g,"Buyback: 40%",x+130,y+316,new Color(201,188,145));
+            text(g,s.pvpOnly?"Bounty Hunter points: "+java.math.BigDecimal.valueOf(s.bountyBalance).stripTrailingZeros().toPlainString():"Blood Money (incl. tokens): "+price(s.balance),x+130,y+303,GOLD);
+            text(g,s.pvpOnly?"Prices in BH points | No buyback":"Buyback: 40%",x+130,y+316,new Color(201,188,145));
             if(s.items.isEmpty())center(g,"No items found.",x+296,y+162,new Color(190,181,152));
             if(dropdown){frame(g,x+8,y+28,141,46,BG);text(g,"General Market",x+14,y+46,GOLD);text(g,"PvP Equipment",x+14,y+66,GOLD);}
             return null;
@@ -219,7 +222,8 @@ public class FlavorScapeMarketPlugin extends Plugin {
             if(client!=null&&client.isMenuOpen())return e;
             if(panel.isEmpty()||e.isAltDown()||e.getButton()==MouseEvent.BUTTON2)return e;
             FlavorScapeMarketState.Snapshot s=FlavorScapeMarketState.get();if(s==null)return e;int x=e.getX()-panel.x,y=e.getY()-panel.y;
-            if(x>=8&&x<149&&y>=7&&y<28&&e.getButton()==MouseEvent.BUTTON1){dropdown=!dropdown;searching=false;e.consume();return e;}
+            if(!s.hasMarketSelector)dropdown=false;
+            if(s.hasMarketSelector&&x>=8&&x<149&&y>=7&&y<28&&e.getButton()==MouseEvent.BUTTON1){dropdown=!dropdown;searching=false;e.consume();return e;}
             if(dropdown){dropdown=false;if(x>=8&&x<149&&y>=28&&y<74&&e.getButton()==MouseEvent.BUTTON1)request(0,y>=51);e.consume();return e;}
             if(!panel.contains(e.getPoint()))return e;
             if(x>=479&&y<29)close();

@@ -119,8 +119,8 @@ public final class Occluder {
          if(var2 != null) {
             var1.method4527(new Buffer(var2));
             //TODO: Custom Item Definitions
-            var1.postDecode();
          }
+         if(var2 != null || var0 == 30330)var1.postDecode();
 
          var1.method4528();
          if(var1.noteTemplate != -1) {

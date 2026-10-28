@@ -44,6 +44,13 @@ public class ObjectDef {
                 LOADED.put(id, def);
             }
         }
+        ObjectDef lootChest = new ObjectDef();
+        lootChest.id = 50005;
+        lootChest.copy(27290);
+        lootChest.name = "Loot chest";
+        lootChest.descriptiveName = "a loot chest";
+        lootChest.options = new String[]{"Loot", null, null, null, null};
+        LOADED.put(lootChest.id, lootChest);
     }
 
     public static void forEach(Consumer<ObjectDef> consumer) {

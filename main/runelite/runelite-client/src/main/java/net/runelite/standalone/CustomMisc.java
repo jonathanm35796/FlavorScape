@@ -9,6 +9,16 @@ public class CustomMisc {
     public static boolean HIDE_TITLES = false;
     public static boolean SHOW_GROUND_ITEM_COLORS = false;
     public static boolean SNOW_ON_GROUND = false;
+    private static Boolean bountyOverlayHidden;
+
+    static boolean bountyOverlayHidden(Widget widget, boolean nativeHidden) {
+        // Native script 866 hides Bounty Hunter on non-BH worlds. FlavorScape's
+        // server controls participation instead, including after layout updates.
+        if (bountyOverlayHidden != null && (widget.id == (90 << 16 | 6)
+                || widget.id == (90 << 16 | 18)))
+            return bountyOverlayHidden;
+        return nativeHidden;
+    }
 
     public static void handleCustomVarp(int id, int value) {
         id -= 20000;
@@ -19,9 +29,16 @@ public class CustomMisc {
 
         if(id == 2) {
             boolean hide = value == 1;
-            Widget minimise = Canvas.get(90, 6);
-            minimise.isHidden = hide;
-            WorldMapSectionType.method116(minimise);
+            bountyOverlayHidden = hide;
+            // The current cache keeps the target panel hidden separately from its parent.
+            // Toggling only the parent leaves an assigned target invisible.
+            for(int child:new int[]{6,18}) {
+                Widget panel = Canvas.get(90, child);
+                if(panel != null) {
+                    panel.isHidden = hide;
+                    WorldMapSectionType.method116(panel);
+                }
+            }
             return;
         }
 

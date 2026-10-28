@@ -867,6 +867,12 @@ public class ObjectDefinition extends DualNode implements RSObjectDefinition {
    }
 
    void postDecode() {
+      if(id == 50005) {
+         copy(27290);
+         name = "Loot chest";
+         actions = new String[]{"Loot", null, null, null, null};
+         return;
+      }
       if (name != null && (id < 33999 || id > 34005)) { name = name.replace("Kronos", "FlavorScape"); }
       if (id == 10060) {
          name = "Trading Post";

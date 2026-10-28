@@ -1017,9 +1017,12 @@ public class PlayerCombat extends Combat {
                 /**
                  * Rewards (Keep before items lost on death!)
                  */
-                boolean bhTarget = player.getBountyHunter().deathByTarget(pKiller);
+                boolean bhTarget = pKiller != null && pKiller.getBountyHunter().target == player;
+                long rewardTime=System.currentTimeMillis();
+                boolean rewardAllowed=io.ruin.model.combat.PvpKillRewards.claim(pKiller,player,rewardTime);
+                player.getBountyHunter().deathByTarget(pKiller,rewardAllowed,rewardTime);
                 if(pKiller != null) {
-                    killer.reward(player, bhTarget);
+                    killer.reward(player, bhTarget,rewardAllowed);
                     Config.PVP_DEATHS.increment(player, 1);
                     player.currentKillSpree = 0;
                 }
@@ -1028,9 +1031,12 @@ public class PlayerCombat extends Combat {
                  * Items lost on death
                  */
                 boolean useDeathStorage = pKiller == null && player.wildernessLevel == 0;
+                io.ruin.model.activities.wilderness.LootKeys.onDeath(player,pKiller);
                 if (useDeathStorage) {
                     player.getDeathStorage().death(killer);
                 } else {
+                    io.ruin.model.activities.wilderness.LootKeys.Capture lootKeys = new io.ruin.model.activities.wilderness.LootKeys.Capture(pKiller,
+                            item -> new GroundItem(item).owner(pKiller).position(player.getPosition()).spawnPrivate());
                     IKOD.forLostItem(player, killer, item -> {
                         ItemDef def = item.getDef();
                         if (pKiller != null && pKiller.hideFreeItems && def.free) {
@@ -1047,6 +1053,7 @@ public class PlayerCombat extends Combat {
                                 new GroundItem(def.id, 1).owner(pKiller).position(player.getPosition()).spawnPrivate(); //Never want emblem to appear for anyone else.
                             return;
                         }
+                        if (lootKeys.collect(item))return;
                         if (pKiller == null || !def.tradeable)
                             new GroundItem(item).owner(player).position(player.getPosition()).spawn(60);
                         else if (pKiller.getGameMode().isIronMan())
@@ -1054,6 +1061,7 @@ public class PlayerCombat extends Combat {
                         else
                             new GroundItem(item).owner(pKiller).position(player.getPosition()).spawn();
                     });
+                    lootKeys.finish();
                 }
                 /**
                  * Drop bones (Keep after all other item drops!)

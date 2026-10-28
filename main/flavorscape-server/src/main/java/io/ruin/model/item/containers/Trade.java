@@ -90,7 +90,9 @@ public class Trade extends ItemContainer {
     private int requestUserId = -1;
 
     public void request(Player target) {
-        if (player.getGameMode().isIronMan() && !target.isAdmin()) {
+        if(target==null||target==player)return;
+        boolean testing=io.ruin.model.entity.player.DevTesting.isPair(player,target);
+        if (player.getGameMode().isIronMan() && !target.isAdmin() && !testing) {
             player.sendMessage("Ironmen stand alone.");
             return;
         }
@@ -118,7 +120,7 @@ public class Trade extends ItemContainer {
             player.sendMessage("This player can't trade right now.");
             return;
         }
-        if(target.getGameMode().isIronMan() && !player.isAdmin()) {
+        if(target.getGameMode().isIronMan() && !player.isAdmin() && !testing) {
             player.sendMessage(target.getName() + " is an ironman and so cannot trade.");
             return;
         }
@@ -127,7 +129,7 @@ public class Trade extends ItemContainer {
             return;
         }
         Trade targetTrade = target.getTrade();
-        if(targetTrade.requestUserId == player.getUserId() && targetTrade.requestEnd.isDelayed()) {
+        if(targetTrade.requestUserId == player.getUserId() && targetTrade.requestEnd != null && targetTrade.requestEnd.isDelayed()) {
             init(targetTrade);
             targetTrade.init(this);
             return;

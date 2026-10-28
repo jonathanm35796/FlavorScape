@@ -45,7 +45,8 @@ public final class HomeLayoutVerifier {
             }}
             boolean[][] reachable=reachable();
             if(Tile.getObject(50004,3097,3508,0,10,3)!=null)failures.add("Rejuvenation pool left at its old position");
-            for(int[] placement:new int[][]{{50004,3097,3510,3},{617,3097,3506,1}}){
+            if(Tile.getObject(617,3097,3506,0,10,1)!=null)failures.add("Table left in front of the PvP shop merchant");
+            for(int[] placement:new int[][]{{50004,3097,3510,3}}){
                 GameObject object=Tile.getObject(placement[0],placement[1],placement[2],0,10,placement[3]);
                 if(object==null){failures.add("Missing workshop object "+Arrays.toString(placement));continue;}
                 ObjectDef def=object.getDef();int width=def.xLength,height=def.yLength;
@@ -56,7 +57,9 @@ public final class HomeLayoutVerifier {
             for(int[] banker:new int[][]{{3096,3489},{3096,3491},{3096,3492},{3098,3492}})
                 if(npcs.stream().noneMatch(o->n(o,"id")==3888&&n(o,"x")==banker[0]&&n(o,"y")==banker[1]))failures.add("Original bank NPC missing "+Arrays.toString(banker));
             if(npcs.stream().noneMatch(o->n(o,"id")==9001&&n(o,"x")==3098&&n(o,"y")==3506))failures.add("Market merchant missing from southeast room corner");
-            if(!r(reachable,3096,3506)||!r(reachable,3096,3507))failures.add("Market counter approach blocked");
+            if(npcs.stream().noneMatch(o->n(o,"id")==15000&&n(o,"x")==3099&&n(o,"y")==3510))failures.add("Skully missing from requested tile");
+            if(Tile.getObject(50005,3095,3506,0,10,1)==null)failures.add("Loot chest missing from requested tile");
+            if(!r(reachable,3096,3506)||!r(reachable,3097,3506))failures.add("Direct market merchant approach blocked");
             if(!r(reachable,World.HOME.getX(),World.HOME.getY()))failures.add("Arrival tile blocked");
             if(!r(reachable,3088,3518))failures.add("Northern wilderness approach disconnected");
             for(JsonObject npc:managed){int x=n(npc,"x"),y=n(npc,"y");boolean accessible=approach(reachable,x,y,1,1);

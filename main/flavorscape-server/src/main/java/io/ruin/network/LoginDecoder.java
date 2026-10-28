@@ -49,10 +49,8 @@ public class LoginDecoder extends MessageDecoder<Channel> {
             }
 
             in.skip(1);
-            if (isAtWildernessLimitForIP(channel)) {
-                /*
-                 * Multiple of the same IP is already in the wilderness.
-                 */
+            // Preserve the early production limit; DEV needs the decoded name for its allowlist.
+            if (!World.isDev() && io.ruin.model.entity.player.DevTesting.atWildernessIpLimit(IPAddress.toInt(IPAddress.get(channel)),Wilderness.players)) {
                 Response.CONNECTION_LIMIT.send(channel);
                 return;
             }
@@ -60,6 +58,11 @@ public class LoginDecoder extends MessageDecoder<Channel> {
                 reconnecting = opcode == 18;
                 LoginInfo loginInfo = decode(channel, in, World.id);
                 if(loginInfo != null) {
+                    // Decode the identity first so only explicitly allowed DEV accounts bypass the limit.
+                    if (!io.ruin.model.entity.player.DevTesting.canLogin(loginInfo.name,loginInfo.ipAddressInt,Wilderness.players)) {
+                        Response.CONNECTION_LIMIT.send(channel);
+                        return;
+                    }
                     LoginWorker.add(new PlayerLogin(loginInfo));
                 }
             } else {
@@ -224,22 +227,6 @@ public class LoginDecoder extends MessageDecoder<Channel> {
         }
 
         return new LoginInfo(channel, name, password, email, macAddress, uuid, tfaCode, tfaTrust, tfaTrustHash, worldId, keys);
-    }
-
-    /**
-     * Checks if the {@code channel}'s remote ip address has 2 or more players already in the wilderness.
-     */
-    private static boolean isAtWildernessLimitForIP(Channel channel) {
-        int ip = IPAddress.toInt(IPAddress.get(channel)),
-            count = 0;
-
-        for (Player player : Wilderness.players) {
-            if (player.getIpInt() == ip && ++count >= 2) {
-                return true;
-            }
-        }
-
-        return false;
     }
 
 }

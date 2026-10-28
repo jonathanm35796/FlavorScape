@@ -179,6 +179,7 @@ public class Login {
          return 1;
       } else if(var0 == 1003) {
          boolean var5 = Interpreter.Interpreter_intStack[--Interpreter.Interpreter_intStackSize] == 1;
+         var5 = CustomMisc.bountyOverlayHidden(var4, var5);
          if(var5 != var4.isHidden) {
             var4.isHidden = var5;
             var4.onHiddenChanged(-1);

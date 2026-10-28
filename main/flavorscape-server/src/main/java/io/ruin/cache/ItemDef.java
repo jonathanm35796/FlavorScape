@@ -73,6 +73,17 @@ public class ItemDef {
                 cached.put(id, def);
             }
         }
+        ItemDef lootKey = new ItemDef();
+        lootKey.id = 30330;
+        lootKey.decode(new InBuffer(index.getFile(10, 13303)));
+        lootKey.name = "Loot key";
+        lootKey.descriptiveName = "a loot key";
+        lootKey.stackable = false;
+        lootKey.tradeable = false;
+        lootKey.free = false;
+        lootKey.neverProtect = true;
+        lootKey.inventoryOptions = new String[]{"Check-value", null, null, null, "Destroy"};
+        cached.put(lootKey.id, lootKey);
     }
 
     public static void forEach(Consumer<ItemDef> consumer) {

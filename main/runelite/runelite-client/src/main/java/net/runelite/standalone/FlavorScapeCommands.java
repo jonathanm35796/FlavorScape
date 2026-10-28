@@ -9,6 +9,7 @@ public final class FlavorScapeCommands {
     private static final java.util.concurrent.atomic.AtomicBoolean presetLoaded = new java.util.concurrent.atomic.AtomicBoolean();
     private FlavorScapeCommands() {}
     public static boolean receive(int hash, String value) {
+        if (FlavorScapeLootKeyState.receive(hash,value)) return true;
         if (FlavorScapeMarketState.receive(hash,value)) return true;
         if ((hash >>> 16) != 32766) return false;
         int row = hash & 65535;
@@ -41,6 +42,16 @@ public final class FlavorScapeCommands {
             if (parent.group == 300 || parent.group == 301) shops.add(parent);
         }
         for (InterfaceParent parent : shops) FontName.method5748(parent, true);
+        ScriptEvent.method808();
+    }
+
+    public static void closeLootKeyWidgets() {
+        java.util.List<InterfaceParent> windows = new java.util.ArrayList<>();
+        for (InterfaceParent parent = (InterfaceParent) Client.interfaceParents.method6348(); parent != null;
+                parent = (InterfaceParent) Client.interfaceParents.method6345()) {
+            if (parent.group == 155) windows.add(parent);
+        }
+        for (InterfaceParent parent : windows) FontName.method5748(parent,true);
         ScriptEvent.method808();
     }
 }

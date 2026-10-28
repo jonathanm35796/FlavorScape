@@ -1,10 +1,12 @@
 # Player account files and rights
 
+DEV testing exception (updated 2026-10-28): **Jon**, **Jon2** and **Sales Tax** can test together on one IP in DEV mode, including repeat Bounty Hunter matches and ironman-mode trading between those accounts. The five-minute repeat-victim reward cooldown still applies. LIVE/BETA and ordinary accounts retain their normal restrictions. [Scope, trading checks and test instructions](dev-testing.md).
+
 Kronos's local player saves are readable JSON files, one per character, at:
 
 `main/flavorscape-server/server-data/_saved/characters/<lowercase name>.json`
 
-For example, `Sales Tax` saves as `sales tax.json`. The file contains the password hash, saved groups, stats, inventory, equipment, bank, configuration, and other character state. It is local runtime data and is excluded from GitHub with main/.
+For example, `Sales Tax` saves as `sales tax.json`. The file contains the password hash, saved groups, stats, inventory, equipment, bank, configuration, and other character state. It is local runtime data and is excluded from GitHub by the `**/server-data/` ignore rule.
 
 PlayerFile.java loads the character's JSON at login. Player.java restores nonempty savedGroupIds from that file. PlayerFile.save serializes fields annotated with Gson @Expose through a single-thread save worker. Saving happens during logout, approximately every minute through World's 100-tick save event, and through the administrator ::save command.
 

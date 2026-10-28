@@ -198,7 +198,11 @@ public class GroundItem {
             player.sendMessage("You already have one of those in your inventory!");
             return;
         }
-        if(!player.getLootingBag().isFull() && player.getInventory().hasId(LootingBag.OPENED_LOOTING_BAG) && player.wildernessLevel > 0) {
+        if(id == io.ruin.model.activities.wilderness.LootKeys.KEY_ID && io.ruin.model.activities.wilderness.LootKeys.count(player) >= 5) {
+            player.sendMessage("You can only carry five loot keys.");
+            return;
+        }
+        if(id != io.ruin.model.activities.wilderness.LootKeys.KEY_ID && !player.getLootingBag().isFull() && player.getInventory().hasId(LootingBag.OPENED_LOOTING_BAG) && player.wildernessLevel > 0) {
             if(player.getLootingBag().add(id, amount, attributes) == 0) {
                 player.sendMessage("Not enough space in your looting bag.");
                 return;

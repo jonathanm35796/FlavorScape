@@ -975,6 +975,15 @@ public class ItemDefinition extends DualNode implements RSItemDefinition {
    }
 
    public void postDecode() {
+      if(id == 30330) {
+         ItemDefinition base = Occluder.getItemDefinition(13303);
+         method4552(base, base);
+         name = "Loot key";
+         isStackable = 0;
+         price = 0;
+         inventoryActions = new String[]{"Check-value", null, null, null, "Destroy"};
+         return;
+      }
       if (name != null && id != 22885) { name = name.replace("Kronos", "FlavorScape"); }
       if(id == 2742) {
          name = "Coin Casket (small)";

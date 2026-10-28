@@ -73,6 +73,7 @@ public class Bank extends ItemContainerG<BankItem> {
 
     @Override
     public int add(int id, int amount, Map<String, String> attributes) {
+        if(id == io.ruin.model.activities.wilderness.LootKeys.KEY_ID)return 0;
         id = io.ruin.model.item.CoinCurrency.normalize(id);
         if (player.getGameMode().isUltimateIronman()) {
             return 0;
@@ -137,6 +138,10 @@ public class Bank extends ItemContainerG<BankItem> {
      */
 
     public int deposit(Item item, int amount, boolean message) {
+        if(io.ruin.model.activities.wilderness.LootKeys.isKey(item)){
+            if(message)player.sendMessage("Loot keys cannot be banked. Use the loot chest to bank their contents.");
+            return 0;
+        }
         ItemDef def = item.getDef();
         int moved = item.move(def.isNote() ? def.notedId : def.id, amount, this);
         if (moved == 0 && message)

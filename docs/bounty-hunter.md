@@ -1,5 +1,13 @@
 # Edgeville Bounty Hunter
 
+## Kill points and PvP Equipment (2026-10-27)
+
+Eligible PvP kills now have a base reward of **10,000,000 Blood Money**, with existing kill bonuses retained. They also award Bounty Hunter points based on the victim's highest carried emblem: tier 10 gives 100, then 50, 25, 12.5, 6.25, 3.125, 1.5625, 0.78125, 0.390625 and 0.1953125 for tiers 9 through 1. A victim without an emblem gives 1 point. Killing your assigned bounty adds 10 points. A shared **five-minute reward cooldown** blocks all generated kill rewards from the same victim, including Blood Money, BH points, emblem upgrades and bonus drops. It applies in Edgeville and to named DEV test accounts. Blocked attempts show the remaining minutes/seconds and do not extend the cooldown; a different eligible opponent can still pay immediately. Reward history persists across relogs. Normal same-account/IP checks remain, with the named DEV same-IP exception retained. Ordinary death loot is unchanged.
+
+Points persist with the account in exact units of 1/512 point. Spend them through the market's **PvP Equipment** selection. Emblem redemption still pays the Blood Money amounts below; these kill points are separate from redemption.
+
+The 10M base reward and shared five-minute cooldown are verified by production reward-path tests, including Edgeville, named DEV pairs, relogged histories and expiry at exactly five minutes. New [loot keys](loot-keys.md) package ordinary death loot separately from generated kill rewards.
+
 Implemented locally on 26 October 2026. This is the assigned-target, tier-1–10 emblem system requested for FlavorScape. Emblems redeem directly for Blood Money. The owner approved the lower-tier payout curve and specified 100,000 Blood Money for tier 10.
 
 ## Playing
@@ -30,7 +38,7 @@ Lost emblems cannot be protected. Tier 2–10 downgrades one tier and drops priv
 
 - Accounts receive stable positive internal IDs from the file-login service, fixing the former shared `-1` identity that prevented matching.
 - The matchmaker rejects the same account, the same IP, dead players, disabled/out-of-area players, pairs outside the five-level combat range, and players with an active target or penalty. Recent opponents are excluded for ten minutes in either direction.
-- Bounty kill rewards also reject same-account/IP kills and a victim account or IP already rewarded within ten minutes. Reward history persists across relogs. These checks apply even when targets are injected or changed outside ordinary matching.
+- All generated kill rewards reject same-account/IP kills and a victim account or IP already rewarded within five minutes. Named DEV pairs retain their same-IP allowance, but their victim-account reward cooldown still applies. Reward history persists across relogs. These checks apply even when targets are injected or changed outside ordinary matching.
 - The existing All Wilderness and Disabled settings remain available. New accounts and the previous default All Wilderness configuration migrate once to Edgeville Only. Explicit later changes persist.
 - Manual skip requires about ten seconds out of defending combat. Ten skips within the tracking window impose a 30-minute target penalty. Automatic logout, disabled-mode and return-timeout cleanup cannot be blocked by that manual combat restriction.
 - Leaving the active targeting area starts the existing two-minute return allowance. A minute warning is retained. Remaining back in the active area for 60 ticks clears the return countdown.
@@ -38,7 +46,13 @@ Lost emblems cannot be protected. Tier 2–10 downgrades one tier and drops priv
 - Target and rogue streaks reset on death; best records persist. Target-risk multiplication now uses 64-bit arithmetic. Overlay visibility respects the player's overlay setting, and the enable message is corrected.
 - Bounty teleport retains its scroll, level and rune requirements, and now propagates failed movement/teleport requests so blocked casts do not report success to the rune-removal wrapper.
 
-Same-IP rejection also applies to localhost clients. Opening two clients from the same computer does not by itself create an eligible Bounty Hunter pair.
+Normal same-IP rejection also applies to localhost clients. In **DEV only**, distinct accounts **Jon**, **Jon2** and **Sales Tax** have explicit same-IP and repeat-matching exceptions. Both participants must be named test accounts; these exceptions are disabled in LIVE/BETA. The five-minute reward cooldown applies in every world stage. See [DEV testing instructions](dev-testing.md).
+
+Target UI repair, 2026-10-27: names/location now update real text widgets in the current cache (90:53/54), instead of a rectangle/sprite at the old indices. Native emblem/wealth fields remain controlled by the cache's script, using the target's highest emblem tier. The client unhides the target container as well as its parent, and assignment refreshes visibility. Both players receive their target's hint arrow. Wilderness range labels now correctly show 1–5.
+
+Wilderness-entry visibility repair, 2026-10-27: native script 866 can hide the target panel's parent again after the server enables it. The client now retains the server's overlay visibility for 90:6 and 90:18 across script updates and widget reloads. Other Wilderness widgets keep their native visibility behavior. Restart the client to load this repair.
+
+Verification for this visibility repair: five client regressions pass, including execution of the native hide opcode, disabled-overlay behavior and interface reloads; all seven DEV targeting/name/emblem checks pass, and the client JAR builds successfully. Rendered in-game confirmation remains pending after the client restart. Logs: `.tools/bounty-overlay-client-tests.log` and `.tools/bounty-overlay-server-tests.log`.
 
 ## Redemption transactions
 

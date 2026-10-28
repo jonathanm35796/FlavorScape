@@ -195,15 +195,8 @@ public class Wilderness {
      * Checks if the {@code player}'s remote ip address has 2 or more players already in the wilderness.
      */
     private static boolean isAtWildernessLimitForIP(Player player) {
-        int count = 0;
-
-        for (Player others : Wilderness.players) {
-            if (player.getIpInt() == others.getIpInt() && ++count >= 2) {
-                return true;
-            }
-        }
-
-        return false;
+        if(io.ruin.model.entity.player.DevTesting.isAccount(player))return false;
+        return io.ruin.model.entity.player.DevTesting.atWildernessIpLimit(player.getIpInt(),players);
     }
 
     private static void teleportOutOfWilderness(ArrayList<Player> players) {

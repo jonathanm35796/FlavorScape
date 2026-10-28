@@ -721,6 +721,9 @@ public abstract class PlayerAttributes extends Entity {
      */
     @Expose public TimedList bmIpLogs = new TimedList();
     @Expose public TimedList bmUserLogs = new TimedList();
+    @Expose public io.ruin.model.activities.wilderness.LootKeys.Settings lootKeySettings = new io.ruin.model.activities.wilderness.LootKeys.Settings();
+    @Expose public long lootKeysClaimed, lootKeyValueClaimed, lootKeyValueDestroyed;
+    public transient io.ruin.model.activities.wilderness.LootKeyWindow.Session lootKeySession;
 
     /**
      * Runecrafting achievement thingies
@@ -1028,6 +1031,7 @@ public abstract class PlayerAttributes extends Entity {
      * Wilderness points
      */
     @Expose public int wildernessPoints;
+    @Expose public long bountyHunterPointUnits;
 
     /**
      * Toggle for exp counter to show hit

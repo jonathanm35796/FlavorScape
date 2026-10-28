@@ -7,9 +7,11 @@ import java.util.List;
 /** Server-provided market data; client controls never supply prices. */
 public final class FlavorScapeMarketState {
     private static final Gson GSON=new Gson();
-    public static final class Item { public int id,price,buyback,category; public String name; }
+    public static final class Item { public int id,buyback,category; public long price; public String name; }
     public static final class Snapshot {
         public String token,query; public int category; public long balance; public boolean pvpOnly;
+        public double bountyBalance;
+        public boolean hasMarketSelector=true;
         public List<Item> items=new ArrayList<>();
     }
     private static Snapshot pending;

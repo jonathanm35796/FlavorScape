@@ -44,6 +44,13 @@ public class NPCDef {
         market.combatLevel = -1;
         market.options = new String[]{"Trade", null, null, null, null};
         cached.put(market.id, market);
+        NPCDef skully = new NPCDef();
+        skully.id = 15000;
+        skully.copy(6773);
+        skully.name = "Skully";
+        skully.combatLevel = -1;
+        skully.options = new String[]{"Talk-to", "Value", null, null, null};
+        cached.put(skully.id, skully);
     }
 
     public static void forEach(Consumer<NPCDef> consumer) {

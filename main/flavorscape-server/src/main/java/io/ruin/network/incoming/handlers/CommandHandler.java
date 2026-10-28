@@ -129,7 +129,7 @@ public class CommandHandler implements Incoming {
     public static void handle(Player player, String query) {
         if((query = query.trim()).isEmpty())
             return;
-        if(!query.contains("yell") && !query.contains("Yell") && !query.startsWith("pvpmarket "))
+        if(!query.contains("yell") && !query.contains("Yell") && !query.startsWith("pvpmarket ") && !query.startsWith("lootkeys "))
             player.sendFilteredMessage("<col=cc0000>::" + query);
         Loggers.logCommand(player.getUserId(), player.getName(), player.getIp(), query);
         if (player.isStaff()) {
@@ -177,6 +177,10 @@ public class CommandHandler implements Incoming {
 
             case "pvpmarket": {
                 if (args != null) io.ruin.model.shop.PvPMarket.handle(player,args);
+                return true;
+            }
+            case "lootkeys": {
+                io.ruin.model.activities.wilderness.LootKeyWindow.handle(player,args);
                 return true;
             }
 

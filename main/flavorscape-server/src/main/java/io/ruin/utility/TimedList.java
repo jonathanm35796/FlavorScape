@@ -21,20 +21,24 @@ public class TimedList {
     }
 
     public boolean contains(int key, long ms, long timeoutMinutes) {
+        return remainingMillis(key, ms, timeoutMinutes) > 0;
+    }
+
+    public long remainingMillis(int key, long ms, long timeoutMinutes) {
         if(list == null)
-            return false;
+            return 0;
         long timeoutMs = TimeUtils.getMinutesToMillis(timeoutMinutes);
-        boolean logged = false;
+        long remaining = 0;
         for(Iterator<Entry> it = list.iterator(); it.hasNext(); ) {
             Entry log = it.next();
             if(ms - log.ms >= timeoutMs)
                 it.remove();
             else if(log.key == key)
-                logged = true;
+                remaining = Math.max(remaining, timeoutMs - (ms - log.ms));
         }
         if(list.isEmpty())
             list = null;
-        return logged;
+        return remaining;
     }
 
     private static final class Entry {
