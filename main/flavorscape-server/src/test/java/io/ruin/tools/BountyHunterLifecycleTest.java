@@ -42,7 +42,7 @@ public class BountyHunterLifecycleTest {
         assertEquals(10,Config.BOUNTY_HUNTER_TARGET_RECORD.get(winner));
         winner.wildernessLevel=0;
         MysteriousEmblem.offerRedemption(winner,winner.inventory.get(0));confirmation(winner).run();
-        assertEquals(100000,winner.inventory.count(13307));
+        assertEquals(100_000_000,winner.inventory.count(13307));
         assertEquals(0,winner.inventory.count(MysteriousEmblem.itemId(10)));
     }
     @Test public void highestEmblemUpgradesOnceAndTierTenRemainsCapped(){
@@ -111,20 +111,38 @@ public class BountyHunterLifecycleTest {
         MysteriousEmblem.offerRedemption(a,a.inventory.get(0));Runnable action=confirmation(a);
         a.inventory.get(0).setId(12746);action.run();assertEquals(0,a.inventory.count(13307));
         MysteriousEmblem.offerRedemption(a,a.inventory.get(0));action=confirmation(a);action.run();action.run();
-        assertEquals(3000,a.inventory.count(13307));
+        assertEquals(3_000_000,a.inventory.count(13307));
     }
     @Test public void fullInventoryRedeemsIntoTheEmblemsFreedSlot()throws Exception{
         BountyHunterAudit.Hunter a=hunter();a.wildernessLevel=0;
         for(int slot=0;slot<28;slot++)a.inventory.set(slot,new Item(385));
         a.inventory.set(0,new Item(12756));MysteriousEmblem.offerRedemption(a,a.inventory.get(0));confirmation(a).run();
-        assertEquals(100000,a.inventory.count(13307));assertEquals(0,a.inventory.getFreeSlots());
+        assertEquals(100_000_000,a.inventory.count(13307));assertEquals(0,a.inventory.getFreeSlots());
     }
-    @Test public void traderAcceptsEveryTierAndPaysOneHundredThousandForTierTen()throws Exception{
+    @Test public void everyTierRedeemsForTheIncreasedBloodMoneyAmount()throws Exception{
+        int[] expected={3_000_000,5_000_000,7_500_000,10_000_000,15_000_000,20_000_000,30_000_000,50_000_000,75_000_000,100_000_000};
+        for(int tier=1;tier<=10;tier++){
+            BountyHunterAudit.Hunter a=hunter();a.wildernessLevel=0;
+            a.inventory.set(0,new Item(MysteriousEmblem.itemId(tier)));
+            MysteriousEmblem.offerRedemption(a,a.inventory.get(0));confirmation(a).run();
+            assertEquals("Tier "+tier,expected[tier-1],a.inventory.count(13307));
+            assertEquals(0,a.inventory.count(MysteriousEmblem.itemId(tier)));
+        }
+    }
+    @Test public void increasedPayoutRejectsCurrencyOverflowWithoutConsumingEmblem(){
+        BountyHunterAudit.Hunter a=hunter();a.wildernessLevel=0;
+        a.inventory.set(0,new Item(13307,Integer.MAX_VALUE-99_999_999));
+        a.inventory.set(1,new Item(12756));
+        MysteriousEmblem.offerRedemption(a,a.inventory.get(1));
+        assertEquals(Integer.MAX_VALUE-99_999_999,a.inventory.count(13307));
+        assertEquals(1,a.inventory.count(12756));
+    }
+    @Test public void traderAcceptsEveryTierAndPaysOneHundredMillionForTierTen()throws Exception{
         Class.forName("io.ruin.model.entity.npc.actions.edgeville.EmblemTrader");
         for(int tier=1;tier<=10;tier++)assertNotNull(NPCDef.get(315).itemActions.get(MysteriousEmblem.itemId(tier)));
         BountyHunterAudit.Hunter a=hunter();a.wildernessLevel=0;a.inventory.set(0,new Item(12756));
         NPCDef.get(315).itemActions.get(12756).handle(a,a.inventory.get(0),null);confirmation(a).run();
-        assertEquals(100000,a.inventory.count(13307));
+        assertEquals(100_000_000,a.inventory.count(13307));
     }
     @Test public void talkingToTraderOffersTheHighestEmblemForRedemption()throws Exception{
         Class.forName("io.ruin.model.entity.npc.actions.edgeville.EmblemTrader");
@@ -134,7 +152,7 @@ public class BountyHunterLifecycleTest {
         trader.defaultActions[option-1].handle(a,null);
         io.ruin.model.inter.utils.Option[] options=(io.ruin.model.inter.utils.Option[])field(a.dialogues[0],io.ruin.model.inter.dialogue.OptionsDialogue.class,"options");
         options[0].select(a);confirmation(a).run();
-        assertEquals(100000,a.inventory.count(13307));assertEquals(1,a.inventory.count(12746));assertEquals(0,a.inventory.count(12756));
+        assertEquals(100_000_000,a.inventory.count(13307));assertEquals(1,a.inventory.count(12746));assertEquals(0,a.inventory.count(12756));
     }
     @Test public void distinctIdsSurviveRestartAndCaseChanges()throws Exception{
         Path file=directory.getRoot().toPath().resolve("ids.json");LocalAccountIds ids=new LocalAccountIds(file);

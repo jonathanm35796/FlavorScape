@@ -1,6 +1,6 @@
 # Bounty Hunter implementation audit
 
-This is the **pre-implementation baseline**. The defects below have subsequently been addressed by the [Edgeville Bounty Hunter implementation](bounty-hunter.md), including the owner's approved tier-10 payout of 100,000 Blood Money. Read that document for current behavior and verification.
+This is the **pre-implementation baseline**. The defects below have subsequently been addressed by the [Edgeville Bounty Hunter implementation](bounty-hunter.md), including the owner's approved tier-10 payout of 100,000,000 Blood Money (increased 1,000 times on 28 October 2026). Read that document for current behavior and verification.
 
 Audited 26 October 2026 in the local `main/` working source. This audit changes no gameplay or account data and does not restart the running server.
 

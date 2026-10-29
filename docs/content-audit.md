@@ -67,7 +67,7 @@ Implementation: [shared server editor](../main/flavorscape-server/src/main/java/
 
 | Content family | Source assessment | Remaining verification or limitation |
 | --- | --- | --- |
-| Bounty Hunter | Assigned Edgeville targets, emblem tiers 1–10, target upgrades, private downgraded death drops and Blood Money redemption. | Tier payouts: 3k, 5k, 7.5k, 10k, 15k, 20k, 30k, 50k, 75k, **100k**. See [BH rules/tests](bounty-hunter.md); live multi-player anti-farming and disconnect scenarios remain important. |
+| Bounty Hunter | Assigned Edgeville targets, emblem tiers 1–10, target upgrades, private downgraded death drops and Blood Money redemption. | Tier payouts: 3M, 5M, 7.5M, 10M, 15M, 20M, 30M, 50M, 75M, **100M**. See [BH rules/tests](bounty-hunter.md); live multi-player anti-farming and disconnect scenarios remain important. |
 | Wilderness PvP | PvP combat/death handling, skull/risk systems, kill streaks/ELO, hotspots, blacklists and risk protection. | Live cross-account damage, death-loot ownership, protection and combat-escape tests still required. |
 | Wilderness content | Boss/event handlers, Revenant Caves, resource area, Chaos Altar, Mage Arena-related content, Larran/other keys, supply/bloody chests, volcano, obelisks, levers and webs. | Individual entrances, drops, restrictions and reward balance not universally exercised. |
 | Last Man Standing | Lobby/queue, session modes, fog, crates/keys, supplies, elimination/winner and reward paths. | Substantial game logic; needs a real multi-player round. Rewards use Survival Tokens. |

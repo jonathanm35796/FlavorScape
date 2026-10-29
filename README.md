@@ -78,11 +78,11 @@ Emblems redeem directly for Blood Money through the Emblem Trader or inventory r
 
 | Tier | Blood Money | Tier | Blood Money |
 | --- | ---: | --- | ---: |
-| 1 | 3,000 | 6 | 20,000 |
-| 2 | 5,000 | 7 | 30,000 |
-| 3 | 7,500 | 8 | 50,000 |
-| 4 | 10,000 | 9 | 75,000 |
-| 5 | 15,000 | 10 | **100,000** |
+| 1 | 3,000,000 | 6 | 20,000,000 |
+| 2 | 5,000,000 | 7 | 30,000,000 |
+| 3 | 7,500,000 | 8 | 50,000,000 |
+| 4 | 10,000,000 | 9 | 75,000,000 |
+| 5 | 15,000,000 | 10 | **100,000,000** |
 
 Matching and rewards include account/IP checks, recent-opponent restrictions and persistent repeat-reward history. Redemption rechecks inventory ownership, item state, location and payment limits before consuming an emblem. Ancient Warriors' equipment follows the server's Bounty Hunter activation rules, with an exception for maximum-hit dummy testing.
 

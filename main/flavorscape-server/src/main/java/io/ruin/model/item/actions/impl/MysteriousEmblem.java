@@ -14,7 +14,7 @@ import static io.ruin.cache.ItemID.BLOOD_MONEY;
 /** One authoritative tier/payout table shared by kills, inventory redemption and the trader. */
 public final class MysteriousEmblem {
     private static final int[] IDS={12746,12748,12749,12750,12751,12752,12753,12754,12755,12756};
-    private static final int[] VALUES={3000,5000,7500,10000,15000,20000,30000,50000,75000,100000};
+    private static final int[] VALUES={3_000_000,5_000_000,7_500_000,10_000_000,15_000_000,20_000_000,30_000_000,50_000_000,75_000_000,100_000_000};
     public static int tier(int id){for(int i=0;i<IDS.length;i++)if(IDS[i]==id)return i+1;return 0;}
     public static int value(int id){int tier=tier(id);return tier==0?0:VALUES[tier-1];}
     public static int itemId(int tier){return tier<1||tier>10?-1:IDS[tier-1];}

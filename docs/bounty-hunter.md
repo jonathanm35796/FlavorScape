@@ -8,29 +8,29 @@ Points persist with the account in exact units of 1/512 point. Spend them throug
 
 The 10M base reward and shared five-minute cooldown are verified by production reward-path tests, including Edgeville, named DEV pairs, relogged histories and expiry at exactly five minutes. New [loot keys](loot-keys.md) package ordinary death loot separately from generated kill rewards.
 
-Implemented locally on 26 October 2026. This is the assigned-target, tier-1–10 emblem system requested for FlavorScape. Emblems redeem directly for Blood Money. The owner approved the lower-tier payout curve and specified 100,000 Blood Money for tier 10.
+Implemented locally on 26 October 2026. This is the assigned-target, tier-1–10 emblem system requested for FlavorScape. Emblems redeem directly for Blood Money. On 28 October 2026, all tier redemption payouts were increased by 1,000 times, bringing tier 10 to 100,000,000 Blood Money.
 
 ## Playing
 
 1. Enter Edgeville Wilderness with targeting enabled. Accounts now default to **Edgeville Only**, covering Wilderness levels 1–5 within `(2993,3523)` to `(3124,3597)`.
 2. The matchmaker checks about every 12 seconds for an eligible player within five combat levels. Both players receive each other as their target, with the normal target panel and hint arrow.
 3. Kill your assigned target to receive a private tier-1 emblem drop. Pick it up and carry it on further eligible target kills to upgrade it one tier at a time.
-4. At tier 10, return safely to the Emblem Trader at `(3089,3503,0)`, below Edgeville bank. **Talk-to → Trade in my highest emblem** opens a confirmation for **100,000 Blood Money**. You can also use a specific emblem on the trader or choose Redeem in your inventory.
+4. At tier 10, return safely to the Emblem Trader at `(3089,3503,0)`, below Edgeville bank. **Talk-to → Trade in my highest emblem** opens a confirmation for **100,000,000 Blood Money**. You can also use a specific emblem on the trader or choose Redeem in your inventory.
 
 Non-target kills do not create or upgrade emblems. Only the highest carried emblem upgrades, once per eligible target kill. Tier 10 never becomes an invalid tier 11; another eligible target kill while the highest carried emblem is tier 10 drops a new tier 1.
 
 | Tier | Blood Money |
 | --- | ---: |
-| 1 | 3,000 |
-| 2 | 5,000 |
-| 3 | 7,500 |
-| 4 | 10,000 |
-| 5 | 15,000 |
-| 6 | 20,000 |
-| 7 | 30,000 |
-| 8 | 50,000 |
-| 9 | 75,000 |
-| 10 | **100,000** |
+| 1 | 3,000,000 |
+| 2 | 5,000,000 |
+| 3 | 7,500,000 |
+| 4 | 10,000,000 |
+| 5 | 15,000,000 |
+| 6 | 20,000,000 |
+| 7 | 30,000,000 |
+| 8 | 50,000,000 |
+| 9 | 75,000,000 |
+| 10 | **100,000,000** |
 
 Lost emblems cannot be protected. Tier 2–10 downgrades one tier and drops privately for the killer; tier 1 remains tier 1 when dropped. This uses the existing production death/drop path with a shared tier table.
 
