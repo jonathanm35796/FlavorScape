@@ -1,8 +1,8 @@
-rootProject.name = "FlavorScape"
+rootProject.name = "Llyeta"
 
-include ':flavorscape-server'
-include ':flavorscape-api'
-include ':flavorscape-update-server'
-include ':flavorscape-launcher'
-include ':flavorscape-webhooks'
+include ':llyeta-server'
+include ':llyeta-api'
+include ':llyeta-update-server'
+include ':llyeta-launcher'
+include ':llyeta-webhooks'
 

@@ -44,7 +44,7 @@ public class RuneLiteProperties
 	private static final String TROUBLESHOOTING_LINK = "runelite.wiki.troubleshooting.link";
 	private static final String BUILDING_LINK = "runelite.wiki.building.link";
 	private static final String DNS_CHANGE_LINK = "runelite.dnschange.link";
-	private static final String FLAVORSCAPE_PREFERENCES = "flavorscape_preferences.dat";
+	private static final String LLYETA_PREFERENCES = "llyeta_preferences.dat";
 
 	private static final int MAIN_REVISION = 184;
 	private static final int SUB_REVISION = 5;
@@ -142,7 +142,7 @@ public class RuneLiteProperties
 		return SUB_REVISION;
 	}
 
-	public static String getFlavorScapePreferences() {
-		return FLAVORSCAPE_PREFERENCES;
+	public static String getLlyetaPreferences() {
+		return LLYETA_PREFERENCES;
 	}
 }

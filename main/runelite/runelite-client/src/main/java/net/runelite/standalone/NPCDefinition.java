@@ -661,7 +661,7 @@ public class NPCDefinition extends DualNode implements RSNPCDefinition {
    }
 
    void postDecode() {
-      if (name != null) { name = name.replace("Kronos", "FlavorScape"); }
+      if (name != null) { name = name.replace("Kronos", "Llyeta"); }
       if (id == 15000) {
          copy(6773);
          name = "Skully";

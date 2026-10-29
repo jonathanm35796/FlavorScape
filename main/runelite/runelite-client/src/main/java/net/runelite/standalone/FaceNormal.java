@@ -107,7 +107,7 @@ public class FaceNormal {
          var3 = "/p=" + class197.field2177;
       }
 
-      // Account/site routes use the configured FlavorScape project homepage.
-      return "https://github.com/jonathanm35796/FlavorScape";
+      // Account/site routes use the configured Llyeta project homepage.
+      return "https://github.com/jonathanm35796/Llyeta";
    }
 }

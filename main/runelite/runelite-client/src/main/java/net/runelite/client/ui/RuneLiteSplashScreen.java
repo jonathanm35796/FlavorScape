@@ -46,7 +46,7 @@ public class RuneLiteSplashScreen extends JFrame
 
 	private RuneLiteSplashScreen()
 	{
-		this.setTitle("FlavorScape");
+		this.setTitle("Llyeta");
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.setSize(FRAME_SIZE);
 		this.setLayout(new BorderLayout());

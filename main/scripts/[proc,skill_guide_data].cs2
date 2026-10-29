@@ -4655,7 +4655,7 @@ switch_int ($int0) {
 				return(-1, obj_7620, "Anima plants have effects on all other farming patches");
 			}
 			if ($int2 = 11) {
-				return(76, dummy_flavorscape_plant_22938, "Anima: FlavorScape<br>Increases speed of growth");
+				return(76, dummy_llyeta_plant_22938, "Anima: Llyeta<br>Increases speed of growth");
 			}
 			if ($int2 = 12) {
 				return(76, dummy_iasor_plant_22939, "Anima: Iasor<br>Decreases chance of disease");

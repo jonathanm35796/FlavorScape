@@ -114,7 +114,7 @@ public class class202 {
          var4 = "_wip";
       }
 
-      File var5 = new File(JagexCache.userHomeDirectory, "flavorscape_" + var1 + "_preferences" + var0 + var4 + ".dat");
+      File var5 = new File(JagexCache.userHomeDirectory, "llyeta_" + var1 + "_preferences" + var0 + var4 + ".dat");
       AccessFile var6;
       if(!var2 && var5.exists()) {
          label34: {

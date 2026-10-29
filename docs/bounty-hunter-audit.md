@@ -61,14 +61,14 @@ The source and data searches did not find an implemented Daimon's Crater/lobby, 
 - Existing JUnit checks: **18 pass, 0 fail/error**: eight `BountyHunterEquipmentTest` and ten `MaxHitDummyInteractionTest` cases.
 - Gradle build succeeds. Its success does **not** mean the audit is clean: the standalone audit records failures in its ledger and exits normally so the separate JUnit checks can run.
 - Full execution log: `.tools/bounty-hunter-verification.log`.
-- Probe source: `main/flavorscape-server/src/test/java/io/ruin/tools/BountyHunterAudit.java`.
+- Probe source: `main/llyeta-server/src/test/java/io/ruin/tools/BountyHunterAudit.java`.
 - The audit uses isolated simulated players and cached definitions. It suppresses background world event processing while invoking individual production methods. It does not certify automatic matchmaking's live event, actual packet/render timing, complete combat deaths, ground-item ownership/pickup, simultaneous deaths, reconnects, or successful target teleport paths.
 - No real players were killed, no accounts were edited, and the server/client were not restarted. The running binary was not substituted with the current build.
 
 Reproduction from `main/`, with the installed JDK 21 and workspace Gradle home:
 
 ```powershell
-.\gradlew.bat :flavorscape-server:bountyHunterAudit :flavorscape-server:test `
+.\gradlew.bat :llyeta-server:bountyHunterAudit :llyeta-server:test `
   --tests 'io.ruin.model.combat.BountyHunterEquipmentTest' `
   --tests 'io.ruin.model.combat.MaxHitDummyInteractionTest' `
   --init-script ../.tools/bounty-hunter-audit.init.gradle --console=plain --no-daemon

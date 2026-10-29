@@ -113,7 +113,7 @@ public class InfoPanel extends PluginPanel
 		JLabel version = new JLabel(htmlLabel("RuneLite version: ", RuneLiteProperties.getVersion()));
 		version.setFont(smallFont);
 
-		JLabel plusVersion = new JLabel(htmlLabel("FlavorScape version: ", RuneLiteProperties.getPlusVersion()));
+		JLabel plusVersion = new JLabel(htmlLabel("Llyeta version: ", RuneLiteProperties.getPlusVersion()));
 		plusVersion.setFont(smallFont);
 
 		JLabel revision = new JLabel();

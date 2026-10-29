@@ -10,7 +10,7 @@ The exceptions apply only when `World.stage` is **DEV**, and only to **Jon**, **
 - Distinct valid identities, the combat bracket, active area, alive state and target availability still apply. Exceptions do not allow self-targeting, bypass authentication/bans or disable normal trade inventory safeguards.
 - Named DEV pairs can trade while testing ironman modes. Ordinary ironman trading restrictions remain elsewhere.
 
-The policy is [DevTesting.java](../main/flavorscape-server/src/main/java/io/ruin/model/entity/player/DevTesting.java), shared by login, Wilderness IP accounting, Bounty Hunter, kill rewards and ironman trade guards. No player save was edited.
+The policy is [DevTesting.java](../main/llyeta-server/src/main/java/io/ruin/model/entity/player/DevTesting.java), shared by login, Wilderness IP accounting, Bounty Hunter, kill rewards and ironman trade guards. No player save was edited.
 
 ## Trading
 
@@ -33,7 +33,7 @@ The old server sent names/location to widgets **90:47/48**, which are a rectangl
 
 Jagex's [2014 announcement](https://secure.runescape.com/m=news/bounty-hunter?oldschool=1) describes Wilderness matching near the player's combat level, a top-right target interface, location hints and ten emblem tiers. Its [2023 version](https://secure.runescape.com/m=news/bounty-hunter-is-back?oldschool=1) uses Daimon's Crater and a default five-level range: a different ruleset from the classic Wilderness version requested here.
 
-Impact's [command guide](https://impactmmo.wiki/w/index.php?stable=1&title=Commands) documents Edgeville BH areas; its [home guide](https://impactmmo.wiki/w/index.php?stable=1&title=Home_Area) describes emblem exchange. These support the general model but do not establish every Impact UI/eligibility detail. FlavorScape keeps the owner's Edgeville rules and approved Blood Money payouts, including **100,000 for tier 10**.
+Impact's [command guide](https://impactmmo.wiki/w/index.php?stable=1&title=Commands) documents Edgeville BH areas; its [home guide](https://impactmmo.wiki/w/index.php?stable=1&title=Home_Area) describes emblem exchange. These support the general model but do not establish every Impact UI/eligibility detail. Llyeta keeps the owner's Edgeville rules and approved Blood Money payouts, including **100,000 for tier 10**.
 
 ## Verification
 

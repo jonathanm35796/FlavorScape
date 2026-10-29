@@ -5,6 +5,6 @@ $env:JAVA_HOME = (Get-ChildItem (Join-Path $workspace '.tools/jdk21') -Directory
 $env:GRADLE_USER_HOME = Join-Path $workspace '.tools/gradle-home'
 Push-Location (Join-Path $workspace 'main')
 try {
-    & .\gradlew.bat ':flavorscape-api:test' ':flavorscape-server:test' '--console=plain' '--no-daemon'
+    & .\gradlew.bat ':llyeta-api:test' ':llyeta-server:test' '--console=plain' '--no-daemon'
     if ($LASTEXITCODE -ne 0) { throw "Roadmap verification failed ($LASTEXITCODE)." }
 } finally { Pop-Location }

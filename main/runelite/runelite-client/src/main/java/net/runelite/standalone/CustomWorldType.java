@@ -6,10 +6,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor @Getter
 public enum CustomWorldType {
 
-    PVP("FlavorScape", "127.0.0.1", "127.0.0.1", "127.0.0.1"),
-    ECO("FlavorScape", "127.0.0.1", "127.0.0.1", "127.0.0.1"),
-    BETA("FlavorScape BETA", "127.0.0.1", "127.0.0.1", "127.0.0.1"),
-    DEV("FlavorScape", "127.0.0.1", "127.0.0.1", "127.0.0.1");
+    PVP("Llyeta", "127.0.0.1", "127.0.0.1", "127.0.0.1"),
+    ECO("Llyeta", "127.0.0.1", "127.0.0.1", "127.0.0.1"),
+    BETA("Llyeta BETA", "127.0.0.1", "127.0.0.1", "127.0.0.1"),
+    DEV("Llyeta", "127.0.0.1", "127.0.0.1", "127.0.0.1");
 
     private final String name;
     private final String url;

@@ -2,7 +2,7 @@ param()
 $ErrorActionPreference = 'Stop'
 $workspace = Split-Path $PSScriptRoot -Parent
 $audit = Join-Path $workspace '.tools/combat-audit'
-$path = Join-Path $workspace 'main/flavorscape-server/data/items/item_info.json'
+$path = Join-Path $workspace 'main/llyeta-server/data/items/item_info.json'
 $differences = Import-Csv (Join-Path $audit 'bonus-differences.tsv') -Delimiter "`t"
 $byId = @{}
 foreach ($row in $differences) {

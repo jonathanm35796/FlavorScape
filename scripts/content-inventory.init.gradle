@@ -1,6 +1,6 @@
 allprojects {
     afterEvaluate { project ->
-        if (project.path == ':flavorscape-server') {
+        if (project.path == ':llyeta-server') {
             tasks.register('contentInventoryAudit', JavaExec) {
                 dependsOn testClasses
                 classpath = sourceSets.test.runtimeClasspath

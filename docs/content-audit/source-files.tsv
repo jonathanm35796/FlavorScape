@@ -947,7 +947,7 @@ model/map/object/actions/impl	src/main/java/io/ruin/model/map/object/actions/imp
 model/map/object/actions/impl	src/main/java/io/ruin/model/map/object/actions/impl/edgeville/PetList.java	Java	32	1	0	0	0	0	0
 model/map/object/actions/impl	src/main/java/io/ruin/model/map/object/actions/impl/edgeville/RejuvenationPool.java	Java	36	3	0	0	0	0	0
 model/map/object/actions/impl	src/main/java/io/ruin/model/map/object/actions/impl/FairyRing.java	Java	236	5	0	0	1	0	0
-model/map/object/actions/impl	src/main/java/io/ruin/model/map/object/actions/impl/FlavorScapeRejuvinationPool.java	Java	32	1	0	0	0	0	0
+model/map/object/actions/impl	src/main/java/io/ruin/model/map/object/actions/impl/LlyetaRejuvinationPool.java	Java	32	1	0	0	0	0	0
 model/map/object/actions/impl	src/main/java/io/ruin/model/map/object/actions/impl/Flax.java	Java	40	1	0	0	0	0	0
 model/map/object/actions/impl	src/main/java/io/ruin/model/map/object/actions/impl/gnome_stronghold/MonkeyMadness.java	Java	60	3	0	0	0	0	0
 model/map/object/actions/impl	src/main/java/io/ruin/model/map/object/actions/impl/Ladder.java	Java	115	23	0	0	0	0	0

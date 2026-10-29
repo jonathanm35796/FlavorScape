@@ -258,7 +258,7 @@ public class LoginPacket implements class168 {
                   var8 = GrandExchangeOfferUnitPriceComparator.loginBoxCenter - 80;
                   var9 = 291;
                   if(var4 == 1 && var25 >= var8 - 75 && var25 <= var8 + 75 && var18 >= var9 - 20 && var18 <= var9 + 20) {
-                     ArchiveDiskActionHandler.method4341("https://github.com/jonathanm35796/FlavorScape", true, false);
+                     ArchiveDiskActionHandler.method4341("https://github.com/jonathanm35796/Llyeta", true, false);
                   }
 
                   var8 = GrandExchangeOfferUnitPriceComparator.loginBoxCenter + 80;
@@ -337,7 +337,7 @@ public class LoginPacket implements class168 {
                                  Login.loginIndex = 5;
                                  return;
                               case 2:
-                                 ArchiveDiskActionHandler.method4341("https://github.com/jonathanm35796/FlavorScape", true, false);
+                                 ArchiveDiskActionHandler.method4341("https://github.com/jonathanm35796/Llyeta", true, false);
                               }
                            }
                         }
@@ -664,10 +664,10 @@ public class LoginPacket implements class168 {
                            String var16 = "";
                            switch(Login.field769) {
                            case 0:
-                              var16 = "https://github.com/jonathanm35796/FlavorScape";
+                              var16 = "https://github.com/jonathanm35796/Llyeta";
                               break;
                            case 1:
-                              var16 = "https://github.com/jonathanm35796/FlavorScape";
+                              var16 = "https://github.com/jonathanm35796/Llyeta";
                               break;
                            default:
                               TilePaint.method2911(false);

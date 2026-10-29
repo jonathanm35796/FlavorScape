@@ -31,10 +31,10 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${user.home}/.flavorscape/logs/client.log</file>
+        <file>${user.home}/.llyeta/logs/client.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>${user.home}/.flavorscape/logs/client_%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>${user.home}/.llyeta/logs/client_%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <maxFileSize>10MB</maxFileSize>
             <maxHistory>30</maxHistory>
         </rollingPolicy>

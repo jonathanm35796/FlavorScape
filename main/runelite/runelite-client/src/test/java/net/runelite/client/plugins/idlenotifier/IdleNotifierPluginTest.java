@@ -253,7 +253,7 @@ public class IdleNotifierPluginTest
 	@Test
 	public void noLogoutWarningOnMouseReset()
 	{
-		// FlavorScape removed automatic idle logout and its warning.
+		// Llyeta removed automatic idle logout and its warning.
 
 		when(client.getKeyboardIdleTicks()).thenReturn(80_000);
 		when(client.getMouseIdleTicks()).thenReturn(14_500);

@@ -31,7 +31,7 @@ import okhttp3.HttpUrl;
 public enum HiscoreEndpoint
 {
 	
-	NORMAL("Normal", System.getProperty("flavorscape.hiscoreUrl", "http://127.0.0.1:8080/hiscores")),
+	NORMAL("Normal", System.getProperty("llyeta.hiscoreUrl", "http://127.0.0.1:8080/hiscores")),
 	IRONMAN("Ironman", "https://services.runescape.com/m=hiscore_oldschool_ironman/index_lite.ws"),
 	HARDCORE_IRONMAN("Hardcore Ironman", "https://services.runescape.com/m=hiscore_oldschool_hardcore_ironman/index_lite.ws"),
 	ULTIMATE_IRONMAN("Ultimate Ironman", "https://services.runescape.com/m=hiscore_oldschool_ultimate/index_lite.ws"),

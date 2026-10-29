@@ -7,7 +7,7 @@ Push-Location (Join-Path $workspace 'main')
 try {
     # Windows PowerShell otherwise reports ordinary compiler stderr warnings as native errors.
     $ErrorActionPreference = 'Continue'
-    & .\gradlew.bat ':flavorscape-server:test' ':flavorscape-server:combatItemAudit' '--console=plain' '--no-daemon' 2>&1 | ForEach-Object { $_.ToString() }
+    & .\gradlew.bat ':llyeta-server:test' ':llyeta-server:combatItemAudit' '--console=plain' '--no-daemon' 2>&1 | ForEach-Object { $_.ToString() }
     $buildExitCode = $LASTEXITCODE
     $ErrorActionPreference = 'Stop'
     if ($buildExitCode -ne 0) { throw "Combat verification failed ($buildExitCode)." }

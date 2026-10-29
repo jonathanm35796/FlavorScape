@@ -1091,7 +1091,7 @@ public class WorldMapRegion {
    )
    public static File method337(String var0, String var1, int var2) {
       String var3 = var2 == 0?"":"" + var2;
-      JagexCache.JagexCache_locationFile = new File(JagexCache.userHomeDirectory, "flavorscape_cl_" + var0 + "_" + var1 + var3 + ".dat");
+      JagexCache.JagexCache_locationFile = new File(JagexCache.userHomeDirectory, "llyeta_cl_" + var0 + "_" + var1 + var3 + ".dat");
       String var4 = null;
       String var5 = null;
       boolean var6 = false;
@@ -1201,7 +1201,7 @@ public class WorldMapRegion {
       }
 
       if(var4 == null) {
-         var4 = JagexCache.userHomeDirectory + File.separatorChar + ".flavorscape" + var3 + File.separatorChar + var0 + File.separatorChar + var1 + File.separatorChar;
+         var4 = JagexCache.userHomeDirectory + File.separatorChar + ".llyeta" + var3 + File.separatorChar + var0 + File.separatorChar + var1 + File.separatorChar;
          var6 = true;
       }
 

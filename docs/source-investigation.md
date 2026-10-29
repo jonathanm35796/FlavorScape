@@ -12,7 +12,7 @@ These are discovery findings, not a completed source evaluation or adoption reco
 | [RSBox candidate fork](https://github.com/vanicosrs/rsbox) | Page identifies a fork of Rune-Status/rsbox-rsbox. README describes Java/Kotlin/Gradle and MIT licensing. | Exact license contents, fork age and provenance, dependencies, working client, gameplay completeness and successful build. README claims about the latest revision are not evidence of current compatibility. |
 | [Tarnish](https://github.com/Jire/tarnish) | Repository contains game-client and game-server directories and a Gradle wrapper. [Resource listing](https://rsps.org/resources/tarnish) describes OS-Royale ancestry, revision 214 data, and reserved Tarnish branding. | Exact source license and redistribution permissions, dependency integrity, buildability, combat correctness, networking and client customization. Availability is not proof that all bundled assets may be redistributed. |
 
-Checked 2026-10-25. Repository pages were available through web research. The owner's FlavorScape repository could not be fetched; its visibility and authentication requirements remain unknown.
+Checked 2026-10-25. Repository pages were available through web research. The owner's Llyeta repository could not be fetched; its visibility and authentication requirements remain unknown.
 
 ## Required evaluation before recommendation
 

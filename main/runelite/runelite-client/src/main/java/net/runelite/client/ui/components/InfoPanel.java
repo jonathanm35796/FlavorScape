@@ -53,10 +53,10 @@ public class InfoPanel extends JPanel
 	private static final String RUNELITE_PLUS_VERSION = "open.osrs.version";
 	private static final String RUNELITE_PLUS_DATE = "open.osrs.builddate";
 
-	private static final BufferedImage TRANSPARENT_LOGO = ImageUtil.getResourceStreamFromClass(InfoPanel.class, "/flavorscape.png");
+	private static final BufferedImage TRANSPARENT_LOGO = ImageUtil.getResourceStreamFromClass(InfoPanel.class, "/llyeta.png");
 	static final Dimension PANEL_SIZE = new Dimension(200, RuneLiteSplashScreen.FRAME_SIZE.height);
 	private static final Dimension VERSION_SIZE = new Dimension(PANEL_SIZE.width, 25);
-	private static final File RUNELITE_DIR = new File(System.getProperty("user.home"), ".flavorscape");
+	private static final File RUNELITE_DIR = new File(System.getProperty("user.home"), ".llyeta");
 	private static final File LOGS_DIR = new File(RUNELITE_DIR, "logs");
 
 	private final Properties properties = new Properties();
@@ -99,7 +99,7 @@ public class InfoPanel extends JPanel
 		c.weighty = 0;
 
 		// OpenOSRS version
-		this.add(createPanelTextButton("FlavorScape Version: " + properties.getProperty(RUNELITE_PLUS_VERSION)), c);
+		this.add(createPanelTextButton("Llyeta Version: " + properties.getProperty(RUNELITE_PLUS_VERSION)), c);
 		c.gridy++;
 
 		// Build date
@@ -110,7 +110,7 @@ public class InfoPanel extends JPanel
 		this.add(logsFolder, c);
 		c.gridy++;
 
-		final JLabel discord = createPanelButton("Get help on Discord", "Instant invite link to join the flavorscape discord", () -> LinkBrowser.browse(RuneLiteProperties.getDiscordInvite()));
+		final JLabel discord = createPanelButton("Get help on Discord", "Instant invite link to join the llyeta discord", () -> LinkBrowser.browse(RuneLiteProperties.getDiscordInvite()));
 		this.add(discord, c);
 		c.gridy++;
 

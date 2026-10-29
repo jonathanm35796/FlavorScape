@@ -1,4 +1,4 @@
-# Run FlavorScape locally
+# Run Llyeta locally
 
 Verified 2026-10-25: both servers and the actual client ran from main/. The Localtest login reached game state 30 with a player at (2038,3577,0), and 16 game ticks arrived over ten seconds. This establishes a working local login; visual inspection and PvP testing remain separate work.
 
@@ -30,7 +30,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\run-local.ps1 -Com
 
 Each client launch writes to its own `.tools/main-Client-<pid>.log` file.
 
-Server modules now live at main/flavorscape-server and main/flavorscape-update-server. Client settings use the user's .flavorscape folder; earlier .kronos settings were copied during the branding migration and retained for recovery.
+Server modules now live at main/llyeta-server and main/llyeta-update-server. Client settings use the user's .llyeta folder; earlier .kronos settings were copied during the branding migration and retained for recovery.
 
 Stop the launched components:
 
@@ -60,17 +60,17 @@ Run the API/server regressions for currency migration, shops, routes, presets, a
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify-roadmap.ps1
 ```
 
-For the extended actual-client gear check, use a disposable DEV account that has completed onboarding and has an empty custom box. Set `FLAVORSCAPE_SMOKE_USERNAME` to that account and `FLAVORSCAPE_VERIFY_ROADMAP=1`, then launch `-Component Client -VerifyLogin` against running local servers. This changes the test character's gear, levels, bank, and saved presets: it loads all six built-ins, saves/loads a custom inventory and prayer, and tests shortcuts and the gear button. Optional `FLAVORSCAPE_VERIFY_HOME=spawn` plus `FLAVORSCAPE_HOME_SCREENSHOT=<workspace PNG path>` captures the final frame after returning home. Look for `GEARS_SMOKE PASS`; the client remains open.
+For the extended actual-client gear check, use a disposable DEV account that has completed onboarding and has an empty custom box. Set `LLYETA_SMOKE_USERNAME` to that account and `LLYETA_VERIFY_ROADMAP=1`, then launch `-Component Client -VerifyLogin` against running local servers. This changes the test character's gear, levels, bank, and saved presets: it loads all six built-ins, saves/loads a custom inventory and prayer, and tests shortcuts and the gear button. Optional `LLYETA_VERIFY_HOME=spawn` plus `LLYETA_HOME_SCREENSHOT=<workspace PNG path>` captures the final frame after returning home. Look for `GEARS_SMOKE PASS`; the client remains open.
 
-For the Quest layout check alone, set `FLAVORSCAPE_VERIFY_QUEST_TAB=1` instead of `FLAVORSCAPE_VERIFY_ROADMAP`. It verifies tab visibility, clicks the dragon helm, checks that the panel fits within the game viewport, and tests Achievements/Back navigation. Look for `QUEST_TAB_SMOKE PASS`.
+For the Quest layout check alone, set `LLYETA_VERIFY_QUEST_TAB=1` instead of `LLYETA_VERIFY_ROADMAP`. It verifies tab visibility, clicks the dragon helm, checks that the panel fits within the game viewport, and tests Achievements/Back navigation. Look for `QUEST_TAB_SMOKE PASS`.
 
-`FLAVORSCAPE_VERIFY_CAMERA_INPUT=1` checks the native mouse handler: presses outside either interface and releases over it must reset held-button state, and middle/Alt-left camera gestures must pass through. `FLAVORSCAPE_VERIFY_PRESET_CLOSE=1` checks that a rejected load keeps the panel open and a successful load closes it. Run these probes separately on a disposable account with `-Component Client -VerifyLogin`; the preset-close probe loads built-in gear. Look for `CAMERA_INPUT_SMOKE PASS` or `PRESET_CLOSE_SMOKE PASS`.
+`LLYETA_VERIFY_CAMERA_INPUT=1` checks the native mouse handler: presses outside either interface and releases over it must reset held-button state, and middle/Alt-left camera gestures must pass through. `LLYETA_VERIFY_PRESET_CLOSE=1` checks that a rejected load keeps the panel open and a successful load closes it. Run these probes separately on a disposable account with `-Component Client -VerifyLogin`; the preset-close probe loads built-in gear. Look for `CAMERA_INPUT_SMOKE PASS` or `PRESET_CLOSE_SMOKE PASS`.
 
-The six targeted client regressions can be run from `main/runelite` with JDK 8 using `:runelite-client:test --tests 'net.runelite.client.plugins.flavorscapegears.*'`.
+The six targeted client regressions can be run from `main/runelite` with JDK 8 using `:runelite-client:test --tests 'net.runelite.client.plugins.llyetagears.*'`.
 
-For the classic spellbook check, set `FLAVORSCAPE_VERIFY_SPELLBOOKS=1`, `FLAVORSCAPE_SMOKE_USERNAME` to a disposable DEV account that has completed onboarding, and `FLAVORSCAPE_SPELLBOOK_SCREENSHOTS` to a workspace directory. Launch `-Component Client -VerifyLogin`. The probe checks the login default, switches books through server commands, verifies all 70 Standard, 26 Ancient and 45 Lunar spell widgets in seven, four and six columns, and captures each rendered grid. Look for `SPELLBOOK_SMOKE PASS`. The account finishes on Lunar and the client remains open.
+For the classic spellbook check, set `LLYETA_VERIFY_SPELLBOOKS=1`, `LLYETA_SMOKE_USERNAME` to a disposable DEV account that has completed onboarding, and `LLYETA_SPELLBOOK_SCREENSHOTS` to a workspace directory. Launch `-Component Client -VerifyLogin`. The probe checks the login default, switches books through server commands, verifies all 70 Standard, 26 Ancient and 45 Lunar spell widgets in seven, four and six columns, and captures each rendered grid. Look for `SPELLBOOK_SMOKE PASS`. The account finishes on Lunar and the client remains open.
 
-The market probe (`FLAVORSCAPE_VERIFY_MARKET=1`) now confirms the inventory-empty dialogue on its disposable account before testing. It verifies that left-click only prints the price, then buys 1, 5 and 10 through the context menu and types 7 into the Buy X numeric dialogue. It also checks 40% buyback, selector dismissal, both shops, scrolling, search and close. The numeric dialogue screenshot is saved alongside `FLAVORSCAPE_MARKET_SCREENSHOT` with `.buyx.png` appended. Use only a disposable character: this probe clears its inventory and purchases items.
+The market probe (`LLYETA_VERIFY_MARKET=1`) now confirms the inventory-empty dialogue on its disposable account before testing. It verifies that left-click only prints the price, then buys 1, 5 and 10 through the context menu and types 7 into the Buy X numeric dialogue. It also checks 40% buyback, selector dismissal, both shops, scrolling, search and close. The numeric dialogue screenshot is saved alongside `LLYETA_MARKET_SCREENSHOT` with `.buyx.png` appended. Use only a disposable character: this probe clears its inventory and purchases items.
 
 ### Bounty Hunter equipment
 

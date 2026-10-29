@@ -984,7 +984,7 @@ public class ItemDefinition extends DualNode implements RSItemDefinition {
          inventoryActions = new String[]{"Check-value", null, null, null, "Destroy"};
          return;
       }
-      if (name != null && id != 22885) { name = name.replace("Kronos", "FlavorScape"); }
+      if (name != null && id != 22885) { name = name.replace("Kronos", "Llyeta"); }
       if(id == 2742) {
          name = "Coin Casket (small)";
          inventoryActions[1] = null;

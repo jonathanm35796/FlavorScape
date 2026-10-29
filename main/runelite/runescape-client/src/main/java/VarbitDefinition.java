@@ -383,7 +383,7 @@ public class VarbitDefinition extends DualNode {
 			class32.titleboxSprite.drawAt(Login.loginBoxX, 171);
 			if (Login.loginIndex == 0) {
 				short var44 = 251;
-				var0.drawCentered("Welcome to FlavorScape", Login.loginBoxX + 180, var44, 16776960, 0);
+				var0.drawCentered("Welcome to Llyeta", Login.loginBoxX + 180, var44, 16776960, 0);
 				int var45 = var44 + 30;
 				int var24 = Login.loginBoxX + 180 - 80;
 				short var5 = 291;

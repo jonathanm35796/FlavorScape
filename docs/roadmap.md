@@ -1,4 +1,4 @@
-# FlavorScape Roadmap
+# Llyeta Roadmap
 
 Updated after implementation and verification on 2026-10-28. Record completed work, desired behavior, and future requests here; update this file at the end of a work batch.
 
@@ -6,7 +6,7 @@ Updated after implementation and verification on 2026-10-28. Record completed wo
 
 Implemented locally in `main/`:
 
-Publication verification on 2026-10-28: 193 server tests, 1 API test and 55 project client tests pass, with no skips or failures. Both JAR builds and the cache-based home-layout check succeed. The latest loot-key interface has an inspected offline preview; live verification after server/client restart remains pending.
+Publication verification on 2026-10-28: 195 server tests, 1 API test and 57 project client tests pass, with no skips or failures. Both JAR builds and the cache-based home-layout check succeed. The latest loot-key interface has an inspected offline preview; live verification after server/client restart remains pending.
 
 | Request | Delivered behavior |
 | --- | --- |
@@ -28,7 +28,7 @@ Publication verification on 2026-10-28: 193 server tests, 1 API test and 55 proj
 | Blood Money | Coin awards, costs, drops, shops, and reward paths use Blood Money. Legacy coin items, including noted/alternate coins, normalize when created or loaded into saved containers. Numeric amounts are preserved. Activity tokens and refunded credits keep their own currencies. Currency labels were updated. |
 | Logout timer | Removed the automatic inactivity logout request and idle/six-hour logout warnings, including the idle logout notification setting. Manual logout and lost-connection handling remain available. |
 | Server errors | Repaired the unconfigured Refunded Credit Exchange, removed the shop enum-null assumption, consumed route callbacks before invocation to prevent repeated failures, and handled ordinary socket resets as disconnects. The launcher renders native logs without PowerShell error wrapping and permits reading live logs. |
-| Client metadata errors | Item-stat parsing skips unknown upstream fields such as `ge_limit`; non-success price/stat responses return empty optional data instead of JSON stack traces. Client logs use `.flavorscape/logs` with the current non-deprecated rolling policy. The legacy RuneLite price URL currently returns 404, so market-price data remains unavailable. |
+| Client metadata errors | Item-stat parsing skips unknown upstream fields such as `ge_limit`; non-success price/stat responses return empty optional data instead of JSON stack traces. Client logs use `.llyeta/logs` with the current non-deprecated rolling policy. The legacy RuneLite price URL currently returns 404, so market-price data remains unavailable. |
 
 Verification: client/server builds and all 15 API/server regression tests pass. Actual localhost client checks loaded all six presets, compared equipment and levels, saved/restored a custom inventory and active prayer, exercised both shortcuts, and clicked open/close controls. Saved character JSON contains the custom inventory, equipment, and prayer selections. The fixed-size interface was visually inspected. Startup and these interactions produced no shop exceptions. Logout removal was checked in code; a six-hour session was not timed.
 
@@ -40,7 +40,7 @@ Input follow-up verified: Quest and gear overlays no longer consume mouse releas
 
 ## Past work
 
-The local baseline, FlavorScape branding, Edgeville home, launch scripts, and command catalogue are described in [local running](local-running.md), [branding status](branding-status.md), and [command help](commands.md). The owner authorized the current source backup to the private FlavorScape GitHub repository on 2026-10-27. Cache assets, credentials, saves, local toolchains and generated output remain excluded.
+The local baseline, Llyeta branding, Edgeville home, launch scripts, and command catalogue are described in [local running](local-running.md), [branding status](branding-status.md), and [command help](commands.md). The owner authorized the current source backup to the private Llyeta GitHub repository on 2026-10-27. Cache assets, credentials, saves, local toolchains and generated output remain excluded.
 
 ## Desired behavior and original requests
 

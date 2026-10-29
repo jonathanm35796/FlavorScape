@@ -209,7 +209,7 @@ public class MiscUtils
 			workingDirectory = System.getProperty("user.home");
 			workingDirectory += "/Library/Application Support";
 		}
-		return workingDirectory + File.separator + ".flavorscape";
+		return workingDirectory + File.separator + ".llyeta";
 	}
 
 	public static void writePreferences(File preferences) {

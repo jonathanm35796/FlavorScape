@@ -1,10 +1,10 @@
-# FlavorScape
+# Llyeta
 
 **An Edgeville PvP server built around freely chosen combat builds, fast gearing and Bounty Hunter.**
 
-FlavorScape is an OSRS-style private server with a customized RuneLite/OpenOSRS desktop client. Our current focus is the PvP experience: choose your levels, load a setup, find a fight and earn Blood Money. The project is in active development; the feature inventory below distinguishes implemented systems from inherited content that still needs full gameplay verification.
+Llyeta is an OSRS-style private server with a customized RuneLite/OpenOSRS desktop client. Our current focus is the PvP experience: choose your levels, load a setup, find a fight and earn Blood Money. The project is in active development; the feature inventory below distinguishes implemented systems from inherited content that still needs full gameplay verification.
 
-[Join the FlavorScape Discord](https://discord.gg/QJDZX7U4y) · [Development roadmap](docs/roadmap.md) · [Full content audit](docs/content-audit.md)
+[Join the Llyeta Discord](https://discord.gg/QJDZX7U4y) · [Development roadmap](docs/roadmap.md) · [Full content audit](docs/content-audit.md)
 
 ## Recent work: 25–28 October 2026
 
@@ -12,7 +12,8 @@ The current development batch brings together the following changes. The feature
 
 | Area | Delivered changes |
 | --- | --- |
-| Branding and local setup | FlavorScape names, login artwork and community links; portable JDK/Gradle launch scripts, localhost startup/login checks, readable logs and optional Discord configuration. |
+| Llyeta rename (28 October) | Renamed modules, custom plugins, client/server text, preferences and launcher resources; added original wilderness loading artwork, an L shield icon and LLYETA wordmark. Startup scripts migrate existing saves after the old servers stop; the client preserves existing settings on first launch. |
+| Branding and local setup | Llyeta names, login artwork and community links; portable JDK/Gradle launch scripts, localhost startup/login checks, readable logs and optional Discord configuration. |
 | Combat builds and gearing | Free editing of seven combat skills, twelve editable presets seeded with six builds, saved prayers/spellbooks, keyboard shortcuts, native close/camera controls and bank-capacity checks that preserve attributed items and rune-pouch contents. |
 | Combat and spellbooks | Maximum-hit dummy corrections, including Vesta's special and dragon claws; equipment/combat regressions; restored classic Standard, Ancient and Lunar spellbook layouts. |
 | Edgeville and market interface | Restored bank/services, workshop pool and merchant placement, removal of the blocking table, category/search/scroll controls, native Buy 1/5/10/X menus, token payments and immediate closing. |
@@ -194,7 +195,7 @@ All **23 skills** are represented. The seven combat skills are freely selectable
 - Quest-tab summary with real kills/deaths, Slayer task, rank, vote/spending information, items-on-death access and achievement navigation.
 - Achievement tiers, bestiary statistics, pets, mystery boxes, chests and activity reward systems. Collection-log totals are currently **not tracked**.
 - Voting, donation, gambling/dicing and web/database integration code; these require configuration and appropriate transaction verification before use.
-- FlavorScape client branding, login artwork and application names, plus native-menu, camera-input and interface fixes.
+- Llyeta client branding, login artwork and application names, plus native-menu, camera-input and interface fixes.
 - Automatic inactivity/six-hour logout requests and their warnings removed; manual logout and connection-loss handling remain.
 - Optional live Discord announcements configured through environment variables in [.env.example](.env.example).
 
@@ -229,7 +230,7 @@ Use **Stop Server.bat** to stop the local servers. DEV operation is local develo
 
 In DEV mode, **Jon**, **Jon2** and **Sales Tax** have explicit exceptions for local same-IP login/matching and ironman-mode trade testing. Their repeated matches still obey the five-minute reward cooldown. Production restrictions remain active outside DEV. See [DEV account testing](docs/dev-testing.md) for trading and Bounty Hunter instructions.
 
-Latest publication checks, **28 October 2026**: the complete server suite (**193 tests**), **1 API test** and **55 project client tests** passed with no failures or skips. Server/client JAR builds succeeded, and the cache-based home-layout check reported zero failures across 99 NPC and 62 object placements. Checks cover trade confirmations, presets, currencies, market catalogues, BH rewards/visibility, loot-key transactions and every chest-window control. The loot window's offline render was visually inspected. Earlier localhost login and selected preset/spellbook/market flows were exercised separately; the newest loot-key UI and full multiplayer behavior still need live verification after restart.
+Latest publication checks, **28 October 2026**: the complete server suite (**195 tests**), **1 API test** and **57 project client tests** passed with no failures or skips. Renamed server, update-server, launcher and client JAR builds succeeded, and the cache-based home-layout check reported zero failures across 99 NPC and 62 object placements. Checks cover trade confirmations, presets, currencies, market catalogues, BH rewards/visibility, loot-key transactions and every chest-window control. The loot window and new loading background were visually inspected. Settings migration preserves existing files, and the live-server guard was checked with both original listeners running. Earlier localhost login and selected preset/spellbook/market flows were exercised separately; the newest loot-key UI and full multiplayer behavior still need live verification after restart.
 
 | Documentation | Purpose |
 | --- | --- |

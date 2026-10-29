@@ -569,7 +569,7 @@ public class IdleNotifierPlugin extends Plugin
 			return;
 		}
 
-		// FlavorScape does not impose idle or six-hour session logout timers.
+		// Llyeta does not impose idle or six-hour session logout timers.
 
 		if (this.outOfItemsIdle && checkOutOfItemsIdle(waitDuration))
 		{

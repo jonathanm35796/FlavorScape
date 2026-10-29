@@ -7,8 +7,8 @@
 [![HitCount](http://hits.dwyl.io/open-osrs/runelite.svg)](http://hits.dwyl.io/open-osrs/runelite)  
 [OpenOSRS](https://openosrs.com)  is an extended version of [RuneLite](https://github.com/runelite/runelite) that provides more functionality and less restrictions while staying more open-source. We are not affiliated with RuneLite.
 
-## FlavorScape Discord
-[Join the FlavorScape community](https://discord.gg/QJDZX7U4y)
+## Llyeta Discord
+[Join the Llyeta community](https://discord.gg/QJDZX7U4y)
 
 ## Project Layout
 

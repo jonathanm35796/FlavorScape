@@ -9,13 +9,13 @@ CentralServer/_saved/*
 CentralServer/src/main/CentralServer.iml
 CentralServer/target/*
 FileServer/target/*
-flavorscape_rsa
+llyeta_rsa
 
 _saved/
 
-flavorscape-update-server/server.properties
+llyeta-update-server/server.properties
 
-/flavorscape-server-live/*
+/llyeta-server-live/*
 
 cache.rar
 
@@ -23,7 +23,7 @@ FileServer/server.properties
 
 runelite/runelite-client/out/
 
-flavorscape-api/out/
+llyeta-api/out/
 
 *.hprof
 
@@ -45,4 +45,4 @@ runelite/http-api/out/
 
 runelite/http-service/src/main/generated/net/runelite/http/service/xp/XpMapperImpl.java
 
-flavorscape-launcher/out/
+llyeta-launcher/out/

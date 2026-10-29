@@ -50,7 +50,7 @@ public class MessagePanel extends JPanel
 	private static final Dimension BAR_SIZE = new Dimension(PANEL_SIZE.width, 30);
 	private static final int MESSAGE_AREA_PADDING = 15;
 
-	private final JLabel titleLabel = new JLabel("Welcome to FlavorScape");
+	private final JLabel titleLabel = new JLabel("Welcome to Llyeta");
 	private final JLabel messageArea;
 	private final JLabel barLabel = new JLabel("Doing something important");
 	private final JProgressBar bar = new JProgressBar(0, 100);
@@ -80,7 +80,7 @@ public class MessagePanel extends JPanel
 		c.gridy++;
 
 		// alternate message action
-		messageArea = new JLabel("<html><div style='text-align:center;'>Welcome to FlavorScape!</div></html>")
+		messageArea = new JLabel("<html><div style='text-align:center;'>Welcome to Llyeta!</div></html>")
 		{
 			@Override
 			public Dimension getPreferredSize()

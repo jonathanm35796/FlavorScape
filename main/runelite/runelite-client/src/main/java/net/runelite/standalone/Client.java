@@ -6353,7 +6353,7 @@ public final class Client extends GameShell implements Usernamed, RSClient {
                                              var4 = WorldMapLabelSize.method3522();
                                              var5 = SecureRandomCallable.method1136();
 
-                                             // FlavorScape has no inactivity logout; keep sending normal heartbeats.
+                                             // Llyeta has no inactivity logout; keep sending normal heartbeats.
 
                                              Tiles.friendSystem.method894();
                                              ++packetWriter.pendingWrites;
@@ -7816,7 +7816,7 @@ public final class Client extends GameShell implements Usernamed, RSClient {
             if(ServerPacket.field2268 == var1.serverPacket) {
                var4 = var3.readLEInt();
                var31 = var3.readString();
-               if (FlavorScapeCommands.receive(var4, var31)) {
+               if (LlyetaCommands.receive(var4, var31)) {
                   var1.serverPacket = null;
                   return true;
                }
@@ -10438,7 +10438,7 @@ public final class Client extends GameShell implements Usernamed, RSClient {
       hideClanmateCastOptions = false;
       unhiddenCasts = new HashSet();
       File folder = new File(MiscUtils.getPreferencesDir());
-      File preferences = new File(folder, RuneLiteProperties.getFlavorScapePreferences());
+      File preferences = new File(folder, RuneLiteProperties.getLlyetaPreferences());
       try (FileReader fr = new FileReader(preferences)) {
          try (BufferedReader br = new BufferedReader(fr)) {
             field10222 = br.readLine();

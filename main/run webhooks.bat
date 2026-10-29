@@ -1,2 +1,2 @@
-gradlew flavorscape-webhooks:run
+gradlew llyeta-webhooks:run
 pause

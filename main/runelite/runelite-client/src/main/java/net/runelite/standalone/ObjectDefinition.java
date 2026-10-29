@@ -873,7 +873,7 @@ public class ObjectDefinition extends DualNode implements RSObjectDefinition {
          actions = new String[]{"Loot", null, null, null, null};
          return;
       }
-      if (name != null && (id < 33999 || id > 34005)) { name = name.replace("Kronos", "FlavorScape"); }
+      if (name != null && (id < 33999 || id > 34005)) { name = name.replace("Kronos", "Llyeta"); }
       if (id == 10060) {
          name = "Trading Post";
          actions[0] = "Open";
