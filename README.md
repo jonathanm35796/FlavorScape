@@ -12,7 +12,7 @@ The current development batch brings together the following changes. The feature
 
 | Area | Delivered changes |
 | --- | --- |
-| Lletya rename (28 October) | Renamed modules, custom plugins, client/server text, preferences and launcher resources; added original wilderness loading artwork, an L shield icon and LLETYA wordmark. Moved source modules and runtime state into the corrected Desktop workspace and consolidated client settings into `.lletya`; no old-name startup mappings remain. |
+| Lletya rename (28 October) | Renamed modules, custom plugins, client/server text, preferences and launcher resources; added original wilderness loading artwork, an L shield icon and LLETYA wordmark, also integrated into the login background. Moved source modules and runtime state into the corrected Desktop workspace and consolidated client settings into `.lletya`; no old-name startup mappings remain. |
 | Branding and local setup | Lletya names, login artwork and community links; portable JDK/Gradle launch scripts, localhost startup/login checks, readable logs and optional Discord configuration. |
 | Combat builds and gearing | Free editing of seven combat skills, twelve editable presets seeded with six builds, saved prayers/spellbooks, keyboard shortcuts, native close/camera controls and bank-capacity checks that preserve attributed items and rune-pouch contents. |
 | Combat and spellbooks | Maximum-hit dummy corrections, including Vesta's special and dragon claws; equipment/combat regressions; restored classic Standard, Ancient and Lunar spellbook layouts. |

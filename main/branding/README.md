@@ -1,10 +1,10 @@
 # Lletya artwork
 
-Created with the built-in imagegen tool on 28 October 2026. The loading artwork is an original scene inspired by the supplied RuneScape courtyard and dark fantasy references, rather than a composite. It contains no text, UI, counters, buttons, watermarks, lava or molten ground.
+Created with the built-in imagegen tool on 28 October 2026. The loading artwork is an original scene inspired by the supplied RuneScape courtyard and dark fantasy references, rather than a composite. The clean scene contains no text, UI, counters, buttons, watermarks, lava or molten ground. The login variant now includes the exact LLETYA wordmark near the top center in the same silver/crimson style as the launcher.
 
-Source assets: `login-background.png` (1672x941), `app-icon.png` (1254x1254, transparent), and `launcher-wordmark.png` (2172x724, transparent). All three outputs were inspected for composition, spelling and transparency. The wordmark reads **LLETYA**.
+Source assets: `login-background.png` (1672x941, with title), `login-background-scene.png` (1672x941, original clean scene), `app-icon.png` (1254x1254, transparent), and `launcher-wordmark.png` (2172x724, transparent). All three outputs were inspected for composition, spelling and transparency. The wordmark reads **LLETYA**.
 
-Run `powershell -ExecutionPolicy Bypass -File scripts/update-branding.ps1` from the workspace root to regenerate runtime assets. The scene is proportionally scaled and cropped to the native 765x503 login canvas, then split at x=383 into adjoining 383x503 and 382x503 PNGs. The app icon fits a transparent 191x225 canvas; the launcher wordmark fits a transparent 469x167 canvas. Original generated images stay at full resolution here. The background deliberately contains no baked-in title or login controls.
+Run `powershell -ExecutionPolicy Bypass -File scripts/update-branding.ps1` from the workspace root to regenerate runtime assets. The scene is proportionally scaled and cropped to the native 765x503 login canvas, then split at x=383 into adjoining 383x503 and 382x503 PNGs. The app icon fits a transparent 191x225 canvas; the launcher wordmark fits a transparent 469x167 canvas. Original generated images stay at full resolution here. The login background includes the title above the native login controls. The original scene remains available separately without a title; neither version includes baked-in login controls.
 
 ## Background prompt
 
@@ -19,3 +19,9 @@ Use case: logo-brand. Transparent application icon for a medieval fantasy RuneSc
 Edit target: the supplied transparent fantasy wordmark. Correct ONLY the title spelling to the exact word LLETYA, spelled L-L-E-T-Y-A, representing the game name Lletya. It must read LLETYA in that exact left-to-right letter order. Preserve the same silver beveled metal letters, crimson-black outline, small violet gems, horizontal layout, dimensions, generous margins and genuinely transparent background. No additional text, scene, plaque or watermark. The final six letters are L L E T Y A.
 
 The correction used the built-in imagegen tool. The full-resolution result is saved as `launcher-wordmark.png`, and `scripts/update-branding.ps1` derives the launcher resource.
+
+## Login title edit prompt
+
+Built-in imagegen edit. Edit target: `login-background-scene.png`. Supporting insert/style reference: `launcher-wordmark.png`. Add the exact title LLETYA (six letters L-L-E-T-Y-A) near the top center, centered horizontally and fully visible within generous margins. Match the supporting wordmark's silver beveled weathered metal lettering, crimson-black trim and small violet accents. Make the title about 46% of the canvas width, confined to the upper 7%-25%, above the native login controls. Retain the armored statue, purple portal, courtyard, notice board, distant crags, red sky and overall atmosphere. Keep the landscape aspect ratio. No rectangular plaque behind the title, other text, buttons, game interface, lava or watermark. Exact spelling is LLETYA.
+
+The titled output is `login-background.png`; `scripts/update-branding.ps1` scales/crops it to the native canvas and writes the two adjoining runtime background halves.
