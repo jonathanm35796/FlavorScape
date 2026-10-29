@@ -883,7 +883,7 @@ npcs/spawns	data/npcs/spawns/cluescrollnpcs.json	403	Vannaka	ALL	FOUND
 npcs/spawns	data/npcs/spawns/cluescrollnpcs.json	1312	Bartender	ALL	FOUND
 npcs/spawns	data/npcs/spawns/donator_island.json	3656	Gardener Gunnhild	ALL	FOUND
 npcs/spawns	data/npcs/spawns/donator_island.json	5422	Sawmill operator	ALL	FOUND
-npcs/spawns	data/npcs/spawns/donator_island.json	4398	Llyeta Wizard	ALL	FOUND
+npcs/spawns	data/npcs/spawns/donator_island.json	4398	Lletya Wizard	ALL	FOUND
 npcs/spawns	data/npcs/spawns/donator_island.json	1027	Banker	ALL	FOUND
 npcs/spawns	data/npcs/spawns/donator_island.json	1028	Banker	ALL	FOUND
 npcs/spawns	data/npcs/spawns/donator_island.json	1027	Banker	ALL	FOUND
@@ -956,7 +956,7 @@ npcs/spawns	data/npcs/spawns/duel_arena.json	3344	Jaraah	ALL	FOUND
 npcs/spawns	data/npcs/spawns/duel_arena.json	3341	A'abla	ALL	FOUND
 npcs/spawns	data/npcs/spawns/duel_arena.json	3342	Sabreen	ALL	FOUND
 npcs/spawns	data/npcs/spawns/duel_arena.json	3345	Zahwa	ALL	FOUND
-npcs/spawns	data/npcs/spawns/duel_arena.json	3343	Llyeta Nurse	ALL	FOUND
+npcs/spawns	data/npcs/spawns/duel_arena.json	3343	Lletya Nurse	ALL	FOUND
 npcs/spawns	data/npcs/spawns/duel_arena.json	3331	Mubariz	ALL	FOUND
 npcs/spawns	data/npcs/spawns/duel_arena.json	3352	Hamid	ALL	FOUND
 npcs/spawns	data/npcs/spawns/duel_arena.json	3340	Fadli	ALL	FOUND
@@ -3716,7 +3716,7 @@ npcs/spawns	data/npcs/spawns/edgeville.json	2889	Grum	ECO	FOUND
 npcs/spawns	data/npcs/spawns/edgeville.json	8532	Herblore	ECO	FOUND
 npcs/spawns	data/npcs/spawns/edgeville.json	6002	Caretaker	ECO	FOUND
 npcs/spawns	data/npcs/spawns/edgeville.json	5523	Gambler	ALL	FOUND
-npcs/spawns	data/npcs/spawns/edgeville.json	306	Llyeta Expert	ALL	FOUND
+npcs/spawns	data/npcs/spawns/edgeville.json	306	Lletya Expert	ALL	FOUND
 npcs/spawns	data/npcs/spawns/edgeville.json	5422	Sawmill operator	ALL	FOUND
 npcs/spawns	data/npcs/spawns/edgeville.json	5419	Estate agent	ALL	FOUND
 npcs/spawns	data/npcs/spawns/edgeville.json	3080	Man	ECO	FOUND
@@ -7427,7 +7427,7 @@ npcs/spawns	data/npcs/spawns/wilderness.json	2905	Black salamander	ALL	FOUND
 npcs/spawns	data/npcs/spawns/wilderness.json	2905	Black salamander	ALL	FOUND
 npcs/spawns	data/npcs/spawns/wilderness.json	2905	Black salamander	ALL	FOUND
 npcs/spawns	data/npcs/spawns/wilderness.json	2905	Black salamander	ALL	FOUND
-npcs/spawns	data/npcs/spawns/wilderness.json	3343	Llyeta Nurse	ALL	FOUND
+npcs/spawns	data/npcs/spawns/wilderness.json	3343	Lletya Nurse	ALL	FOUND
 npcs/spawns	data/npcs/spawns/wilderness.json	1535	Dark Crab Fishing Spot	ALL	FOUND
 npcs/spawns	data/npcs/spawns/wilderness.json	1535	Dark Crab Fishing Spot	ALL	FOUND
 npcs/spawns	data/npcs/spawns/wilderness.json	1535	Dark Crab Fishing Spot	ALL	FOUND

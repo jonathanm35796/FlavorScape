@@ -42,7 +42,7 @@ import net.runelite.client.ui.overlay.OverlayManager;
 import net.runelite.client.ui.overlay.OverlayPosition;
 import net.runelite.client.ui.overlay.tooltip.Tooltip;
 import net.runelite.client.ui.overlay.tooltip.TooltipManager;
-import net.runelite.standalone.LlyetaMarketState;
+import net.runelite.standalone.LletyaMarketState;
 import org.jooq.meta.derby.sys.Sys;
 
 @Singleton
@@ -69,7 +69,7 @@ class MouseHighlightOverlay extends Overlay
 	{
 		// The custom market has its own controls; native shop actions underneath it
 		// must not leak through as mouse tooltips.
-		if (LlyetaMarketState.get() != null)
+		if (LletyaMarketState.get() != null)
 		{
 			return null;
 		}

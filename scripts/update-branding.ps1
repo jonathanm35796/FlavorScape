@@ -34,11 +34,11 @@ try {
 } finally { $background.Dispose() }
 
 $icon = Render-Asset (Join-Path $branding 'app-icon.png') 191 225 $false
-try { $icon.Save((Join-Path $resources 'llyeta.png'), [Drawing.Imaging.ImageFormat]::Png) }
+try { $icon.Save((Join-Path $resources 'lletya.png'), [Drawing.Imaging.ImageFormat]::Png) }
 finally { $icon.Dispose() }
 
 $wordmark = Render-Asset (Join-Path $branding 'launcher-wordmark.png') 469 167 $false
-try { $wordmark.Save((Join-Path $workspace 'main/llyeta-launcher/src/main/resources/logo.png'), [Drawing.Imaging.ImageFormat]::Png) }
+try { $wordmark.Save((Join-Path $workspace 'main/lletya-launcher/src/main/resources/logo.png'), [Drawing.Imaging.ImageFormat]::Png) }
 finally { $wordmark.Dispose() }
 
 Write-Host 'Updated the native login halves, application icon and launcher wordmark.'

@@ -12,7 +12,7 @@ public class CustomMisc {
     private static Boolean bountyOverlayHidden;
 
     static boolean bountyOverlayHidden(Widget widget, boolean nativeHidden) {
-        // Native script 866 hides Bounty Hunter on non-BH worlds. Llyeta's
+        // Native script 866 hides Bounty Hunter on non-BH worlds. Lletya's
         // server controls participation instead, including after layout updates.
         if (bountyOverlayHidden != null && (widget.id == (90 << 16 | 6)
                 || widget.id == (90 << 16 | 18)))

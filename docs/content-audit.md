@@ -31,7 +31,7 @@ Every account, including ironmen, can select its own Attack, Strength, Defence, 
 
 Changes require being outside combat, PvP areas and active activities. The server checks again when the number is submitted: recent attacks/defence, death/locks, Wilderness, PvP combat zones, an active Bounty Hunter target, duels, tournament/LMS participation and queues, supported minigame/session fields, instances and instance heights block changes. Players must unequip gear whose requirements would be broken by lowering a level. Prayers, quick prayers, bonuses and displayed combat level are refreshed. Noncombat skills keep their normal progression.
 
-Implementation: [shared server editor](../main/llyeta-server/src/main/java/io/ruin/model/stat/CombatLevelEditor.java), [Skills-tab routing](../main/llyeta-server/src/main/java/io/ruin/model/inter/handlers/TabStats.java), and [client skill actions](../main/runelite/runelite-client/src/main/java/net/runelite/standalone/CustomInterfaceEdits.java). Restart both client and server to activate these changes. No running account was edited and no live server was restarted during this audit.
+Implementation: [shared server editor](../main/lletya-server/src/main/java/io/ruin/model/stat/CombatLevelEditor.java), [Skills-tab routing](../main/lletya-server/src/main/java/io/ruin/model/inter/handlers/TabStats.java), and [client skill actions](../main/runelite/runelite-client/src/main/java/net/runelite/standalone/CustomInterfaceEdits.java). Restart both client and server to activate these changes. No running account was edited and no live server was restarted during this audit.
 
 ## All 23 skills
 
@@ -131,12 +131,12 @@ For the intended PvP server, the strongest launch scope is Edgeville/Bounty Hunt
 - Inventory: zero JSON/YAML parse errors and zero unresolved cache definitions among the spawn references checked (`.tools/content-inventory.log`).
 - No full live playthrough or multi-client combat session was performed for this request.
 
-The inventory generator is `main/llyeta-server/src/test/java/io/ruin/tools/ContentInventoryAudit.java`. It runs with the server test runtime classpath, the server module as working directory, and JVM option `--add-exports=java.base/jdk.internal.vm=ALL-UNNAMED`. The checked-in [Gradle init script](../scripts/content-inventory.init.gradle) adds the task without changing production startup:
+The inventory generator is `main/lletya-server/src/test/java/io/ruin/tools/ContentInventoryAudit.java`. It runs with the server test runtime classpath, the server module as working directory, and JVM option `--add-exports=java.base/jdk.internal.vm=ALL-UNNAMED`. The checked-in [Gradle init script](../scripts/content-inventory.init.gradle) adds the task without changing production startup:
 
 ```powershell
 # From the workspace root, with the project's JDK 21 and Gradle environment set:
 Set-Location main
-.\gradlew.bat -I ..\scripts\content-inventory.init.gradle :llyeta-server:contentInventoryAudit --no-daemon --console=plain
+.\gradlew.bat -I ..\scripts\content-inventory.init.gradle :lletya-server:contentInventoryAudit --no-daemon --console=plain
 ```
 
 This regenerates the ledgers from current source/data. It does not change player saves or start a game server.

@@ -27,8 +27,6 @@ Desktop.ini
 /main/Cache/
 /main/.kotlin/
 **/server-data/
-# Previous module folders retain only the connected session's local runtime state.
-/main/flavorscape-*/
 **/server.properties
 **/local.properties
 **/out/

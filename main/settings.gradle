@@ -1,8 +1,8 @@
-rootProject.name = "Llyeta"
+rootProject.name = "Lletya"
 
-include ':llyeta-server'
-include ':llyeta-api'
-include ':llyeta-update-server'
-include ':llyeta-launcher'
-include ':llyeta-webhooks'
+include ':lletya-server'
+include ':lletya-api'
+include ':lletya-update-server'
+include ':lletya-launcher'
+include ':lletya-webhooks'
 

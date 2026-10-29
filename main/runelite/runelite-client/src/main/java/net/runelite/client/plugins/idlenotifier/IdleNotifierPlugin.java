@@ -569,7 +569,7 @@ public class IdleNotifierPlugin extends Plugin
 			return;
 		}
 
-		// Llyeta does not impose idle or six-hour session logout timers.
+		// Lletya does not impose idle or six-hour session logout timers.
 
 		if (this.outOfItemsIdle && checkOutOfItemsIdle(waitDuration))
 		{

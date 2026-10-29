@@ -1,0 +1,14 @@
+version = '1.0.0.1'
+project.ext {
+    type = "server"
+}
+
+apply plugin: 'application'
+
+dependencies {
+    implementation project(':lletya-api')
+}
+
+application {
+    mainClassName = 'io.ruin.update.Server'
+}

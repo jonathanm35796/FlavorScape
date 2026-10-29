@@ -373,7 +373,7 @@ public final class ArchiveDisk {
 			Login.field1171 = 2;
 			PlayerType.setLoginResponseString("Your account has not logged out from its last", "session or the server is too busy right now.", "Please try again in a few minutes.");
 		} else if (var0 == 68 || !Client.onMobile && var0 == 6) {
-			PlayerType.setLoginResponseString("Llyeta has been updated!", "Please reload this page.", "");
+			PlayerType.setLoginResponseString("Lletya has been updated!", "Please reload this page.", "");
 		} else if (var0 == 7) {
 			PlayerType.setLoginResponseString("This world is full.", "Please use a different world.", "");
 		} else if (var0 == 8) {

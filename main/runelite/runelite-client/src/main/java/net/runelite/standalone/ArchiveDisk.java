@@ -386,7 +386,7 @@ public final class ArchiveDisk {
          Login.field766 = 2;
          PlayerType.method3939("Your account has not logged out from its last", "session or the server is too busy right now.", "Please try again in a few minutes.");
       } else if(var0 == 68 || !Client.onMobile && var0 == 6) {
-         PlayerType.method3939("Llyeta has been updated!", "Please reload this page.", "");
+         PlayerType.method3939("Lletya has been updated!", "Please reload this page.", "");
       } else if(var0 == 7) {
          PlayerType.method3939("This world is full.", "Please use a different world.", "");
       } else if(var0 == 8) {
@@ -439,7 +439,7 @@ public final class ArchiveDisk {
       } else if (var0 == 58) {
          PlayerType.method3939("You must register before logging in.", "The registration page has been opened.", "Sign in here once complete.");
          try {
-            ArchiveDiskActionHandler.method4341("https://github.com/jonathanm35796/Llyeta", true, false);//Is this the only custom login msg?
+            ArchiveDiskActionHandler.method4341("https://github.com/jonathanm35796/Lletya", true, false);//Is this the only custom login msg?
          } catch (Exception e) {
             e.printStackTrace();
          }

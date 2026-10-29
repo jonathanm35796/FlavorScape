@@ -1,21 +1,21 @@
-# Llyeta branding
+# Lletya branding
 
-Renamed on 28 October 2026 using **Llyeta**, the spelling in the owner's final instruction. The working checkout remains at its existing Desktop path so the open workspace continues to work.
+The owner's confirmed spelling is **Lletya**, corrected on 28 October 2026. The current project is at `C:\Users\Jonathan\Desktop\Lletya`; all current project modules, custom Java classes/plugins, resource filenames, Gradle task names, environment variables, client/server text, preference paths, project links and launcher artwork use this spelling.
 
-The current source uses Llyeta for client/server/world names, window and splash titles, loading and login text, announcements, help, custom item/NPC names, Gradle modules, launcher properties, preference filenames, internal custom classes, plugin packages, environment variable names and raster branding. Modules are `llyeta-api`, `llyeta-server`, `llyeta-update-server`, `llyeta-launcher` and `llyeta-webhooks`; local scripts use those task names.
+The GitHub repository and origin are [jonathanm35796/Lletya](https://github.com/jonathanm35796/Lletya). Server modules are `lletya-api`, `lletya-server`, `lletya-update-server`, `lletya-launcher` and `lletya-webhooks`. The server's data and private local configuration moved with the module directory. No old-name runtime directory mapping is needed by the startup scripts.
 
-The original loading scene features a wilderness courtyard, armored statue, notice board and purple portal under a dark red sky. It contains no UI overlays, lettering or lava. The launcher has a matching silver LLYETA wordmark and the application has an L shield icon. Full-resolution originals and prompts are in [branding](../main/branding/README.md). Runtime derivatives preserve the native login split and application resource sizes; regenerate them with `scripts/update-branding.ps1`.
+## Local state
 
-## Existing saves and settings
+Both game listeners were stopped before moving the runtime directories. Player files were retained in `main/lletya-server/server-data`; private server configuration remains excluded from Git. Superseded local build/data copies are retained under neutral directory names in the ignored `.tools/retired-module-artifacts` area.
 
-The local game and update server were already running when this rename began. Their active data and ignored builds remain in the previous module directories until shutdown; source files moved to the new module names. Before launching Llyeta, stop the existing servers with `Stop Server.bat`. The startup script then moves the previous `server-data`, `server.properties` and `local.properties` into the new modules, only while both ports are stopped, and refuses duplicate source/destination state. Build-only commands do not migrate or modify live data. Direct Gradle `run` commands do not perform this migration; use the supported startup scripts for the first launch.
+Client settings are now `.lletya` in both the user-home and platform preference locations. Existing current settings and device preferences take precedence; missing settings from the older location were merged without overwriting existing files. Additional originals are preserved in the ignored `.tools/name-correction-user-settings` backup. The one-time legacy migration code has been removed from the application after completing this filesystem migration.
 
-On the first launch of the renamed client, local profiles and preferences are copied to `.llyeta` in the user-home and platform preference locations. Existing destination files are never overwritten; original settings remain available. The device preference filename is migrated too. A completion marker makes this a one-time migration. The migration runs at application startup, without side effects from merely loading client classes in tests.
+Windows can keep the now-empty original Desktop folder locked while an editor or tool process still has it as its working directory. The project files have moved to the correct folder. `scripts/cleanup-empty-workspace.ps1` safely retries removing an empty original directory after its handles are released; it never deletes files or recursively removes a directory. Open the new workspace path for further work.
 
-## Links and historical content
+## Artwork
 
-The owner's Discord invite stays [Llyeta Discord](https://discord.gg/QJDZX7U4y). The GitHub repository is now [jonathanm35796/Llyeta](https://github.com/jonathanm35796/Llyeta), and this checkout's origin and current project links use the new URL. An existing checkout's physical path, existing active runtime data, saved historical logs/backups, explicit compatibility strings, third-party copyright/author credits and upstream service URLs stay intact. Genuine OSRS farming names and cached IDs stay intact. Legacy cached text is translated when loaded.
+The original wilderness background remains unchanged: an armored statue, stone courtyard, notice board and purple portal beneath a dark red sky, without text, UI overlays or lava. The silver launcher wordmark now reads **LLETYA**, in the exact order L-L-E-T-Y-A. The L shield icon remains appropriate. The spelling correction used the built-in imagegen tool; originals and prompts are recorded in [the artwork documentation](../main/branding/README.md). `scripts/update-branding.ps1` regenerates native login halves and correctly sized app/launcher resources.
 
-## Verification
+## Verification and history
 
-Current validation is recorded in the README. The first WMI-based listener check was denied by Windows and treated the result as no listeners; a guard check moved runtime state prematurely. The original state was restored without overwriting newer saves, and its snapshot remains in the ignored `.tools/aborted-live-migration-runtime` directory. All 20 original runtime files were accounted for after restoration. The replacement check uses native `netstat`, rejects listener-query failures, and was verified to block migration while both original listeners remained open. No verification-only server process remains. The renamed client and server require a restart for live verification.
+Current verification is recorded in the README. Current source and filesystem names are checked case-insensitively for both superseded spellings. Git commit history, third-party author credits, upstream OSRS content and recovery snapshots remain historical records; current runtime branding uses Lletya.

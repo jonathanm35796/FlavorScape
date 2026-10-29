@@ -20,52 +20,6 @@ if (-not (Test-Path (Join-Path $env:JAVA_HOME 'bin/java.exe'))) {
     throw 'Required portable JDK is missing. See docs/environment-status.md.'
 }
 
-# Runtime state is moved only after the previous server has stopped. Builds and
-# source renaming must never copy a live player's save into a second data store.
-if (-not $BuildOnly -and $Component -ne 'Client') {
-    $legacyModules = @('server', 'update-server')
-    foreach ($module in $legacyModules) {
-        $legacy = Join-Path $source ('flavor' + 'scape-' + $module)
-        $current = Join-Path $source ('llyeta-' + $module)
-        $pending = @('server-data', 'server.properties', 'local.properties') | Where-Object {
-            Test-Path -LiteralPath (Join-Path $legacy $_)
-        }
-        if ($pending.Count -eq 0) { continue }
-        # netstat does not require the WMI/CIM permissions that can silently make
-        # Get-NetTCPConnection appear empty in restricted desktop sessions.
-        $netstat = & "$env:SystemRoot/System32/netstat.exe" -ano -p tcp
-        if ($LASTEXITCODE -ne 0) { throw 'Cannot verify that game ports are stopped; runtime migration was cancelled.' }
-        $listeners = @($netstat | Where-Object {
-            $_ -match '^\s*TCP\s+\S+:(7304|13302)\s+\S+\s+LISTENING\s+\d+\s*$'
-        })
-        if ($listeners) {
-            throw 'Stop the existing servers with Stop Server.bat before starting Llyeta; their saves will then migrate automatically.'
-        }
-        foreach ($entry in $pending) {
-            $oldPath = [IO.Path]::GetFullPath((Join-Path $legacy $entry))
-            $newPath = [IO.Path]::GetFullPath((Join-Path $current $entry))
-            $sourceRoot = [IO.Path]::GetFullPath($source).TrimEnd('\') + '\'
-            if (-not $oldPath.StartsWith($sourceRoot, [StringComparison]::OrdinalIgnoreCase) -or
-                -not $newPath.StartsWith($sourceRoot, [StringComparison]::OrdinalIgnoreCase)) {
-                throw 'Runtime migration path is outside the source directory.'
-            }
-            if (Test-Path -LiteralPath $newPath) {
-                throw "Both old and new runtime state exist for $entry. Resolve the duplicate before starting to avoid overwriting saves."
-            }
-            Move-Item -LiteralPath $oldPath -Destination $newPath
-            if ($entry -eq 'server.properties') {
-                $properties = [IO.File]::ReadAllText($newPath)
-                $oldName = 'Flavor' + 'Scape'
-                $properties = [regex]::Replace($properties, '(?im)^(world_name\s*=\s*)[^\r\n]*', {
-                    param($match)
-                    $match.Value.Replace($oldName, 'Llyeta').Replace($oldName.ToLowerInvariant(), 'llyeta')
-                })
-                [IO.File]::WriteAllText($newPath, $properties, (New-Object Text.UTF8Encoding($false)))
-            }
-        }
-    }
-}
-
 function Invoke-LocalGradle([string]$Directory, [string[]]$Tasks, [string]$Log) {
     Push-Location $Directory
     try {
@@ -94,7 +48,7 @@ if ($Component -in @('All', 'Servers')) {
         if ($listeners) { throw 'Local game ports are already in use. Run scripts/stop-local.ps1 first.' }
     }
     Write-Host 'Building game and update servers with JDK 21...'
-    Invoke-LocalGradle $source @(':llyeta-server:classes', ':llyeta-update-server:classes') (Join-Path $tools 'main-server-build.log')
+    Invoke-LocalGradle $source @(':lletya-server:classes', ':lletya-update-server:classes') (Join-Path $tools 'main-server-build.log')
     if ($Component -eq 'All') {
         $env:JAVA_HOME = (Get-ChildItem (Join-Path $tools 'jdk8') -Directory | Select-Object -First 1).FullName
         Write-Host 'Building client with JDK 8...'
@@ -143,8 +97,8 @@ if ($Component -in @('All', 'Servers')) {
 }
 
 switch ($Component) {
-    'UpdateServer' { $directory = $source; $task = ':llyeta-update-server:run' }
-    'GameServer' { $directory = $source; $task = ':llyeta-server:run' }
+    'UpdateServer' { $directory = $source; $task = ':lletya-update-server:run' }
+    'GameServer' { $directory = $source; $task = ':lletya-server:run' }
     'Client' { $directory = Join-Path $source 'runelite'; $task = 'run' }
 }
 $tasks = @($task)

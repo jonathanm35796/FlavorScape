@@ -87,7 +87,7 @@ import org.slf4j.LoggerFactory;
 @Slf4j
 public class RuneLite
 {
-	public static final File RUNELITE_DIR = new File(System.getProperty("user.home"), ".llyeta");
+	public static final File RUNELITE_DIR = new File(System.getProperty("user.home"), ".lletya");
 	public static final File PROFILES_DIR = new File(RUNELITE_DIR, "profiles");
 	public static final File PLUGIN_DIR = new File(RUNELITE_DIR, "plugins");
 	public static final File SCREENSHOT_DIR = new File(RUNELITE_DIR, "screenshots");
@@ -177,8 +177,6 @@ public class RuneLite
 	public static void main(String[] args) throws Exception
 	{
 		Locale.setDefault(Locale.ENGLISH);
-		net.runelite.client.util.LlyetaPaths.directory(new File(System.getProperty("user.home")));
-		net.runelite.client.util.LlyetaPaths.directory(new File(MiscUtils.getPreferencesDir()).getParentFile());
 
 		final OptionParser parser = new OptionParser();
 		parser.accepts("developer-mode", "Enable developer tools");
@@ -264,7 +262,7 @@ public class RuneLite
 		File folder = new File(MiscUtils.getPreferencesDir());
 		if (!folder.exists()) folder.mkdirs();
 
-		File preferences = new File(folder, RuneLiteProperties.getLlyetaPreferences());
+		File preferences = new File(folder, RuneLiteProperties.getLletyaPreferences());
 		if (!preferences.exists()) {
 			preferences.createNewFile();
 			MiscUtils.writePreferences(preferences);

@@ -398,7 +398,7 @@ public class SwingUtil
 		dialog.setAlwaysOnTop(true);
 		dialog.setAutoRequestFocus(true);
 		dialog.setLocationRelativeTo(null);
-		dialog.setIconImage(ImageUtil.getResourceStreamFromClass(SwingUtil.class, "/llyeta.png"));
+		dialog.setIconImage(ImageUtil.getResourceStreamFromClass(SwingUtil.class, "/lletya.png"));
 
 		// Listen for value changes and close dialog when necessary
 		pane.addPropertyChangeListener(e -> {

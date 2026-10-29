@@ -411,7 +411,7 @@ public class VarbitDefinition extends DualNode implements RSVarbitDefinition {
             short var5;
             if(Login.loginIndex == 0) {
                var44 = 251;
-               var0.method5332("Welcome to Llyeta", Login.loginBoxX + 180, var44, 16776960, 0);
+               var0.method5332("Welcome to Lletya", Login.loginBoxX + 180, var44, 16776960, 0);
                var45 = var44 + 30;
                var24 = Login.loginBoxX + 180 - 80;
                var5 = 291;

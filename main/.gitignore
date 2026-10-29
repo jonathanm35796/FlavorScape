@@ -9,13 +9,13 @@ CentralServer/_saved/*
 CentralServer/src/main/CentralServer.iml
 CentralServer/target/*
 FileServer/target/*
-llyeta_rsa
+lletya_rsa
 
 _saved/
 
-llyeta-update-server/server.properties
+lletya-update-server/server.properties
 
-/llyeta-server-live/*
+/lletya-server-live/*
 
 cache.rar
 
@@ -23,7 +23,7 @@ FileServer/server.properties
 
 runelite/runelite-client/out/
 
-llyeta-api/out/
+lletya-api/out/
 
 *.hprof
 
@@ -45,4 +45,4 @@ runelite/http-api/out/
 
 runelite/http-service/src/main/generated/net/runelite/http/service/xp/XpMapperImpl.java
 
-llyeta-launcher/out/
+lletya-launcher/out/

@@ -54,7 +54,7 @@ public final class LocalLoginSmoke {
         if (gearPlugin == null) {
             Object manager = instance.invoke(injector, Class.forName("net.runelite.client.plugins.PluginManager"));
             for (Object plugin : (java.util.Collection<?>) manager.getClass().getMethod("getPlugins").invoke(manager))
-                if (plugin.getClass().getName().endsWith("LlyetaGearsPlugin")) gearPlugin = plugin;
+                if (plugin.getClass().getName().endsWith("LletyaGearsPlugin")) gearPlugin = plugin;
         }
         if (gearPlugin == null) throw new IllegalStateException("Gears plugin missing");
         Field toggle = gearPlugin.getClass().getDeclaredField("toggle"); toggle.setAccessible(true);
@@ -192,7 +192,7 @@ public final class LocalLoginSmoke {
                     if (state == 10) loginReadySince = System.currentTimeMillis();
                 }
                 if (state == 10 && !submitted && System.currentTimeMillis() - loginReadySince >= 2000) {
-                    String testName = System.getenv("LLYETA_SMOKE_USERNAME");
+                    String testName = System.getenv("LLETYA_SMOKE_USERNAME");
                     field("Login", "Login_username").set(null, testName == null ? "Localtest" : testName);
                     field("Login", "Login_password").set(null, "local-only-test");
                     call("PlayerType", "method3947", boolean.class, false);
@@ -211,14 +211,14 @@ public final class LocalLoginSmoke {
                             System.out.println("LOCAL_SMOKE PASS logged-in player at " + location + "; received ticks=" + (ticks - firstTick));
                             loginReported = true;
                         }
-                        String homeCheck = System.getenv("LLYETA_VERIFY_HOME");
-                        if ("1".equals(System.getenv("LLYETA_SMOKE_SAVE_PLAYERS"))) {
+                        String homeCheck = System.getenv("LLETYA_VERIFY_HOME");
+                        if ("1".equals(System.getenv("LLETYA_SMOKE_SAVE_PLAYERS"))) {
                             sendCommand("save");
                             sendCommand("update 1");
                             System.out.println("LOCAL_SAVE requested save and one-minute safe logout before local server restart");
                             return true;
                         }
-                        if ("1".equals(System.getenv("LLYETA_VERIFY_SPELLBOOKS"))) {
+                        if ("1".equals(System.getenv("LLETYA_VERIFY_SPELLBOOKS"))) {
                             int[] varps = (int[]) clientApi.getMethod("getVarps").invoke(client);
                             int classic = (Integer) clientApi.getMethod("getVarbitValue", int[].class, int.class).invoke(client, varps, 6718);
                             if (classic != 1) throw new IllegalStateException("Login did not select the classic spellbook grid");
@@ -247,8 +247,8 @@ public final class LocalLoginSmoke {
                                 System.out.println("SPELLBOOK_SMOKE " + names[book] + " visible=" + visible + " columns=" + columns);
                                 if (columns.size() != new int[]{7, 4, 6}[book]) throw new IllegalStateException("Unexpected spell grid for " + names[book]);
                                 if (visible != new int[]{70, 26, 45}[book]) throw new IllegalStateException("Spells missing from " + names[book]);
-                                String directory = System.getenv("LLYETA_SPELLBOOK_SCREENSHOTS");
-                                if (directory == null) throw new IllegalStateException("Set LLYETA_SPELLBOOK_SCREENSHOTS to a workspace directory");
+                                String directory = System.getenv("LLETYA_SPELLBOOK_SCREENSHOTS");
+                                if (directory == null) throw new IllegalStateException("Set LLETYA_SPELLBOOK_SCREENSHOTS to a workspace directory");
                                 captureFrame(drawManager, directory + "/" + names[book] + ".png");
                                 spellbookStage++; return false;
                             }
@@ -261,8 +261,8 @@ public final class LocalLoginSmoke {
                             sendCommand("vb 4070 " + (book + 1));
                             spellbookStage++; return false;
                         }
-                        if ("1".equals(System.getenv("LLYETA_VERIFY_MARKET"))) {
-                            Class<?> bridge=Class.forName("net.runelite.standalone.LlyetaMarketState");
+                        if ("1".equals(System.getenv("LLETYA_VERIFY_MARKET"))) {
+                            Class<?> bridge=Class.forName("net.runelite.standalone.LletyaMarketState");
                             Object snapshot=bridge.getMethod("get").invoke(null);
                             if(marketStage==0){
                                 field("Client","camAngleX").setInt(null,383);field("Client","camAngleY").setInt(null,0);
@@ -301,7 +301,7 @@ public final class LocalLoginSmoke {
                             if(marketPlugin==null){
                                 Object manager=instance.invoke(injector,Class.forName("net.runelite.client.plugins.PluginManager"));
                                 for(Object plugin:(java.util.Collection<?>)manager.getClass().getMethod("getPlugins").invoke(manager))
-                                    if(plugin.getClass().getName().endsWith("LlyetaMarketPlugin"))marketPlugin=plugin;
+                                    if(plugin.getClass().getName().endsWith("LletyaMarketPlugin"))marketPlugin=plugin;
                                 if(marketPlugin==null)throw new IllegalStateException("Market plugin not loaded");
                             }
                             Field boundsField=marketPlugin.getClass().getDeclaredField("panel");boundsField.setAccessible(true);
@@ -370,7 +370,7 @@ public final class LocalLoginSmoke {
                                 java.awt.Canvas marketCanvas=(java.awt.Canvas)clientApi.getMethod("getCanvas").invoke(client);
                                 java.awt.event.MouseMotionListener nativeMouse=(java.awt.event.MouseMotionListener)field("MouseHandler","MouseHandler_instance").get(null);
                                 nativeMouse.mouseMoved(new java.awt.event.MouseEvent(marketCanvas,java.awt.event.MouseEvent.MOUSE_MOVED,System.currentTimeMillis(),0,bounds.x+marketClickX,bounds.y+marketClickY,0,false));
-                                captureFrame(drawManager,System.getenv("LLYETA_MARKET_SCREENSHOT"));marketStage=3;return false;
+                                captureFrame(drawManager,System.getenv("LLETYA_MARKET_SCREENSHOT"));marketStage=3;return false;
                             }
                             if(marketStage==3){if(!frameSaved)return false;marketItemCount=inventoryCount(clientApi,client,marketItem);marketClick(injector,instance,clientApi,client,bounds.x+marketClickX,bounds.y+marketClickY);marketStage=30;return false;}
                             if(marketStage==30){
@@ -400,7 +400,7 @@ public final class LocalLoginSmoke {
                                 Class<?> varc=Class.forName("net.runelite.api.VarClientInt");
                                 int input=(Integer)clientApi.getMethod("getVar",varc).invoke(client,varc.getField("INPUT_TYPE").get(null));
                                 if(input==0)throw new IllegalStateException("Buy X did not open the numeric dialogue");
-                                captureFrame(drawManager,System.getenv("LLYETA_MARKET_SCREENSHOT")+".buyx.png");marketStage=35;return false;
+                                captureFrame(drawManager,System.getenv("LLETYA_MARKET_SCREENSHOT")+".buyx.png");marketStage=35;return false;
                             }
                             if(marketStage==35){
                                 if(frameError!=null)throw new IllegalStateException("Buy X capture failed",frameError);
@@ -426,12 +426,12 @@ public final class LocalLoginSmoke {
                                 if(!"dragon".equals(snapshot.getClass().getField("query").get(snapshot)))throw new IllegalStateException("Market search did not reach the server");
                                 marketClick(injector,instance,clientApi,client,bounds.x+480,bounds.y+14);marketStage=8;return false;
                             }
-                            if(marketStage==8){if(snapshot!=null)throw new IllegalStateException("Market close failed");captureFrame(drawManager,System.getenv("LLYETA_WORKSHOP_SCREENSHOT"));marketStage=9;return false;}
+                            if(marketStage==8){if(snapshot!=null)throw new IllegalStateException("Market close failed");captureFrame(drawManager,System.getenv("LLETYA_WORKSHOP_SCREENSHOT"));marketStage=9;return false;}
                             if(frameError!=null)throw new IllegalStateException("Market capture failed",frameError);
                             if(!frameSaved)return false;
                             System.out.println("MARKET_SMOKE PASS NPC trade, dropdown dismissal, both shops, scrolling, left-click price only, right-click Buy 1/5/10/X with typed numeric dialogue, 40% buyback, category, search, close and captures");return true;
                         }
-                        if ("1".equals(System.getenv("LLYETA_VERIFY_PRESET_CLOSE"))) {
+                        if ("1".equals(System.getenv("LLETYA_VERIFY_PRESET_CLOSE"))) {
                             if (autoCloseStage == 0) {
                                 clientApi.getMethod("runScript", Object[].class).invoke(client, (Object) new Object[]{915, 2});
                                 commandSent = System.currentTimeMillis(); autoCloseStage = 1; return false;
@@ -448,7 +448,7 @@ public final class LocalLoginSmoke {
                             System.out.println("PRESET_CLOSE_SMOKE PASS successful load closes the gear panel; rejected load keeps it open");
                             return true;
                         }
-                        if ("1".equals(System.getenv("LLYETA_VERIFY_CAMERA_INPUT"))) {
+                        if ("1".equals(System.getenv("LLETYA_VERIFY_CAMERA_INPUT"))) {
                             if (cameraStage == 0) {
                                 clientApi.getMethod("runScript", Object[].class).invoke(client, (Object) new Object[]{915, 2});
                                 commandSent = System.currentTimeMillis(); cameraStage = 1; return false;
@@ -466,7 +466,7 @@ public final class LocalLoginSmoke {
                             System.out.println("CAMERA_INPUT_SMOKE PASS native left/middle/right releases reset held state over Quest summary and gear panel; middle and Alt-left camera gestures pass through");
                             return true;
                         }
-                        if ("1".equals(System.getenv("LLYETA_VERIFY_QUEST_TAB")) && questStage < 5) {
+                        if ("1".equals(System.getenv("LLETYA_VERIFY_QUEST_TAB")) && questStage < 5) {
                             if (questStage == 0) {
                                 clientApi.getMethod("runScript", Object[].class).invoke(client, (Object) new Object[]{915, 3});
                                 commandSent = System.currentTimeMillis(); questStage = 1; return false;
@@ -475,7 +475,7 @@ public final class LocalLoginSmoke {
                             if (questStage == 1 || questStage == 4) {
                                 Object manager = instance.invoke(injector, Class.forName("net.runelite.client.plugins.PluginManager"));
                                 for (Object plugin : (java.util.Collection<?>) manager.getClass().getMethod("getPlugins").invoke(manager))
-                                    if (plugin.getClass().getName().endsWith("LlyetaGearsPlugin")) gearPlugin = plugin;
+                                    if (plugin.getClass().getName().endsWith("LletyaGearsPlugin")) gearPlugin = plugin;
                                 Field frame = gearPlugin.getClass().getDeclaredField("questFrame"); frame.setAccessible(true);
                                 Field opened = gearPlugin.getClass().getDeclaredField("open"); opened.setAccessible(true);
                                 if (!((java.awt.Rectangle) frame.get(gearPlugin)).isEmpty() || opened.getBoolean(gearPlugin)) throw new IllegalStateException("Quest interface leaked onto another tab");
@@ -494,12 +494,12 @@ public final class LocalLoginSmoke {
                                 commandSent = System.currentTimeMillis(); questStage = 4; return false;
                             }
                         }
-                        if ("1".equals(System.getenv("LLYETA_VERIFY_QUEST_TAB")) && questStage == 5) {
+                        if ("1".equals(System.getenv("LLETYA_VERIFY_QUEST_TAB")) && questStage == 5) {
                             if (System.currentTimeMillis() - commandSent < 1500) return false;
                             clickGearButton(injector, instance, clientApi, client); questStage = 6;
                             System.out.println("QUEST_TAB_SMOKE PASS other tabs hide/close gear controls; Quest tab exposes the helm button");
                         }
-                        if ("1".equals(System.getenv("LLYETA_VERIFY_QUEST_TAB")) && questStage >= 6 && questStage < 9) {
+                        if ("1".equals(System.getenv("LLETYA_VERIFY_QUEST_TAB")) && questStage >= 6 && questStage < 9) {
                             if (System.currentTimeMillis() - commandSent < 1500) return false;
                             Field frameField = gearPlugin.getClass().getDeclaredField("questFrame"); frameField.setAccessible(true);
                             java.awt.Rectangle frame = (java.awt.Rectangle) frameField.get(gearPlugin);
@@ -521,10 +521,10 @@ public final class LocalLoginSmoke {
                             clickGearButton(injector, instance, clientApi, client); questStage = 9;
                             System.out.println("QUEST_TAB_SMOKE PASS summary navigation opens Achievements and Back restores the summary");
                         }
-                        if ("1".equals(System.getenv("LLYETA_VERIFY_ROADMAP")) && gearStage < 15) {
+                        if ("1".equals(System.getenv("LLETYA_VERIFY_ROADMAP")) && gearStage < 15) {
                             if (gearStage == 0) { sendCommand("gears"); gearStage = 1; return false; }
                             if (System.currentTimeMillis() - commandSent < 2500) return false;
-                            String[] previews = (String[]) Class.forName(PREFIX + "LlyetaCommands").getMethod("previews").invoke(null);
+                            String[] previews = (String[]) Class.forName(PREFIX + "LletyaCommands").getMethod("previews").invoke(null);
                             if (gearStage == 13) { clickGearButton(injector, instance, clientApi, client); gearStage = 14; return false; }
                             if (gearStage == 14) {
                                 Field opened = gearPlugin.getClass().getDeclaredField("open"); opened.setAccessible(true);
@@ -598,7 +598,7 @@ public final class LocalLoginSmoke {
                             if (homeStage == 0) {
                                 field("Client", "camAngleX").setInt(null, 383);
                                 field("Client", "camAngleY").setInt(null, 0);
-                                if (!homeCheck.equals("spawn") || "1".equals(System.getenv("LLYETA_VERIFY_ROADMAP"))) sendCommand("home");
+                                if (!homeCheck.equals("spawn") || "1".equals(System.getenv("LLETYA_VERIFY_ROADMAP"))) sendCommand("home");
                                 else commandSent = System.currentTimeMillis();
                                 homeStage = 1; return false;
                             }
@@ -608,7 +608,7 @@ public final class LocalLoginSmoke {
                             int plane = (Integer) location.getClass().getMethod("getPlane").invoke(location);
                             if (x != 3087 || y != 3492 || plane != 0) throw new IllegalStateException("Edgeville home check failed: " + location);
                             if (homeStage == 1) {
-                                String screenshot = System.getenv("LLYETA_HOME_SCREENSHOT");
+                                String screenshot = System.getenv("LLETYA_HOME_SCREENSHOT");
                                 if (screenshot == null) frameSaved = true;
                                 else {
                                     java.util.function.Consumer<java.awt.Image> capture = image -> {
@@ -628,12 +628,12 @@ public final class LocalLoginSmoke {
                             System.out.println("HOME_SMOKE PASS mode=" + homeCheck + " Edgeville position=" + location + "; rendered frame captured");
                             return true;
                         }
-                        if ("1".equals(System.getenv("LLYETA_VERIFY_COMMANDS"))) {
+                        if ("1".equals(System.getenv("LLETYA_VERIFY_COMMANDS"))) {
                             if (commandStage == 0) { sendCommand("commands"); commandStage = 1; return false; }
                             if (System.currentTimeMillis() - commandSent < 2000) return false;
                             String menu = commandMenu(clientApi, client);
                             if (commandStage == 1) {
-                                if (!menu.contains("Llyeta Commands") || !menu.contains("accessible commands"))
+                                if (!menu.contains("Lletya Commands") || !menu.contains("accessible commands"))
                                     throw new IllegalStateException("Command catalogue interface did not open");
                                 System.out.println("COMMANDS_SMOKE full catalogue opened");
                                 sendCommand("commands 1 save"); commandStage = 2; return false;

@@ -1,6 +1,6 @@
-# Llyeta — Source Selection and Development Strategy
+# Lletya — Source Selection and Development Strategy
 
-I want to revive my former RuneScape Private Server, Llyeta.
+I want to revive my former RuneScape Private Server, Lletya.
 
 My inspirations are Runite for authentic, responsive PvP combat and OS-PvP for its polished standalone client with custom settings.
 
@@ -13,7 +13,7 @@ I am willing to replace or substantially rewrite individual components where nec
 1. Find a reputable, well-developed OSRS-style server source with a compatible standalone client.
 2. Prioritize accurate combat, responsive PKing, reliable networking, and correct game-tick processing.
 3. Favor an existing source with substantial working gameplay and content over a bare framework, provided its architecture is maintainable.
-4. Develop a dedicated Llyeta client with configurable settings, custom interfaces, hotkeys, performance options, and PvP quality-of-life features.
+4. Develop a dedicated Lletya client with configurable settings, custom interfaces, hotkeys, performance options, and PvP quality-of-life features.
 5. Do not require RuneLite compatibility.
 6. Preserve working systems and improve them incrementally.
 7. Avoid outdated, insecure, incomplete, or poorly structured sources.
@@ -50,10 +50,10 @@ For each promising candidate:
 
 Distinguish verified findings from assumptions. Do not equate popularity with quality.
 
-Recommend the strongest foundation for a long-term Llyeta project.
+Recommend the strongest foundation for a long-term Lletya project.
 
 **Do not start from scratch unless the evidence demonstrates that adapting existing sources would be more difficult or less maintainable.**
 
-The first development milestone should be a working local Llyeta client and server, followed by improvements to PvP combat and client customization.
+The first development milestone should be a working local Lletya client and server, followed by improvements to PvP combat and client customization.
 
 Do not begin major implementation until I approve the recommended source.

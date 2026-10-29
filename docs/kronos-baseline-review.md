@@ -2,7 +2,7 @@
 
 ## Owner-authorized private source backup, 2026-10-27
 
-The owner explicitly requested pushing the current project to the existing private `jonathanm35796/Llyeta` repository. The blanket `main/` ignore has been replaced by exclusions for cache assets, player/runtime data, local credentials, toolchains and generated output. Upstream client notices/licenses are retained. Embedded legacy Discord webhooks and commented payment credentials were removed from source before preparing the backup; optional live announcements now read environment variables documented in `.env.example`. This private backup does not resolve the historical public-redistribution questions recorded below.
+The owner explicitly requested pushing the current project to the existing private `jonathanm35796/Lletya` repository. The blanket `main/` ignore has been replaced by exclusions for cache assets, player/runtime data, local credentials, toolchains and generated output. Upstream client notices/licenses are retained. Embedded legacy Discord webhooks and commented payment credentials were removed from source before preparing the backup; optional live announcements now read environment variables documented in `.env.example`. This private backup does not resolve the historical public-redistribution questions recorded below.
 
 ## Latest milestone: localhost login passed from main/
 
@@ -25,7 +25,7 @@ Inspected 2026-10-25. Publication is blocked pending redistribution evidence and
 
 ## Selected foundation and client direction
 
-The owner selected https://github.com/Leif-Yggdrasil/Kronos-184-Fixed and its release at https://rune-server.org/threads/kronos-184-central-server-removed-kilim-replaced.708268/ for evaluation. Keep the bundled RuneLite/OpenOSRS foundation; build and verify locally before Llyeta branding or gameplay changes. Broad source discovery is not required.
+The owner selected https://github.com/Leif-Yggdrasil/Kronos-184-Fixed and its release at https://rune-server.org/threads/kronos-184-central-server-removed-kilim-replaced.708268/ for evaluation. Keep the bundled RuneLite/OpenOSRS foundation; build and verify locally before Lletya branding or gameplay changes. Broad source discovery is not required.
 
 GitHub's web commit history showed commit `66ee03dbbae53ccc652f6e49e9aa4191034b3c8e` (Update README.md, July 5, 2026):
 https://github.com/Leif-Yggdrasil/Kronos-184-Fixed/commit/66ee03dbbae53ccc652f6e49e9aa4191034b3c8e
@@ -63,7 +63,7 @@ Sources:
 
 1. Restore terminal GitHub HTTPS access; then reassess CLI authentication without exposing tokens. Do not assume the cached credential is invalid solely from an offline check.
 2. Clone into ignored research-sources/Kronos-184-Fixed and verify the exact commit, recursive license/header inventory, provenance, bundled binaries, configuration, and assets.
-3. Fetch Llyeta separately and inspect its history. The owner previously observed main at a75b93d6510013f67fdae2fbbe5b7231dfb997e7; that was not reverified here. Preserve remote history and local documentation, including Start.txt. Do not initialize an unrelated baseline or force-push.
+3. Fetch Lletya separately and inspect its history. The owner previously observed main at a75b93d6510013f67fdae2fbbe5b7231dfb997e7; that was not reverified here. Preserve remote history and local documentation, including Start.txt. Do not initialize an unrelated baseline or force-push.
 4. Only once redistribution evidence supports it, import reviewed source with upstream notices and attribution; exclude tools, build output, secrets, personal settings, player data, and unverified assets. Review staged contents, commit, and push. The owner already authorized this conditional baseline push.
 5. Install isolated required JDKs, inspect remaining scripts/dependencies, then build and launch locally. Login, gameplay, PvP, networking, and tick behavior are entirely unverified.
 
@@ -88,4 +88,4 @@ Sources:
 
 Use separate PowerShell sessions from the workspace. Set JAVA_HOME to the relevant portable JDK and GRADLE_USER_HOME to the workspace's .tools/gradle-home. From research-sources/Kronos-184-Fixed/Kronos-master, run .\gradlew.bat :kronos-update-server:run or :kronos-server:run with JDK 21. From its runelite directory, run .\gradlew.bat run with JDK 8. The DEV client configuration already points to 127.0.0.1. Do not launch duplicate instances while ports are in use.
 
-Server/source redistribution evidence is still required before the source baseline can be published. Only Llyeta's own documentation/setup files have been pushed.
+Server/source redistribution evidence is still required before the source baseline can be published. Only Lletya's own documentation/setup files have been pushed.

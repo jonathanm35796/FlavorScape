@@ -1,2 +1,2 @@
-gradlew llyeta-webhooks:run
+gradlew lletya-webhooks:run
 pause

@@ -112,7 +112,7 @@ task cleanDist(type: Delete) {
     delete "$rootDir/build/collected/"
 }
 task jarAll {
-    def serverProjects = ["llyeta-server", "llyeta-update-server", "llyeta-server-live" ]
+    def serverProjects = ["lletya-server", "lletya-update-server", "lletya-server-live" ]
     serverProjects.each { dependsOn("$it:jar") }
     doLast {
 
@@ -120,7 +120,7 @@ task jarAll {
 }
 
 task mergeDist {
-    def serverProjects = ["llyeta-server", "llyeta-update-server", "llyeta-server-live" ]
+    def serverProjects = ["lletya-server", "lletya-update-server", "lletya-server-live" ]
 
     serverProjects.each { dependsOn("$it:distZip", "$it:collectDist") }
     doLast {

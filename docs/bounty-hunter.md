@@ -8,7 +8,7 @@ Points persist with the account in exact units of 1/512 point. Spend them throug
 
 The 10M base reward and shared five-minute cooldown are verified by production reward-path tests, including Edgeville, named DEV pairs, relogged histories and expiry at exactly five minutes. New [loot keys](loot-keys.md) package ordinary death loot separately from generated kill rewards.
 
-Implemented locally on 26 October 2026. This is the assigned-target, tier-1–10 emblem system requested for Llyeta. Emblems redeem directly for Blood Money. On 28 October 2026, all tier redemption payouts were increased by 1,000 times, bringing tier 10 to 100,000,000 Blood Money.
+Implemented locally on 26 October 2026. This is the assigned-target, tier-1–10 emblem system requested for Lletya. Emblems redeem directly for Blood Money. On 28 October 2026, all tier redemption payouts were increased by 1,000 times, bringing tier 10 to 100,000,000 Blood Money.
 
 ## Playing
 
@@ -62,7 +62,7 @@ The authoritative tier IDs and values are in `MysteriousEmblem.java`; kills, dea
 
 ## Scope of the Impact reference
 
-Impact's published [command guide](https://impactmmo.wiki/w/index.php?stable=1&title=Commands) describes Edgeville Bounty Hunter, and its [home guide](https://impactmmo.wiki/w/index.php?stable=1&title=Home_Area) describes an Emblem Trader and Bounty Points. A complete authoritative Impact tier-value and eligibility specification was not available during implementation. Llyeta therefore implements the owner's stated assigned-target/emblem loop and approved Blood Money payouts; it is not claimed as a verified exact copy of every Impact mechanic.
+Impact's published [command guide](https://impactmmo.wiki/w/index.php?stable=1&title=Commands) describes Edgeville Bounty Hunter, and its [home guide](https://impactmmo.wiki/w/index.php?stable=1&title=Home_Area) describes an Emblem Trader and Bounty Points. A complete authoritative Impact tier-value and eligibility specification was not available during implementation. Lletya therefore implements the owner's stated assigned-target/emblem loop and approved Blood Money payouts; it is not claimed as a verified exact copy of every Impact mechanic.
 
 ## Verification
 

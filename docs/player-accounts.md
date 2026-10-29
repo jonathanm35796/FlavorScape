@@ -4,7 +4,7 @@ DEV testing exception (updated 2026-10-28): **Jon**, **Jon2** and **Sales Tax** 
 
 Kronos's local player saves are readable JSON files, one per character, at:
 
-`main/llyeta-server/server-data/_saved/characters/<lowercase name>.json`
+`main/lletya-server/server-data/_saved/characters/<lowercase name>.json`
 
 For example, `Sales Tax` saves as `sales tax.json`. The file contains the password hash, saved groups, stats, inventory, equipment, bank, configuration, and other character state. It is local runtime data and is excluded from GitHub by the `**/server-data/` ignore rule.
 

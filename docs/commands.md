@@ -39,17 +39,17 @@ Adding/removing a case or alias in an existing handler updates the list on the n
 
 Server-local source files:
 
-- main/llyeta-server/src/main/java/io/ruin/network/incoming/handlers/CommandCatalog.java
-- main/llyeta-server/src/main/java/io/ruin/network/incoming/handlers/CommandHandler.java
-- main/llyeta-server/src/commandCatalog/java/io/ruin/tools/GenerateCommandCatalog.java
-- main/llyeta-server/src/test/java/io/ruin/network/incoming/handlers/CommandCatalogTest.java
+- main/lletya-server/src/main/java/io/ruin/network/incoming/handlers/CommandCatalog.java
+- main/lletya-server/src/main/java/io/ruin/network/incoming/handlers/CommandHandler.java
+- main/lletya-server/src/commandCatalog/java/io/ruin/tools/GenerateCommandCatalog.java
+- main/lletya-server/src/test/java/io/ruin/network/incoming/handlers/CommandCatalogTest.java
 
 ## Verification
 
 Verified 2026-10-25: all eight targeted tests passed with no failures. After backing up a fresh autosave and restarting locally, the actual client logged in, opened the full catalogue, searched for save, and opened the staff subset. The probe verified the resulting in-game widgets and recorded COMMANDS_SMOKE PASS in .tools/main-Client.log. Servers and the client were left running with the full catalogue open.
 
-Run the targeted tests with JDK 21 and the existing Gradle wrapper: `:llyeta-server:test --tests io.ruin.network.incoming.handlers.CommandCatalogTest`. Eight tests cover access boundaries, manager exclusions, Owner override restrictions, DEV alias exceptions, donor heal entitlement, search/pagination, malformed page inputs, and source parsing.
+Run the targeted tests with JDK 21 and the existing Gradle wrapper: `:lletya-server:test --tests io.ruin.network.incoming.handlers.CommandCatalogTest`. Eight tests cover access boundaries, manager exclusions, Owner override restrictions, DEV alias exceptions, donor heal entitlement, search/pagination, malformed page inputs, and source parsing.
 
 Client-only console and optional plugin commands are separate from this server-command catalogue and can depend on enabled plugins. They do not grant server privileges.
 
-For a real-client menu check, set the local environment variable LLYETA_VERIFY_COMMANDS=1 before starting scripts/run-local.ps1 -VerifyLogin. The optional probe submits the read-only commands menu, search, and staff-list requests through the actual game connection and verifies the resulting widgets. It does not execute the commands displayed in the list.
+For a real-client menu check, set the local environment variable LLETYA_VERIFY_COMMANDS=1 before starting scripts/run-local.ps1 -VerifyLogin. The optional probe submits the read-only commands menu, search, and staff-list requests through the actual game connection and verifies the resulting widgets. It does not execute the commands displayed in the list.
