@@ -4,7 +4,7 @@
 
 Lletya is an OSRS-style private server with a customized RuneLite/OpenOSRS desktop client. Our current focus is the PvP experience: choose your levels, load a setup, find a fight and earn Blood Money. The project is in active development; the feature inventory below distinguishes implemented systems from inherited content that still needs full gameplay verification.
 
-[Join the Lletya Discord](https://discord.gg/QJDZX7U4y) · [Development roadmap](docs/roadmap.md) · [Full content audit](docs/content-audit.md)
+[Join the Lletya Discord](https://discord.gg/j5YGZpNxR) · [Development roadmap](docs/roadmap.md) · [Full content audit](docs/content-audit.md)
 
 ## Recent work: 25–28 October 2026
 

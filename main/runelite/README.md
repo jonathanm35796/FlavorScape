@@ -8,7 +8,7 @@
 [OpenOSRS](https://openosrs.com)  is an extended version of [RuneLite](https://github.com/runelite/runelite) that provides more functionality and less restrictions while staying more open-source. We are not affiliated with RuneLite.
 
 ## Lletya Discord
-[Join the Lletya community](https://discord.gg/QJDZX7U4y)
+[Join the Lletya community](https://discord.gg/j5YGZpNxR)
 
 ## Project Layout
 

@@ -42,7 +42,7 @@ import java.util.stream.StreamSupport;
 @Slf4j
 public class World extends EventWorker {
 
-    public static final String DISCORD_INVITE = "https://discord.gg/QJDZX7U4y";
+    public static final String DISCORD_INVITE = "https://discord.gg/j5YGZpNxR";
 
     public static int id;
 
